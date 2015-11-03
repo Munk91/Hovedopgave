@@ -1,2 +1,0 @@
-\select@language {danish}
-\contentsline {section}{\numberline {0.1}Gruppekontrakt}{1}
