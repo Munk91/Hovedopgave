@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.20)  3 NOV 2015 09:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.20)  3 NOV 2015 10:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -108,33 +108,45 @@ File: uni-global.def 2013/05/13 UCS: Unicode global data
 \uc@combtoksb=\toks22
 \uc@temptokena=\toks23
 )
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2013/12/03 3.9h The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-danish/danish.ldf
+Language: danish 2009/09/19 v1.3r Danish support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2013/12/03 3.9h Babel common definitions
+\babel@savecnt=\count101
+\U@D=\dimen112
+)
+Package babel Info: Making " an active character on input line 82.
+))
 Runaway argument?
 ! Paragraph ended before \@fileswith@ptions was complete.
 <to be read again> 
                    \par 
-l.7 
+l.8 
     
 ? 
-(./master.aux (./gruppekontrakt.aux))
+(./master.aux)
 \openout1 = `master.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+ (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 18.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 19.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -143,8 +155,9 @@ File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-\openout2 = `gruppekontrakt.aux'.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./master.toc)
+\tf@toc=\write3
+\openout3 = `master.toc'.
 
  (./gruppekontrakt.tex
 
@@ -157,42 +170,38 @@ Type  H <return>  for immediate help.
 l.1 \begin{document}
                     
 ? 
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 4.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 4.
+ [1
 
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2 \item t
-           est
-? 
-[1
-
-] (./master.aux (./gruppekontrakt.aux)) ) )
+] (./master.aux) ) )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 1 (\begingroup)
-### bottom level
-(\end occurred when \iftrue on line 19 was incomplete)
-(\end occurred when \ifnum on line 19 was incomplete) 
+### bottom level 
 Here is how much of TeX's memory you used:
- 1828 strings out of 493304
- 21779 string characters out of 6139870
- 79266 words of memory out of 5000000
- 5314 multiletter control sequences out of 15000+600000
- 7919 words of font info for 24 fonts, out of 8000000 for 9000
+ 2285 strings out of 493304
+ 27555 string characters out of 6139870
+ 90232 words of memory out of 5000000
+ 5745 multiletter control sequences out of 15000+600000
+ 14122 words of font info for 39 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 27i,6n,20p,327b,658s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/en
-c/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/fonts/type1/public/cm-super/
-sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/s
-hare/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/typ
-e1/public/cm-super/sftt1440.pfb>
-Output written on master.pdf (2 pages, 55525 bytes).
+ 27i,6n,27p,324b,660s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
+e/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/
+public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
+1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/p
+ublic/cm-super/sftt1440.pfb>
+Output written on master.pdf (2 pages, 80749 bytes).
 PDF statistics:
- 28 PDF objects out of 1000 (max. 8388607)
- 19 compressed objects within 1 object stream
+ 40 PDF objects out of 1000 (max. 8388607)
+ 28 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
