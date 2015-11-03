@@ -1,4 +1,4 @@
-## Statistics
+## Hovedopgave - Statistik applikation
 
 [![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](http://forthebadge.com)
 
@@ -8,7 +8,7 @@ Statistics is a web application built for Ordbogen A/S, as a final project on th
 
 ## Technologies
 
-It is built with [Lumen](http://lumen.laravel.com/), and [AngularJS](http://angularjs.org/) by Google.
+It is built with [Lumen](http://lumen.laravel.com/), and [AngularJS](http://angularjs.org/).
 
 ## Installation guide
 
@@ -18,11 +18,7 @@ To install and get the app running, use the following steps:
 
 - To install composer dependencies run the following command: $ php composer.phar install
 
-- Done?
-
-## Todos
-
-- Make project
+Thats it! Youre ready to use the project.
 
 ## Authors
 
@@ -32,7 +28,7 @@ To install and get the app running, use the following steps:
 
 ## Contributing
 
-If you want to contribute to the project, feel free to do so.
+Since it is a school project, we will unfortunately not accept any pull requests.
 
 ## License
 
