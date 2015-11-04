@@ -1,4 +1,5 @@
 \documentclass[a4paper, 11pt, danish]{report}
+\setcounter{secnumdepth}{0}
 
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
@@ -6,6 +7,8 @@
 \usepackage{babel}
 \usepackage{graphicx}
 \usepackage{import}
+
+\graphicspath{{images/}}
 
 \title{Hovedopgave} 
 \author{
@@ -23,9 +26,10 @@
 %\input{abstract}
 %\input{indledning}
 %\input{problemstilling}
-\import*{}{gruppekontrakt}
-\import*{}{kvalitetssikring}
-\import*{produktbeskrivelse}
+\import{}{gruppekontrakt}
+\import{}{kvalitetssikring}
+\import{}{produktbeskrivelse}
+\import{}{arkitektur}
 %\input{konklusion}
 %\input{bilag}
 \end{document}

@@ -1,0 +1,5 @@
+\select@language {danish}
+\contentsline {section}{Gruppekontrakt}{2}
+\contentsline {section}{Kvalitetssikring}{2}
+\contentsline {section}{Produktbeskrivelse}{2}
+\contentsline {section}{Arkitektur}{3}
