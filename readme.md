@@ -1,21 +1,36 @@
-## Lumen PHP Framework
+## Hovedopgave - Statistik applikation
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+[![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](http://forthebadge.com)
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+## About
 
-## Official Documentation
+Statistics is a web application built for Ordbogen A/S, as a final project on the Computer Science education. The purpose of the app is to make it simple to upload data and have it shown in a nice way.
 
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
+## Technologies
 
-## Security Vulnerabilities
+It is built with [Lumen](http://lumen.laravel.com/), and [AngularJS](http://angularjs.org/).
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+## Installation guide
 
-### License
+To install and get the app running, use the following steps:
 
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+- Clone Git repository: $ git clone https://github.com/ckr123/Hovedopgave
+
+- To install composer dependencies run the following command: $ php composer.phar install
+
+Thats it! Youre ready to use the project.
+
+## Authors
+
+[Mikkel Bendix Munk](https://github.com/Munk91)
+
+[Christoffer Frydkjær Kristensen](https://github.com/ckr123)
+
+## Contributing
+
+Since it is a school project, we will unfortunately not accept any pull requests.
+
+## License
+
+The project is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
