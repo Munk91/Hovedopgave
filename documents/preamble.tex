@@ -4,7 +4,8 @@
 \usepackage{amsmath}
 \usepackage[utf8x]{inputenc}
 \usepackage{babel}
-\usepackage[graphicx]
+\usepackage{graphicx}
+\usepackage{import}
 
 \title{Hovedopgave} 
 \author{
@@ -19,10 +20,11 @@
 \maketitle
 \tableofcontents{}
 \newpage
-\input{abstract}
-\input{indledning}
-\input{problemstilling}
-\input{gruppekontrakt}
-\input{konklusion}
-\input{bilag}
+%\input{abstract}
+%\input{indledning}
+%\input{problemstilling}
+\import*{}{gruppekontrakt}
+\import*{}{kvalitetssikring}
+%\input{konklusion}
+%\input{bilag}
 \end{document}
