@@ -3,5 +3,5 @@
 /storage/framework/cache
 .env
 .env.example
-.log
-.aux
+*.log
+*.aux
