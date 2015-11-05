@@ -24,6 +24,7 @@ gulp.task('scripts', function() {
 
 gulp.task('latex', function() {
     gulp.src('documents/preamble.tex')
+        .pipe(plugins.changed('documents'))
         .pipe(plugins.latex())
         .pipe(gulp.dest('documents'));
 });
