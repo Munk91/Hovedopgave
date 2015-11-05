@@ -22,7 +22,11 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('www/assets/js'));
 });
 
-
+gulp.task('latex', function() {
+    gulp.src('documents/preamble.tex')
+        .pipe(plugins.latex())
+        .pipe(gulp.dest('documents'));
+});
 
 /**
  * The default gulp task
@@ -38,4 +42,5 @@ gulp.task('default', function() {
 gulp.task('watch', function() {
     gulp.watch('assets/less/**/*.less', ['less']);
     gulp.watch('assets/js/**/*.js', ['scripts']);
+    gulp.watch('documents/*.tex', ['latex']);
 });
