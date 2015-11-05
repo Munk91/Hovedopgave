@@ -23,10 +23,9 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('latex', function() {
-    gulp.src('documents/preamble.tex')
+    gulp.src('documents')
         .pipe(plugins.changed('documents'))
-        .pipe(plugins.latex())
-        .pipe(gulp.dest('documents'));
+        .pipe(plugins.shell('pdflatex -output-directory=./documents ./documents/preamble.tex'));
 });
 
 /**
