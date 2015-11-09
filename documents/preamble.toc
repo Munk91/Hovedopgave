@@ -5,4 +5,6 @@
 \contentsline {subsection}{Planl\IeC {\ae }gning}{2}
 \contentsline {section}{Kvalitetssikring}{3}
 \contentsline {section}{Produktbeskrivelse}{4}
-\contentsline {section}{}{4}
+\contentsline {section}{Database}{3}
+\contentsline {subsection}{Valg af database}{3}
+\contentsline {subsection}{ElasticSearch}{4}
