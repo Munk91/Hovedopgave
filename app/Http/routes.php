@@ -14,3 +14,5 @@
 $app->get('/', function () use ($app) {
     return $app->welcome();
 });
+
+$app->post('create_user', 'App\Http\Controllers\UserController@createUser');
