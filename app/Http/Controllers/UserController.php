@@ -9,17 +9,20 @@ class UserController extends Controller {
     
     private $userRepository = UserRepository;
     /**
-     * Creates the user
+     * Creates a user
      *
-     * @return bool
+     * @param Request $request
+     *
+     * @return Response
      */
-    public function createUser($user) {
-        $u = new User();
-        $u->name = $user->name;
-        $u->username = $user->username;
-        $u->password = $user->password;
-        $u->role = $user->role;
+    public function createUser(Request $request) {
+        $user = new User(
+            $name = $request->name,
+            $username = $request->username,
+            $password = $request->password,
+            $role = $request->role
+        );
 
-        return $userRepository->save($u);
+        return $userRepository->save($user);
     }
 }
