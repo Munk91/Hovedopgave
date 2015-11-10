@@ -1,5 +1,8 @@
 \select@language {danish}
 \contentsline {section}{Gruppekontrakt}{2}
-\contentsline {section}{Kvalitetssikring}{2}
-\contentsline {section}{Produktbeskrivelse}{2}
-\contentsline {section}{}{3}
+\contentsline {section}{Projektstyring}{2}
+\contentsline {subsection}{Scrum}{2}
+\contentsline {subsection}{Planl\IeC {\ae }gning}{2}
+\contentsline {section}{Kvalitetssikring}{3}
+\contentsline {section}{Produktbeskrivelse}{4}
+\contentsline {section}{}{4}
