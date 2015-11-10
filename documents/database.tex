@@ -1,0 +1,10 @@
+\section{Database}
+\subsection{Valg af database}
+Vores valg stod imellem MySQL/MariaDB, MongoDB og ElasticSearch. Vores valg faldt på ElasticSearch. Grunden til vi valgte at bruge ElasticSearch og ikke de to andre var at da vi laver et statistik program, som skal hente data på tværs af forskellige tabeller, ville vi undgå at lave en masse kald til databasen og joine data sammen. Det er ElasticSearch lavet til og vinder klart på performance. 
+Der hvor ElasticSearch taber sammenlignet med de andre databaser, er at det oprindeligt er lavet som en search engine og ikke en decideret database. Dvs.\ man får ikke den samme sikkerhed, som de andre tilbyder. 
+\subsection{ElasticSearch}
+ElasticSearch er en næsten real-time search engine som er bygget på Apache Lucene, som er et søge API.\
+ElasticSearch er bygget op omkring et Cluster, som er en liste af nodes, hvor en node er en server der gemmer data. Clustered indexere så dataen og gør det søgbart\footnote{https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-repositories.html}.
+ElasticSearch gør også brug af index, som er en liste af dokumenter, der har samme karakteristika og er skrevet i JSON format. Ved større index kan de dele et index op i shards og et shard er et fuldt funktionelt index. Det gør man kan kan skalere data horisontalt.
+\\\\
+TODO: Tilføj billede af opbygning af ElasticSearch

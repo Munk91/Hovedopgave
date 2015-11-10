@@ -6,3 +6,6 @@
 \contentsline {section}{Kvalitetssikring}{3}
 \contentsline {section}{Produktbeskrivelse}{4}
 \contentsline {section}{}{4}
+\contentsline {section}{Database}{4}
+\contentsline {subsection}{Valg af database}{4}
+\contentsline {subsection}{ElasticSearch}{4}
