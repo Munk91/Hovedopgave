@@ -13,7 +13,7 @@ class UserRepository {
      *
      * @return Response 
      */
-    public function save($name, $username, $password, $role) {
+    public static function save($name, $username, $password, $role) {
         $user = new User;
 
         $user->name = $name;

@@ -8,20 +8,6 @@ use Illuminate\Http\Request;
 class UserController extends Controller {
     
     /**
-     * @var UserRepository
-     */
-    private $userRepository;
-
-    /**
-     * Constructor
-     *
-     * @param UserRepository $userRepository
-     */
-    public function __construct(UserRepository $userRepository) {
-        $this->userRepository = $userRepository;
-    }
-
-    /**
      * Extracts user data from request and sends it to the repository 
      *
      * @param Request $request
@@ -30,7 +16,7 @@ class UserController extends Controller {
      */
     public function createUser(Request $request) {
         
-        return $this->userRepository->save(
+        return UserRepository::save(
             $request->input('name'),
             $request->input('username'),
             $request->input('password'),
