@@ -1,5 +1,7 @@
 <?php
 
+use App\Model\User;
+
 namespace App\Repositories;
 
 use App\Model\User;
@@ -22,5 +24,14 @@ class UserRepository {
         $user->role = $role;
 
         $user->save();
+    }
+
+    /**
+     * Get all users in database or return error.
+     *
+     * @return string 
+    */
+    public static function getUsers() {
+        return User::all();
     }
 }

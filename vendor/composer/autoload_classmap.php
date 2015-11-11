@@ -453,5 +453,7 @@ return array(
     'SessionHandlerInterface' => $vendorDir . '/symfony/http-foundation/Resources/stubs/SessionHandlerInterface.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
+    'UpdateSoftDeleteElequent' => $baseDir . '/database/migrations/2015_11_11_140410_update_soft_delete_elequent.php',
+    'UpdateUsersTable' => $baseDir . '/database/migrations/2015_11_11_122106_update_users_table.php',
     'tests\\php\\controllers\\UserControllerTest' => $baseDir . '/tests/php/controllers/UserControllerTest.php',
 );
