@@ -3,14 +3,13 @@
 namespace tests\php\controllers;
 
 use App\Http\Controllers\UserController;
+use App\Models\User;
 
 class UserControllerTest extends \PHPUnit_Framework_TestCase {
 
     public function testCreateUser() {
-        $name = 'navn';
-        $username = 'mbk';
-        $password = 'secret';
-        $role = 'boss'; 
+        $userMock = $this->getMockBuilder('User')
+            ->getMock();
 
         $userControllerMock = $this->getMockBuilder('UserController')
             ->setMethods(array('createUser'))
@@ -18,14 +17,9 @@ class UserControllerTest extends \PHPUnit_Framework_TestCase {
 
         $userControllerMock->expects($this->once())
             ->method('createUser')
-            ->with($name, $username, $password, $role)
+            ->with($userMock)
             ->willReturn(true);
 
-        $this->assertTrue($userControllerMock->createUser($name, $username, $password, $role));
-
-        // gets some data
-        // creates user object
-        // calls userRepo->save(user object)
-        // returns true
+        $this->assertTrue($userControllerMock->createUser($userMock));
     }
 }

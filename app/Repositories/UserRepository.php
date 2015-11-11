@@ -2,6 +2,8 @@
 
 namespace App\Repositories;
 
+use App\Model\User;
+
 class UserRepository {
     
     /**
@@ -11,7 +13,14 @@ class UserRepository {
      *
      * @return Response 
      */
-    public function save($user) {
-        return $user->save();
+    public function save($name, $username, $password, $role) {
+        $user = new User;
+
+        $user->name = $name;
+        $user->username = $username;
+        $user->password = $password;
+        $user->role = $role;
+
+        $user->save();
     }
 }
