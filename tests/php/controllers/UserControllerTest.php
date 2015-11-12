@@ -22,4 +22,10 @@ class UserControllerTest extends \PHPUnit_Framework_TestCase {
 
         $this->assertTrue($userControllerMock->createUser($userMock));
     }
+
+    public function testGetUsers() {
+        $userMock = $this->getMockBuilder('User')
+            ->getMock();
+        file_put_contents('php://stderr', print_r($userMock, TRUE));
+    }
 }

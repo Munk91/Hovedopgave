@@ -23,4 +23,12 @@ class UserController extends Controller {
             $request->input('role') 
         );
     }
+
+    /**
+     * Get all users
+     * @return json
+     */
+    public function getUsers() {
+        return response()->json($UserRepository::getUsers());
+    }
 }

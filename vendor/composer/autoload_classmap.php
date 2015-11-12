@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddSoftDeleteToUsers' => $baseDir . '/database/migrations/2015_11_11_091928_add_soft_delete_to_users.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2015_11_10_095702_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'ExampleTest' => $baseDir . '/tests/ExampleTest.php',
@@ -452,4 +453,7 @@ return array(
     'SessionHandlerInterface' => $vendorDir . '/symfony/http-foundation/Resources/stubs/SessionHandlerInterface.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
+    'UpdateSoftDeleteElequent' => $baseDir . '/database/migrations/2015_11_11_140410_update_soft_delete_elequent.php',
+    'UpdateUsersTable' => $baseDir . '/database/migrations/2015_11_11_122106_update_users_table.php',
+    'tests\\php\\controllers\\UserControllerTest' => $baseDir . '/tests/php/controllers/UserControllerTest.php',
 );
