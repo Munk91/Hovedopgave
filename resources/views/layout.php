@@ -1,15 +1,19 @@
 <html>
 <head>
+    <base href="/"></base>
     <h1>Statistik applikation</h1>
 </head>
-<body ng-app="StatisticsApp">
-    {% block content %}
-        <div ui-view></div>
-    {% endblock %}
+<body ng-app="statisticsApp", ng-controller="RootCtrl">
+    <div ui-view>
+    </div>
 </body>
 <footer>
-    <script src="node_modules/angular/angular"></script>
-    <script src="js/angular-ui-router.min.js"></script>
     <p>Copyright</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+
+    <script src="main.js"></script>
 </footer>
 </html>

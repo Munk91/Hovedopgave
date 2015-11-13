@@ -1,12 +1,13 @@
-angular.module('routerModule', ['StatisticsApp', 'users'])
-    .config(function($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise("/");
+var app = angular.module('stats', ['ui.router', 'statistics.users'])
 
-        $stateProvider
-            .state('users', {
-                url: "/users",
-                templateUrl: "users/users.html",
-                controller: 'UsersController as UsersCtrl' 
-            })
-    });
+app.config(function($stateProvider, $urlRouterProvider) {
+$urlRouterProvider.otherwise("/");
+
+$stateProvider
+    .state('users', {
+        url: "/users",
+        templateUrl: "users/users.html",
+        controller: 'UsersController as UsersCtrl' 
+    })
+});
 
