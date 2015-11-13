@@ -10,7 +10,7 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
-$app->get('/', 'FrontpageController@index');
+$app->get('/', 'LayoutController@index');
 
 $app->group(['prefix' => 'users', 'namespace' => 'App\Http\Controllers'], function ($app) {
     $app->post('create', ['uses' => 'UserController@createUser', 'as' => 'create_user']);
