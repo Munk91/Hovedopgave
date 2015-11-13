@@ -1,8 +1,8 @@
 <html>
-    <head>
-        <h1>Hej</h1>
-    </head>
-<body ng-app="statistic">
+<head>
+    <h1>Statistik applikation</h1>
+</head>
+<body ng-app="StatisticsApp">
     {% block content %}
     {% endblock %}
 </body>
