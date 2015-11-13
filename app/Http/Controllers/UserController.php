@@ -29,6 +29,6 @@ class UserController extends Controller {
      * @return json
      */
     public function getUsers() {
-        return response()->json($UserRepository::getUsers());
+        return response()->json(UserRepository::getUsers());
     }
 }
