@@ -11,12 +11,7 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->welcome();
-});
-
-$app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
-    $users = '/users/';
-    $app->post($users.'/create', ['uses' => 'UserController@createUser', 'as' => 'create_user']);
-    $app->get($users.'/get', ['uses' => 'UserController@getUsers', 'as' => 'get_users']);
+$app->group(['prefix' => 'users', 'namespace' => 'App\Http\Controllers'], function ($app) {
+    $app->post('create', ['uses' => 'UserController@createUser', 'as' => 'create_user']);
+    $app->get('get', ['uses' => 'UserController@getUsers', 'as' => 'get_users']);
 });
