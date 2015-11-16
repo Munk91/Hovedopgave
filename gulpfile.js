@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 
+
 /**
  * Main styles
  */
@@ -9,7 +10,8 @@ gulp.task('less', function() {
         .pipe(plugins.changed('public'))
         .pipe(plugins.less())
         .pipe(plugins.minifyCss())
-        .pipe(gulp.dest('public'));
+        .pipe(gulp.dest('public'))
+        .pipe(plugins.livereload());
 });
 
 /**
@@ -19,16 +21,21 @@ gulp.task('scripts', function() {
     gulp.src('assets/js/**/*.js')
         .pipe(plugins.changed('public'))
         .pipe(plugins.concat('main.js'))
-        .pipe(gulp.dest('public'));
+        .pipe(gulp.dest('public'))
+        .pipe(plugins.livereload());
 });
 
 /**
  * Views
  */
 gulp.task('views', function() {
-    gulp.src('assets/js/**/*.html')
+    gulp.src('assets/js/**/*.jade')
         .pipe(plugins.changed('public'))
-        .pipe(gulp.dest('public/views'));
+        .pipe(plugins.jade({
+         locals: {} 
+        }))
+        .pipe(gulp.dest('public/views'))
+        .pipe(plugins.livereload());
 });
 
 gulp.task('latex', function() {
@@ -49,8 +56,9 @@ gulp.task('default', function() {
  * (gulp-changed plugin will make sure only files that are edited will be re-compiled by gulp)
  */
 gulp.task('watch', function() {
+    plugins.livereload.listen()
     gulp.watch('assets/less/**/*.less', ['less']);
     gulp.watch('assets/js/**/*.js', ['scripts']);
-    gulp.watch('assets/js/**/*.html', ['views']);
+    gulp.watch('assets/js/**/*.jade', ['views']);
     gulp.watch('documents/*.tex', ['latex']);
 });

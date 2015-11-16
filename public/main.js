@@ -27,6 +27,10 @@ $stateProvider
         templateUrl: "users/users.html",
         controller: 'UsersController as UsersCtrl' 
     })
+    .state('users.show', {
+        url: "/show",
+        templateUrl: "users/ShowUsers.html"
+    })
 });
 
 
