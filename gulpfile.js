@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 
-
 /**
  * Main styles
  */
@@ -21,6 +20,7 @@ gulp.task('scripts', function() {
     gulp.src('assets/js/**/*.js')
         .pipe(plugins.changed('public'))
         .pipe(plugins.concat('main.js'))
+        .pipe(plugins.uglify())
         .pipe(gulp.dest('public'))
         .pipe(plugins.livereload());
 });

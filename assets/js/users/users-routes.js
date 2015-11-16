@@ -1,4 +1,4 @@
-var usersRoutes = angular.module('usersRoutes', ['statistic.users']);
+var usersRoutes = angular.module('users.routes', ['users']);
 
 usersRoutes.config(function($stateProvider) {
     $stateProvider
@@ -10,11 +10,9 @@ usersRoutes.config(function($stateProvider) {
         .state('users.create', {
             url: "/create",
             templateUrl: "views/users/users-create.html",
-            controller: 'UsersController as UsersCtrl'
         })
         .state('users.list', {
             url: "/list",
             templateUrl: "views/users/users-list.html",
-            controller: 'UsersController as UsersCtrl'
         });
 });

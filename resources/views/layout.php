@@ -3,7 +3,7 @@
     <base href="/"></base>
     <h1>Statistik applikation</h1>
 </head>
-<body ng-app="statisticsApp", ng-controller="RootCtrl">
+<body ng-app="statisticsApp">
     <div ui-view>
     </div>
 </body>

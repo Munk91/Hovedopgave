@@ -1,4 +1,4 @@
-var users = angular.module('statistic.users', []);
+var users = angular.module('users', []);
 
 users.controller('UsersController', ['$scope', function($scope) {
 }]);
