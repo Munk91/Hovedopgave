@@ -6,10 +6,11 @@ var plugins = require('gulp-load-plugins')();
  */
 gulp.task('less', function() {
     gulp.src('assets/less/**/*.less')
-        .pipe(plugins.changed('www/assets/css'))
+        .pipe(plugins.changed('public'))
         .pipe(plugins.less())
         .pipe(plugins.minifyCss())
-        .pipe(gulp.dest('www/assets/css'));
+        .pipe(gulp.dest('public'))
+        .pipe(plugins.livereload());
 });
 
 /**
@@ -17,9 +18,24 @@ gulp.task('less', function() {
  */
 gulp.task('scripts', function() {
     gulp.src('assets/js/**/*.js')
-        .pipe(plugins.changed('www/assets/js'))
+        .pipe(plugins.changed('public'))
         .pipe(plugins.concat('main.js'))
-        .pipe(gulp.dest('www/assets/js'));
+        .pipe(plugins.uglify( { mangle: false } ))
+        .pipe(gulp.dest('public'))
+        .pipe(plugins.livereload());
+});
+
+/**
+ * Views
+ */
+gulp.task('views', function() {
+    gulp.src('assets/js/**/*.jade')
+        .pipe(plugins.changed('public'))
+        .pipe(plugins.jade({
+         locals: {} 
+        }))
+        .pipe(gulp.dest('public/views'))
+        .pipe(plugins.livereload());
 });
 
 gulp.task('latex', function() {
@@ -32,7 +48,7 @@ gulp.task('latex', function() {
  * The default gulp task
  */
 gulp.task('default', function() {
-    gulp.start('less', 'scripts');
+    gulp.start('less', 'scripts', 'views', 'latex');
 });
 
 /**
@@ -40,7 +56,9 @@ gulp.task('default', function() {
  * (gulp-changed plugin will make sure only files that are edited will be re-compiled by gulp)
  */
 gulp.task('watch', function() {
+    plugins.livereload.listen()
     gulp.watch('assets/less/**/*.less', ['less']);
     gulp.watch('assets/js/**/*.js', ['scripts']);
+    gulp.watch('assets/js/**/*.jade', ['views']);
     gulp.watch('documents/*.tex', ['latex']);
 });
