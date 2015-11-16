@@ -9,10 +9,10 @@ usersRoutes.config(function($stateProvider) {
         })
         .state('users.create', {
             url: "/create",
-            templateUrl: "views/users/users-create.html",
+            templateUrl: "views/users/usersCreate.html",
         })
         .state('users.list', {
             url: "/list",
-            templateUrl: "views/users/users-list.html",
+            templateUrl: "views/users/usersList.html",
         });
 });

@@ -1,1 +1,1 @@
-var app = angular.module('statisticsApp', ['routes']);
+var statisticsApp = angular.module('statisticsApp', ['routes']);
