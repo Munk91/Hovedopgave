@@ -1,17 +1,5 @@
-var app = angular.module('stats', ['ui.router', 'statistics.users'])
+var routes = angular.module('routes', ['ui.router', 'usersRoutes']);
 
-app.config(function($stateProvider, $urlRouterProvider) {
-$urlRouterProvider.otherwise("/");
-
-$stateProvider
-    .state('users', {
-        url: "/users",
-        templateUrl: "users/users.html",
-        controller: 'UsersController as UsersCtrl' 
-    })
-    .state('users.show', {
-        url: "/show",
-        templateUrl: "users/ShowUsers.html"
-    })
+routes.config(function($urlRouterProvider) {
+    $urlRouterProvider.otherwise("/");
 });
-

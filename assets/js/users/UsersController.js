@@ -1,5 +1,4 @@
-var statsapp = angular.module('statistic.users', []);
+var users = angular.module('statistic.users', []);
 
-statsapp.controller('UsersController', ['$scope', function($scope) {
-    $scope.test = "Hola!";
+users.controller('UsersController', ['$scope', function($scope) {
 }]);
