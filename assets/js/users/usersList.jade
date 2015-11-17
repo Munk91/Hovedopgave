@@ -1,10 +1,10 @@
 div
-  table.table-striped
+  table.table.table-striped
     tr
       th Navn
       th Brugernavn
       th Role
-    tr
-      td Lars
-      td ll13
-      td admin
+    tr(ng-repeat="user in UsersCtrl.users")
+      td(ng-bind="user.name")
+      td(ng-bind="user.username")
+      td(ng-bind="user.role")

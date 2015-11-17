@@ -3,5 +3,14 @@ var users = angular.module('users', [
 ]);
 
 users.controller('UsersController', function(showAllUsers) {
-    console.log(showAllUsers.query());
+    ctrl = this;
+
+    init = function() {
+        showAllUsers.query().$promise.then(function(data) {
+            ctrl.users = data;
+        });
+    };
+    
+    init();
+    return ctrl;
 });
