@@ -12,7 +12,7 @@
 */
 $app->get('/', 'LayoutController@index');
 
-$app->group(['prefix' => 'users', 'namespace' => 'App\Http\Controllers'], function ($app) {
-    $app->post('create', ['uses' => 'UserController@createUser', 'as' => 'create_user']);
-    $app->get('get', ['uses' => 'UserController@getUsers', 'as' => 'get_users']);
+$app->group(['prefix' => 'api', 'namespace' => 'App\Http\Controllers'], function ($app) {
+    $app->post('create', 'UserController@createUser');
+    $app->get('users', 'UserController@getUsers');
 });

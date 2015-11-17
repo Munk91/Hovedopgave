@@ -1,4 +1,7 @@
-var users = angular.module('users', []);
+var users = angular.module('users', [
+    'user.service'
+]);
 
-users.controller('UsersController', ['$scope', function($scope) {
-}]);
+users.controller('UsersController', function(showAllUsers) {
+    console.log(showAllUsers.query());
+});
