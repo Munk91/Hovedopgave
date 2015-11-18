@@ -15,5 +15,15 @@ describe('users', function() {
             $httpBackend.whenGET('/api/users').respond(200);
             $httpBackend.flush();
         });
+
+        it('should delete a user', function() {
+            var users = $httpBackend.whenGET('/api/users')
+                            .respond([user = { deleted_at : null }]);
+
+            $httpBackend.expectDELETE(user, '/api/delete')
+                            .respond(user = { deleted_at : "13:37:00 01-01-2001" })
+
+            expect(user.deleted_at).not.toBe(null);
+        });
     });
 });

@@ -236,6 +236,3 @@ sympy-plots-for-*.tex/
 # WinEdt
 *.bak
 *.sav
-
-public/views
-public/main.js

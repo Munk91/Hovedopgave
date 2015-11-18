@@ -5,6 +5,9 @@ div
       th Brugernavn
       th Brugertype 
     tr(ng-repeat="user in UsersCtrl.users")
+      td
+        button.btn.btn-default
+          span.glyphicon.glyphicon-remove
       td(ng-bind="user.name")
       td(ng-bind="user.username")
       td(ng-bind="user.role")
