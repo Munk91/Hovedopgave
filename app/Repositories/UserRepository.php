@@ -30,8 +30,23 @@ class UserRepository {
      * Get all users in database or return error.
      *
      * @return string 
-    */
+     */
     public static function getUsers() {
         return User::all();
+    }
+
+    /**
+     * Finds a user and soft deletes it
+     *
+     * @param int $userId
+     *
+     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
+     *
+     * @return null
+     */
+    public static function deleteUser($userId) {
+        $user = User::findOrFail($userId);
+
+        $user->delete(); 
     }
 }

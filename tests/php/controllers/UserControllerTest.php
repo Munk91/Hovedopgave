@@ -18,7 +18,7 @@ class UserControllerTest extends \PHPUnit_Framework_TestCase {
         $userControllerMock->expects($this->once())
             ->method('createUser')
             ->with($userMock)
-            ->willReturn(true);
+            ->will($this->returnValue(true));
 
         $this->assertTrue($userControllerMock->createUser($userMock));
     }
@@ -28,4 +28,30 @@ class UserControllerTest extends \PHPUnit_Framework_TestCase {
             ->getMock();
         file_put_contents('php://stderr', print_r($userMock, TRUE));
     }
+
+    public function testDeleteUser() {
+        $userMock = $this->getMockBuilder('User')
+           ->getMock(); 
+
+        $userMock->id = 1;
+
+        $userControllerMock = $this->getMockBuilder('UserController')
+            ->setMethods(array('deleteUser'))
+            ->getMock();
+
+        $userControllerMock->expects($this->once())
+            ->method('deleteUser')
+            ->with($userMock->id)
+            ->will($this->returnValue(null));
+
+        $userControllerMock->expects($this->once())
+            ->method('deleteUser')
+            ->with($userMock->id)
+            ->will($this->returnValue($userMock->id = 1, $userMock->deleted_at = "2001-11-21 13:37:11"));
+
+        $this->assertEquals(null, $userControllerMock->deleteUser(1));
+        $this->assertEquals("2001-11-21 13:37:11", $userMock->deleted_at);
+    }
+
+
 }

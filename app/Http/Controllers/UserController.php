@@ -31,4 +31,17 @@ class UserController extends Controller {
     public function getUsers() {
         return response()->json(UserRepository::getUsers());
     }
+
+    /**
+     * Extracts a user id from the request and send deletion handling to repository
+     *
+     * @param Request $request
+     *
+     * @return Response
+     */
+    public function deleteUser(Request $request) {
+        return UserRepository::deleteUser(
+            $request->input('id') 
+        ); 
+    }
 }

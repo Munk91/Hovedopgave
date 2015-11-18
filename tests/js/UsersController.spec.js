@@ -12,16 +12,16 @@ describe('users', function() {
 
         it('should fetch users on init of the controller', function() {
             $controller('UsersController', {});
-            $httpBackend.whenGET('/api/users').respond(200);
+            $httpBackend.expectGET('/api/showAllUsers').respond(200);
             $httpBackend.flush();
         });
 
         it('should delete a user', function() {
-            var users = $httpBackend.whenGET('/api/users')
+            var users = $httpBackend.whenGET('/api/showAllUsers')
                             .respond([user = { deleted_at : null }]);
 
             $httpBackend.expectDELETE(user, '/api/delete')
-                            .respond(user = { deleted_at : "13:37:00 01-01-2001" })
+                            .respond(user = { deleted_at : "2001-12-30 13:37:00" })
 
             expect(user.deleted_at).not.toBe(null);
         });
