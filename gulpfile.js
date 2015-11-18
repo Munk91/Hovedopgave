@@ -17,7 +17,7 @@ gulp.task('less', function() {
  * Main scripts
  */
 gulp.task('scripts', function() {
-    gulp.src('assets/js/**/*.js')
+    gulp.src(['assets/js/**/*.js', 'assets/js/*.js'])
         .pipe(plugins.changed('public'))
         .pipe(plugins.concat('main.js'))
         .pipe(plugins.uglify( { mangle: false } ).on('error', plugins.util.log))
