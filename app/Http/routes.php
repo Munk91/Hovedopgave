@@ -14,5 +14,5 @@ $app->get('/', 'LayoutController@index');
 
 $app->group(['prefix' => 'api', 'namespace' => 'App\Http\Controllers'], function ($app) {
     $app->post('create', 'UserController@createUser');
-    $app->get('users', 'UserController@getUsers');
+    $app->get('showAllUsers', 'UserController@getUsers');
 });
