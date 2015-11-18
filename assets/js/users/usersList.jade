@@ -1,2 +1,10 @@
 div
-  p list of users
+  table.table.table-striped
+    tr
+      th Navn
+      th Brugernavn
+      th Brugertype 
+    tr(ng-repeat="user in UsersCtrl.users")
+      td(ng-bind="user.name")
+      td(ng-bind="user.username")
+      td(ng-bind="user.role")
