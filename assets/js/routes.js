@@ -1,15 +1,22 @@
 angular.module('routes', ['ui.router', 'statistic.home'])
     .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
-        $urlRouterProvider.otherwise('/');
-        $locationProvider.html5Mode(true);
         $stateProvider
-            views: {
-                'navbar': {
-                    templateUrl: "views/navbar.html"
+            .state('statistic', {
+                url: "/",
+                views: {
+                    'navbar': {
+                        templateUrl: "views/navbar.html"
+                    }
                 },
-                'front': {
-                    templateUrl: "views/home/home.html",
-                    controller: "HomeController as HomeCtrl"
+                abstract: true
+            })
+            .state('statistic.front', {
+                url: '',
+                views: {
+                    'main': {
+                        templateUrl: "views/home/home.html",
+                        controller: "HomeController as HomeCtrl"
+                    }
                 }
-            }
+            });
     });

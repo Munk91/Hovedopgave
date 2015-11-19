@@ -1,1 +1,1 @@
-var statisticsApp = angular.module('statisticsApp', ['routes']);
+var statisticsApp = angular.module('statisticsApp', ['routes', 'users.routes']);

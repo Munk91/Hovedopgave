@@ -4,8 +4,13 @@ usersRoutes.config(function($stateProvider) {
     $stateProvider
         .state('statistic.users', {
             url: "users",
-            templateUrl: "views/users/users.html",
-            controller: 'UsersController as UsersCtrl' 
+            views: {
+                'main': {
+                    templateUrl: "views/users/users.html",
+                    controller: 'UsersController as UsersCtrl' 
+                }
+            
+            }
         })
         .state('statistic.users.create', {
             url: "/create",
