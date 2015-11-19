@@ -1,7 +1,6 @@
 angular.module('users', ['user.service'])
-    .controller('UsersController', function(showAllUsers, deleteUser) {
+    .controller('UsersController', function(showAllUsers, deleteUser, $timeout) {
         ctrl = this;
-
         ctrl.error = "";
 
         init = function() {
@@ -10,11 +9,23 @@ angular.module('users', ['user.service'])
 
         ctrl.deleteUser = function(user) {
             if(user) {
-                deleteUser.delete(user).$promise.then(function(resource) {
-                    getUsers();
+                if(confirm('Er du sikker på at du vil slette ' + user.name + '?')) {
+                    deleteUser.delete(user).$promise.then(function(resource) {
+                        if(resource.message) {
+                            ctrl.error = resource.message;
+                            $timeout(function() {
+                                ctrl.error = '';
+                            }, 3000);
+                        } else {
+                            ctrl.success = user.name + ' blev slettet';
+                            $timeout(function() {
+                                ctrl.success = '';
+                            }, 3000);
+                        }
 
-                    ctrl.error = resource.message;
-                });
+                        getUsers();
+                    });
+                }
             }
         };
 
