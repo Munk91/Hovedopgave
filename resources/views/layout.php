@@ -1,10 +1,9 @@
 <html>
 <head>
-    <base href="/"></base>
+    <base href="/"/>
 </head>
 <body ng-app="statisticsApp">
-    <div ui-view>
-    </div>
+    <div ui-view="navbar"></div>
 </body>
 <footer>
     <p>Copyright</p>

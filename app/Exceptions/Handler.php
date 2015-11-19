@@ -4,6 +4,7 @@ namespace App\Exceptions;
 
 use Exception;
 use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Laravel\Lumen\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -39,6 +40,9 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
+        if($e instanceof NotFoundHttpException) {
+            return redirect('/#/' . $request->path());
+        }
         return parent::render($request, $e);
     }
 }
