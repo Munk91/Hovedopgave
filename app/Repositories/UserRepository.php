@@ -7,13 +7,13 @@ namespace App\Repositories;
 use App\Model\User;
 
 class UserRepository {
-    
+
     /**
      * Saves a user in the database.
      *
      * @param User $user
      *
-     * @return Response 
+     * @return Response
      */
     public static function save($name, $username, $password, $role) {
         $user = new User;
@@ -29,7 +29,7 @@ class UserRepository {
     /**
      * Get all users in database or return error.
      *
-     * @return string 
+     * @return string
      */
     public static function getUsers() {
         return User::all();
@@ -47,6 +47,10 @@ class UserRepository {
     public static function deleteUser($userId) {
         $user = User::findOrFail($userId);
 
-        $user->delete(); 
+        if($user) {
+            $user->delete();
+        } else {
+            throw \Illuminate\Database\Eloquent\ModelNotFoundException;
+        }
     }
 }

@@ -2,16 +2,20 @@ angular.module('users', ['user.service'])
     .controller('UsersController', function(showAllUsers, deleteUser) {
         ctrl = this;
 
+        ctrl.error = "";
+
         init = function() {
             getUsers();
         };
 
         ctrl.deleteUser = function(user) {
-            console.log(user);
             if(user) {
-                console.log(deleteUser.delete(user));   
-                getUsers();
-            } 
+                deleteUser.delete(user).$promise.then(function(resource) {
+                    getUsers();
+
+                    ctrl.error = resource.message;
+                });
+            }
         };
 
         getUsers = function() {
@@ -19,7 +23,8 @@ angular.module('users', ['user.service'])
                 ctrl.users = data;
             });
         };
-        
+
         init();
+        
         return ctrl;
     });

@@ -1,4 +1,6 @@
 div
+  .alert.alert-danger(ng-if="UsersCtrl.error")
+    strong(ng-bind="UsersCtrl.error")
   table.table.table-striped
     tr
       th

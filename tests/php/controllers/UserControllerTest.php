@@ -26,7 +26,7 @@ class UserControllerTest extends \PHPUnit_Framework_TestCase {
     public function testGetUsers() {
         $userMock = $this->getMockBuilder('User')
             ->getMock();
-        file_put_contents('php://stderr', print_r($userMock, TRUE));
+        //file_put_contents('php://stderr', print_r($userMock, TRUE));
     }
 
     public function testDeleteUser() {
@@ -52,6 +52,4 @@ class UserControllerTest extends \PHPUnit_Framework_TestCase {
         $this->assertEquals(null, $userControllerMock->deleteUser(1));
         $this->assertEquals("2001-11-21 13:37:11", $userMock->deleted_at);
     }
-
-
 }
