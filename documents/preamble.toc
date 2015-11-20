@@ -1,11 +1,25 @@
 \select@language {danish}
-\contentsline {section}{Gruppekontrakt}{2}
-\contentsline {section}{Projektstyring}{2}
-\contentsline {subsection}{Scrum}{2}
-\contentsline {subsection}{Planl\IeC {\ae }gning}{2}
-\contentsline {section}{Kvalitetssikring}{3}
-\contentsline {section}{Produktbeskrivelse}{4}
-\contentsline {section}{}{4}
-\contentsline {section}{Database}{4}
-\contentsline {subsection}{Valg af database}{4}
-\contentsline {subsection}{ElasticSearch}{4}
+\contentsline {section}{Problemstilling}{2}
+\contentsline {subsection}{Overordnet emne}{2}
+\contentsline {subsection}{Delemne}{2}
+\contentsline {subsection}{Udgangspunkt}{2}
+\contentsline {subsection}{Sp\IeC {\o }rgsm\IeC {\r a}l}{2}
+\contentsline {subsubsection}{Datasp\IeC {\o }rgsm\IeC {\r a}l}{2}
+\contentsline {subsubsection}{Vurderingssp\IeC {\o }rgsm\IeC {\r a}l}{2}
+\contentsline {subsubsection}{Forklaringssp\IeC {\o }rgsm\IeC {\r a}l}{2}
+\contentsline {subsubsection}{Handlingssp\IeC {\o }rgsm\IeC {\r a}l}{3}
+\contentsline {subsection}{Problemstilling}{3}
+\contentsline {section}{Gruppekontrakt}{3}
+\contentsline {section}{Projektstyring}{4}
+\contentsline {subsection}{Scrum}{4}
+\contentsline {subsection}{Planl\IeC {\ae }gning}{4}
+\contentsline {subsection}{Review referater}{5}
+\contentsline {subsubsection}{Fredag d. 20/11}{5}
+\contentsline {section}{Kvalitetssikring}{5}
+\contentsline {section}{Produktbeskrivelse}{6}
+\contentsline {section}{}{6}
+\contentsline {section}{Teknologier}{6}
+\contentsline {subsection}{Problemstilling omkring h\IeC {\r a}ndtering af data}{6}
+\contentsline {section}{Database}{8}
+\contentsline {subsection}{Valg af database}{8}
+\contentsline {subsection}{ElasticSearch}{8}

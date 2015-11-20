@@ -1,0 +1,30 @@
+\section{Teknologier}
+\subsection{Problemstilling omkring håndtering af data}
+Vi har en problemstilling der går på at vi skal have noget data ind i vores ElasticSearch database, for at kunne præsentere det.
+Problemstillingen går på, om vi skal pulle data ud fra de API'er der bliver tilgængelige for vores system. Eller om de forskellige teams der uploader API'er selv skal stå for at pushe data ind til vores database.
+\\\\
+Fordele og ulemper ved de forskellige løsninger er vigtige i forhold til hvordan systemet skal bygges op.
+Vi har nedskrevet nogle overordnede fordele og ulemper for de to forskellige løsninger.
+\\\\
+\textbf{Fordele ved pull af data}
+\begin{itemize}
+    \item{Vi har selv styr på hvilke data vi henter}
+    \item{Vi vælger selv hvornår data skal hentes}
+    \item{Vi kan nemmere kontrollere hvor meget data der bliver hentet ind}
+    \item{Hvis serveren er nede mister vi ikke data, da vi selv bestemmer hvornår vi henter data ind}
+\end{itemize}
+\textbf{Ulemper ved pull af data}
+\begin{itemize}
+    \item{Vi står selv for at hente data ind}
+\end{itemize}
+\textbf{Fordele ved at pushe data}
+\begin{itemize}
+    \item{Det er ikke os der skal stå for at hente data}
+\end{itemize}
+\textbf{Ulemper ved at pushe data}
+\begin{itemize}
+    \item{Vi kan ikke bestemme hvilke data eller hvor meget der bliver uploadet}
+    \item{Hvis vores server er nede når der bliver pushet mister vi data}
+    \item{Der skal lægges meget tid i at skalere data der kommer ind}
+\end{itemize}
+Ud fra fordele og ulemper ved begge løsninger har vi valgt at gå videre med pull af data, da det vigtigste for os bliver at vi selv kan kontrollere hvordan vi vil skalere vores data. Herudover giver det os nogle fordele når vi selv kan udvælge hvilke data vi gerne vil have ind på vores cluster. Dette vil gøre at vi skal arbejde lidt mere med hvordan vi håndterer data fra de forskellige API'er, men vi har vurderet at det er det værd i forhold til systemet.
