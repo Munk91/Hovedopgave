@@ -9,6 +9,7 @@ angular.module('routes', ['ui.router', 'statistic.home'])
          * route to default url
          */
         $urlRouterProvider.otherwise('/');
+
         $stateProvider
             .state('statistic', {
                 url: "/",

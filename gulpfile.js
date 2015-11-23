@@ -5,7 +5,7 @@ var plugins = require('gulp-load-plugins')();
  * Main styles
  */
 gulp.task('less', function() {
-    gulp.src(['assets/less/**/*.less', 'assets/less/*.less'])
+    gulp.src('assets/less/**/*less')
         .pipe(plugins.changed('public'))
         .pipe(plugins.less())
         .pipe(plugins.minifyCss())
@@ -17,7 +17,7 @@ gulp.task('less', function() {
  * Main scripts
  */
 gulp.task('scripts', function() {
-    gulp.src(['assets/js/**/*.js', 'assets/js/*.js'])
+    gulp.src('assets/js/**/*.js')
         .pipe(plugins.changed('public'))
         .pipe(plugins.concat('main.js'))
         .pipe(plugins.uglify( { mangle: false } ).on('error', plugins.util.log))
