@@ -31,4 +31,21 @@ class UserController extends Controller {
     public function getUsers() {
         return response()->json(UserRepository::getUsers());
     }
+
+    /**
+     * Extracts a user id from the request and send deletion handling to repository
+     *
+     * @param Request $request
+     *
+     * @return Response
+     */
+    public function deleteUser(Request $request) {
+        try {
+            $response = UserRepository::deleteUser($request->input('id'));
+        
+            return $response;
+        } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
+            return response()->json(['message' => 'Brugeren findes ikke']);
+        }
+    }
 }

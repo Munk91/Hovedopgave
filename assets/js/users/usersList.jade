@@ -1,10 +1,18 @@
 div
+  .alert.alert-danger(ng-show="UsersCtrl.error")
+    strong(ng-bind="UsersCtrl.error")
+  .alert.alert-success(ng-show="UsersCtrl.success")
+    strong(ng-bind="UsersCtrl.success")
   table.table.table-striped
     tr
+      th
       th Navn
       th Brugernavn
       th Brugertype 
     tr(ng-repeat="user in UsersCtrl.users")
+      td
+        a(ng-click="UsersCtrl.deleteUser(user)")
+          span.glyphicon.glyphicon-remove-circle
       td(ng-bind="user.name")
       td(ng-bind="user.username")
       td(ng-bind="user.role")
