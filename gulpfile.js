@@ -9,6 +9,7 @@ gulp.task('less', function() {
         .pipe(plugins.changed('public'))
         .pipe(plugins.less())
         .pipe(plugins.minifyCss())
+        .pipe(plugins.concat('style.css'))
         .pipe(gulp.dest('public'))
         .pipe(plugins.livereload());
 });
