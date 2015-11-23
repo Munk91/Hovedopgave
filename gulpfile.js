@@ -5,7 +5,7 @@ var plugins = require('gulp-load-plugins')();
  * Main styles
  */
 gulp.task('less', function() {
-    gulp.src('assets/less/**/*less')
+    gulp.src('assets/less/**/*.less')
         .pipe(plugins.changed('public'))
         .pipe(plugins.less())
         .pipe(plugins.minifyCss())
