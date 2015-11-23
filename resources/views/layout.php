@@ -1,11 +1,9 @@
 <html>
 <head>
-    <base href="/"></base>
-    <h1>Statistik applikation</h1>
+    <base href="/"/>
 </head>
 <body ng-app="statisticsApp">
-    <div ui-view>
-    </div>
+    <div ui-view="navbar"></div>
 </body>
 <footer>
     <p>Copyright</p>
@@ -16,6 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-resource.js"></script>
 
     <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="home.css"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
