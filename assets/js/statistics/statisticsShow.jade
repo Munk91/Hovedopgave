@@ -1,0 +1,8 @@
+p Statistikker
+  .dropdown
+    button.btn.btn-default.dropdown-toggle(type="button", id="statisticIndexes" data-toggle="dropdown" aria-haspopup="true") {{ StatisticsCtrl.activeStatisticIndex }}
+      span.caret
+    ul.dropdown-menu(aria-labelledby="statisticIndexes")
+      li(ng-repeat="statisticIndex in StatisticsCtrl.statisticIndexes")
+        a(ng-click="StatisticsCtrl.getStatistics(statisticIndex)")
+          {{ statisticIndex }}
