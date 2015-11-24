@@ -3,6 +3,8 @@ p Statistikker
     button.btn.btn-default.dropdown-toggle(type="button", id="statisticIndexes" data-toggle="dropdown" aria-haspopup="true") {{ StatisticsCtrl.activeStatisticIndex }}
       span.caret
     ul.dropdown-menu(aria-labelledby="statisticIndexes")
-      li(ng-repeat="statisticIndex in StatisticsCtrl.statisticIndexes")
-        a(ng-click="StatisticsCtrl.getStatistics(statisticIndex)")
-          {{ statisticIndex }}
+      li(ng-repeat="(key, value) in StatisticsCtrl.statisticIndexes")
+        a(ui-sref="statistic.statistics.show.graph({statsId : value})" ng-click="StatisticsCtrl.showStatistics(key, value)")
+          {{ key }}
+div
+  <div ui-view></div>
