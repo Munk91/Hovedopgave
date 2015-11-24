@@ -1,34 +1,22 @@
-angular.module('statistics', [])
-    .controller('StatisticsController', function() {
+angular.module('statistics', ['statistic.service'])
+    .controller('StatisticsController', function(showStatistics, $stateParams) {
         ctrl = this;
 
-        ctrl.statisticIndexes = [
-            "Brugere",
-            "Andet"
-        ];
-
-        ctrl.activeStatisticIndex = "Vælg statistik"; 
-
-        ctrl.getStatistics = function(statisticIndex) {
-            ctrl.activeStatisticIndex = statisticIndex;
-
-            switch(statisticIndex) {
-                case "Brugere":
-                    getUsers();
-                    break;
-                case "Andet":
-                    getOther();
-                    break;
-                default:
-                    break;
-            }
+        ctrl.statisticIndexes = {
+            'Brugere' : 'users',
+            'Andet' : 'other'
         };
 
-        getUsers = function() {
-            console.log("Get users!!"); 
-        };
+        ctrl.activeStatisticIndex = "Vælg statistik";
 
-        getOther = function() {
-            console.log("Get other!!"); 
-        }; 
+
+        ctrl.showStatistics = function(statsIndexKey, statsIndexValue) {
+            $stateParams.statsId = statsIndexValue;
+
+            ctrl.activeStatisticIndex = statsIndexKey;
+
+            showStatistics.query({statsId : $stateParams.statsId}).$promise.then(function(data) {
+                ctrl.statistics = data;
+            });
+        };
     });
