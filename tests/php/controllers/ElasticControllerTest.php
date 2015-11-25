@@ -20,6 +20,7 @@ class ElasticControllerTest extends \PHPUnit_Framework_TestCase
            ->method('get')
            ->with('index', 'type')
            ->will($this->returnValue($returnArray));
-       $this->assertEquals(0, count($returnArray));
+
+       $this->assertEmpty($returnArray);
     }
 }

@@ -12,7 +12,12 @@ class ElasticRepository {
         $client = ClientBuilder::create()->build();
     }
 
-    public function index($jsonSchema) {
+    /*
+     * index a json scheme in Elasticsearch
+     * @params json $jsonSchema
+     * @return json
+    */
+    public static function index($jsonSchema) {
         $params = [
             'index' => $jsonSchema['index'],
             'type' => $jsonSchema['type'], 
@@ -21,7 +26,14 @@ class ElasticRepository {
         return $client->index($params); 
     }
 
-    public function get($index, $type) {
+    /*
+     * Gets an index from Elasticsearch
+     *
+     * @params string $index
+     * @params string $type
+     * @return json
+    */
+    public static function get($index, $type) {
         $params = [
             'index' => $index,
             'type' => $type,
