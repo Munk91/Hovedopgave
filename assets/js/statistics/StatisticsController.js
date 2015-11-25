@@ -1,22 +1,41 @@
 angular.module('statistics', ['statistic.service'])
-    .controller('StatisticsController', function(showStatistics, $stateParams) {
+    .controller('StatisticsController', function(showStatistics, $stateParams, $state) {
         ctrl = this;
 
-        ctrl.statisticIndexes = {
-            'Brugere' : 'users',
-            'Andet' : 'other'
-        };
+        ctrl.activeStatisticIndex = 'Vælg statistik index';
+        ctrl.activeStatisticType = 'Vælg statistik type';
+        ctrl.activeStatisticTypeList = [];
 
-        ctrl.activeStatisticIndex = "Vælg statistik";
+        ctrl.statistics = [
+            {
+                'index' : 'MCstats',
+                'type' : ['Brugere', 'Test']
+            },
+            {
+                'index' : 'Andet',
+                'type' : ['Fest']
+            }
+        ];
 
+        ctrl.showStatistics = function(statisticIndex, statisticType) {
+            $stateParams.statsIndexId = statisticIndex;
+            $stateParams.statsTypeId = statisticType;
 
-        ctrl.showStatistics = function(statsIndexKey, statsIndexValue) {
-            $stateParams.statsId = statsIndexValue;
-
-            ctrl.activeStatisticIndex = statsIndexKey;
-
-            showStatistics.query({statsId : $stateParams.statsId}).$promise.then(function(data) {
+            showStatistics.query({statsIndexId : $stateParams.statsIndexId, statsTypeId : $stateParams.statsTypeId }).$promise.then(function(data) {
                 ctrl.statistics = data;
             });
         };
+
+        ctrl.getStatsTypes = function(selectedStatistic) {
+            ctrl.activeStatisticIndex = selectedStatistic.index;
+
+            // If index dropdown value changes, reset type dropdown and URL
+            ctrl.activeStatisticTypeList = [];
+            $state.go('.', {'statsIndexId' : selectedStatistic.index, 'statsTypeId' : null});
+            ctrl.activeStatisticType = 'Vælg statistik type';
+
+            angular.forEach(selectedStatistic.type, function(type) {
+                ctrl.activeStatisticTypeList.push(type);
+            });
+        }
     });
