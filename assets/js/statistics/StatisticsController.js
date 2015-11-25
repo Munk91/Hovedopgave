@@ -62,4 +62,4 @@ angular.module('statistics', ['statistic.service'])
         };
 
         init();
-    });
+   });
