@@ -11,11 +11,16 @@ angular.module('statistics.show.routes', ['statistics'])
                 }
             })
             .state('statistic.statistics.show', {
-                url: "/show",
-                templateUrl: "views/statistics/statisticsShow.html"
-            })
-            .state('statistic.statistics.show.graph', {
-                url: "/:statsId",
-                templateUrl: "views/statistics/showStatisticsGraph.html"
+                url: "/show/:statsIndexId/:statsTypeId",
+                templateUrl: "views/statistics/statisticsShow.html",
+                params: {
+                    statsIndexId: {
+                        value: null,
+                        squash: true
+                    },
+                    statsTypeId: {
+                        value: null
+                    }
+                }
             });
     });
