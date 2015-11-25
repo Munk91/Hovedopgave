@@ -1,23 +1,19 @@
 <?php
 
-namespace App\Repository;
+namespace App\Repositories;
 
 use Elasticsearch\ClientBuilder;
+use App\Helpers;
 
 class ElasticRepository {
-    
-    private $client;
-
-    function __construct() {
-        $client = ClientBuilder::create()->build();
-    }
-
     /*
      * index a json scheme in Elasticsearch
      * @params json $jsonSchema
      * @return json
     */
     public static function index($jsonSchema) {
+        Helpers::printConsole($jsonSchema);
+        $client = ClientBuilder::create()->build();
         $params = [
             'index' => $jsonSchema['index'],
             'type' => $jsonSchema['type'], 
@@ -34,6 +30,7 @@ class ElasticRepository {
      * @return json
     */
     public static function get($index, $type) {
+        $client = ClientBuilder::create()->build();
         $params = [
             'index' => $index,
             'type' => $type,

@@ -3,7 +3,6 @@
 namespace Tests\Php\Controllers;
 
 use App\Http\Controllers\ElasticController;
-use App\Helpers;
 
 class ElasticControllerTest extends \PHPUnit_Framework_TestCase
 {
