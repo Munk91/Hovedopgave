@@ -16,17 +16,20 @@ angular.module('statistics', ['statistic.service'])
             }
         ];
 
+        statsIndexId = $stateParams.statsIndexId || null;
+        statsTypeId = $stateParams.statsTypeId || null;
+
         init = function() {
             $state.go($state.current, {'statsIndexId' : null, 'statsTypeId' : null});
         };
 
         ctrl.showStatistics = function(statisticIndex, statisticType) {
-            $stateParams.statsIndexId = statisticIndex;
-            $stateParams.statsTypeId = statisticType;
+            statsIndexId = statisticIndex;
+            statsTypeId = statisticType;
 
             showStatistics.query({
-                statsIndexId : $stateParams.statsIndexId,
-                statsTypeId : $stateParams.statsTypeId
+                statsIndex : statsIndexId,
+                statsType : statsTypeId 
                 })
                 .$promise.then(function(data) {
                     ctrl.statistics = data;
@@ -39,7 +42,7 @@ angular.module('statistics', ['statistic.service'])
             ctrl.activeStatisticTypeList = [];
             $state.go('.', {'statsIndexId' : selectedStatistic.index, 'statsTypeId' : null});
 
-            $stateParams.statsIndexId = selectedStatistic.index;
+            statsIndexId = selectedStatistic.index;
             setActiveDropdownValue();
 
             angular.forEach(selectedStatistic.type, function(type) {
@@ -48,10 +51,10 @@ angular.module('statistics', ['statistic.service'])
         };
 
         setActiveDropdownValue = function() {
-            if($stateParams.statsIndexId) {
-                ctrl.activeStatisticIndex = $stateParams.statsIndexId;
-                if($stateParams.statsTypeId) {
-                    ctrl.activeStatisticType = $stateParams.statsTypeId;
+            if(statsIndexId) {
+                ctrl.activeStatisticIndex = statsIndexId;
+                if(statsTypeId) {
+                    ctrl.activeStatisticType = statsTypeId;
                 } else {
                     ctrl.activeStatisticType = 'Vælg statistik type';
                 }
