@@ -1,4 +1,4 @@
-angular.module('statistics.show.routes', ['statistics'])
+angular.module('statistic.show.routes', ['statistics'])
     .config(function($stateProvider) {
         $stateProvider
             .state('statistic.statistics', {
