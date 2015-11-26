@@ -18,9 +18,7 @@ angular.module('statistics.show.routes', ['statistics'])
                         value: null,
                         squash: true
                     },
-                    statsTypeId: {
-                        value: null
-                    }
+                    statsTypeId: null 
                 }
             });
     });
