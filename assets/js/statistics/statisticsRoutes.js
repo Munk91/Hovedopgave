@@ -14,11 +14,16 @@ angular.module('statistics.show.routes', ['statistics'])
                 url: "/show/:statsIndexId/:statsTypeId",
                 templateUrl: "views/statistics/statisticsShow.html",
                 params: {
+                    squash: true,
+
                     statsIndexId: {
                         value: null,
                         squash: true
                     },
-                    statsTypeId: null 
+                    statsTypeId: {
+                        value: null,
+                        squash: true
+                    }
                 }
             });
     });
