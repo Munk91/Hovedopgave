@@ -1,7 +1,6 @@
 angular.module('statistics', ['statistic.service'])
     .controller('StatisticsController', function(showStatistics, $stateParams, $state) {
         ctrl = this;
-
         ctrl.activeStatisticIndex = 'Vælg statistik index';
         ctrl.activeStatisticType = 'Vælg statistik type';
         ctrl.activeStatisticTypeList = [];
@@ -17,6 +16,10 @@ angular.module('statistics', ['statistic.service'])
             }
         ];
 
+        init = function() {
+            $state.go($state.current, {'statsIndexId' : null, 'statsTypeId' : null});
+        };
+
         ctrl.showStatistics = function(statisticIndex, statisticType) {
             $stateParams.statsIndexId = statisticIndex;
             $stateParams.statsTypeId = statisticType;
@@ -27,15 +30,29 @@ angular.module('statistics', ['statistic.service'])
         };
 
         ctrl.getStatsTypes = function(selectedStatistic) {
-            ctrl.activeStatisticIndex = selectedStatistic.index;
 
             // If index dropdown value changes, reset type dropdown and URL
             ctrl.activeStatisticTypeList = [];
             $state.go('.', {'statsIndexId' : selectedStatistic.index, 'statsTypeId' : null});
-            ctrl.activeStatisticType = 'Vælg statistik type';
+
+            $stateParams.statsIndexId = selectedStatistic.index;
+            setActiveDropdownValue();
 
             angular.forEach(selectedStatistic.type, function(type) {
                 ctrl.activeStatisticTypeList.push(type);
             });
-        }
+        };
+
+        setActiveDropdownValue = function() {
+            if($stateParams.statsIndexId) {
+                ctrl.activeStatisticIndex = $stateParams.statsIndexId;
+                if($stateParams.statsTypeId) {
+                    ctrl.activeStatisticType = $stateParams.statsTypeId;
+                } else {
+                    ctrl.activeStatisticType = 'Vælg statistik type';
+                }
+            }
+        };
+
+        init();
     });
