@@ -16,4 +16,7 @@ $app->group(['prefix' => 'api', 'namespace' => 'App\Http\Controllers'], function
     $app->post('create', 'UserController@createUser');
     $app->get('showAllUsers', 'UserController@getUsers');
     $app->delete('deleteUser', 'UserController@deleteUser');
+    $app->post('elasticIndex', 'ElasticController@index');
+    $app->get('elasticGet/{index}/{type}', 'ElasticController@get');
 });
+
