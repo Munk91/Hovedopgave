@@ -5,15 +5,13 @@ h3 Statistikker
         span.caret
       ul.dropdown-menu(aria-labelledby="statisticIndexes")
         li(ng-repeat="statistic in StatisticsCtrl.statistics")
-          a(ng-click="StatisticsCtrl.getStatsTypes(statistic)")
-            {{ statistic.index }}
+          a(ng-click="StatisticsCtrl.getStatsTypes(statistic)" ng-bind="statistic.index")
     .dropdown
       button.btn.btn-default.dropdown-toggle.type-button(type="button", id="statisticTypes" data-toggle="dropdown" aria-haspopup="true") {{ StatisticsCtrl.activeStatisticType }}
         span.caret
       ul.dropdown-menu(aria-labelledby="statisticTypes")
         li(ng-repeat="statsType in StatisticsCtrl.activeStatisticTypeList")
-          a(ng-click="StatisticsCtrl.activeStatisticType = statsType" ui-sref="statistic.statistics.show({statsTypeId : statsType})")
-            {{ statsType }}
+          a(ng-click="StatisticsCtrl.activeStatisticType = statsType" ng-bind="statsType" ui-sref="statistic.statistics.show({statsTypeId : statsType})")
       button.btn.btn-success.get-stats(type="button", id="getStatistics" ng-click="StatisticsCtrl.showStatistics(StatisticsCtrl.activeStatisticIndex, StatisticsCtrl.activeStatisticType)") Hent data
 
 div
