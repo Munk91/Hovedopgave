@@ -14,8 +14,6 @@ angular.module('statistics.routes', ['statistics'])
                 url: "/show/:statsIndexId/:statsTypeId",
                 templateUrl: "views/statistics/statisticsShow.html",
                 params: {
-                    squash: true,
-
                     statsIndexId: {
                         value: null,
                         squash: true
