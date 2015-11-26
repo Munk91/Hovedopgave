@@ -24,9 +24,13 @@ angular.module('statistics', ['statistic.service'])
             $stateParams.statsIndexId = statisticIndex;
             $stateParams.statsTypeId = statisticType;
 
-            showStatistics.query({statsIndexId : $stateParams.statsIndexId, statsTypeId : $stateParams.statsTypeId }).$promise.then(function(data) {
-                ctrl.statistics = data;
-            });
+            showStatistics.query({
+                statsIndexId : $stateParams.statsIndexId,
+                statsTypeId : $stateParams.statsTypeId
+                })
+                .$promise.then(function(data) {
+                    ctrl.statistics = data;
+                });
         };
 
         ctrl.getStatsTypes = function(selectedStatistic) {
