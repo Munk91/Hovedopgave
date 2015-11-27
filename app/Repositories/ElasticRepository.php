@@ -12,13 +12,13 @@ class ElasticRepository {
      * @return json
     */
     public static function index($jsonSchema) {
-        Helpers::printConsole($jsonSchema);
         $client = ClientBuilder::create()->build();
         $params = [
             'index' => $jsonSchema['index'],
             'type' => $jsonSchema['type'], 
-            'body' => [$jsonSchema['body']]
+            'body' => $jsonSchema['body']
         ];
+        error_log(print_r($params, true));
         return $client->index($params); 
     }
 

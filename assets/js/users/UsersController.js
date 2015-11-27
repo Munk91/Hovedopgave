@@ -33,10 +33,12 @@ angular.module('users', ['user.service', 'pull.service'])
             showAllUsers.query().$promise.then(function(data) {
                 ctrl.users = data;
             }).finally(function() {
-                console.log('test');
-                elasticIndex.save('jsonSchema', function(resp) {
-                    console.log("Response from POST: %j", resp);
-                });
+                var test = {
+                    'index': 'hesttest',
+                    'type': 'fest',
+                    'body': {'users': ctrl.users} 
+                };
+                elasticIndex.save(test);
               });
         };
 
