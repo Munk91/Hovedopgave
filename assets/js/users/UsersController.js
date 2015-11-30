@@ -1,4 +1,4 @@
-angular.module('users', ['user.service', 'pull.service'])
+angular.module('users', ['user.service', 'statistic.pull.service'])
     .controller('UsersController', function(showAllUsers, elasticIndex, deleteUser, $timeout) {
         ctrl = this;
         ctrl.error = "";
@@ -32,14 +32,7 @@ angular.module('users', ['user.service', 'pull.service'])
         getUsers = function() {
             showAllUsers.query().$promise.then(function(data) {
                 ctrl.users = data;
-            }).finally(function() {
-                var test = {
-                    'index': 'hesttest',
-                    'type': 'fest',
-                    'body': {'users': ctrl.users} 
-                };
-                elasticIndex.save(test);
-              });
+            });
         };
 
         init();

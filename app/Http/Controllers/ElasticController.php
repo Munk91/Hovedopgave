@@ -17,9 +17,6 @@ class ElasticController extends Controller {
      * @return json
      */
     public function index(Request $request) {
-        $index = $request->input('index');
-        $type = $request->input('type');
-        $body = $request->input('body');
         return ElasticRepository::index($request->json()->all());
     }
 

@@ -18,8 +18,7 @@ class ElasticRepository {
             'type' => $jsonSchema['type'], 
             'body' => $jsonSchema['body']
         ];
-        error_log(print_r($params, true));
-        return $client->index($params); 
+        $client->index($params); 
     }
 
     /*
@@ -33,9 +32,9 @@ class ElasticRepository {
         $client = ClientBuilder::create()->build();
         $params = [
             'index' => $index,
-            'type' => $type,
+            'type' => $type
         ];
 
-        return $client->get($params);
+        return $client->indices()->getMapping($params);
     }
 }
