@@ -1,9 +1,7 @@
 describe('StatisticsController', function() {
-    var $httpBackend;
-    var $stateParams;
-    var $state;
-    var showStatistics;
-    var ctrl;
+    var $httpBackend = null;
+    var $state = null;
+    var ctrl = null;
 
 
     beforeEach(function() { 
@@ -12,20 +10,14 @@ describe('StatisticsController', function() {
         inject(function(
             $controller,
             _$httpBackend_,
-            _showStatistics_,
-            _$stateParams_,
             _$state_
         ) {
             $httpBackend = _$httpBackend_;
-            showStatistics = _showStatistics_;
-            $stateParams = _$stateParams_;
             $state = _$state_;
 
             spyOn($state, 'go').and.returnValue({});
 
             ctrl = $controller('StatisticsController', {
-                showStatistics : showStatistics,
-                $stateParams : $stateParams,
                 $state : $state
             });
         });
@@ -33,7 +25,7 @@ describe('StatisticsController', function() {
 
     it('should go to current state on init of the controller', function() {
         expect(ctrl).not.toBe(null);
-        expect($state.go).toHaveBeenCalledWith($state.current, {'statsIndexId' : null, 'statsTypeId' : null});
+        expect($state.go).toHaveBeenCalledWith('.', {'statsIndexId' : null, 'statsTypeId' : null});
     });
 
     it('should fetch statistics from query request based on index and type', function() {
