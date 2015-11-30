@@ -29,7 +29,7 @@ angular.module('statistics', ['statistic.service'])
 
             showStatistics.query({
                 statsIndex : statsIndexId,
-                statsType : statsTypeId 
+                statsType : statsTypeId
                 })
                 .$promise.then(function(data) {
                     ctrl.statistics = data;
