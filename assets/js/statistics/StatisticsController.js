@@ -1,10 +1,8 @@
 angular.module('statistics', ['statistic.service'])
     .controller('StatisticsController', function(showStatistics, $stateParams, $state) {
         ctrl = this;
-        ctrl.activeStatisticIndex = 'Vælg statistik index';
-        ctrl.activeStatisticType = 'Vælg statistik type';
-        ctrl.activeStatisticTypeList = [];
 
+        // TODO: Dynamically load this data from the database on load
         ctrl.statistics = [
             {
                 'index' : 'MCstats',
@@ -20,7 +18,8 @@ angular.module('statistics', ['statistic.service'])
         statsTypeId = $stateParams.statsTypeId || null;
 
         init = function() {
-            $state.go($state.current, {'statsIndexId' : null, 'statsTypeId' : null});
+            $state.go('.', {'statsIndexId' : null, 'statsTypeId' : null});
+            setActiveDropdownValue();
         };
 
         ctrl.showStatistics = function(statisticIndex, statisticType) {
@@ -51,13 +50,18 @@ angular.module('statistics', ['statistic.service'])
         };
 
         setActiveDropdownValue = function() {
-            if(statsIndexId) {
+            if(ctrl.activeStatisticIndex) {
                 ctrl.activeStatisticIndex = statsIndexId;
-                if(statsTypeId) {
-                    ctrl.activeStatisticType = statsTypeId;
-                } else {
-                    ctrl.activeStatisticType = 'Vælg statistik type';
-                }
+                ctrl.typeButtonDisabled = false;
+            } else {
+                ctrl.activeStatisticIndex = 'Vælg statistik index'; 
+                ctrl.typeButtonDisabled = true;
+            }
+            if(statsTypeId) {
+                ctrl.activeStatisticType = statsTypeId;
+            }else {
+                ctrl.activeStatisticType = 'Vælg statistik type';
+                ctrl.getDataButtonDisabled = true;
             }
         };
 
