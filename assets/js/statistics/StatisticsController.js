@@ -31,7 +31,7 @@ angular.module('statistics', ['statistic.service'])
                 statsType : statsTypeId
                 })
                 .$promise.then(function(data) {
-                    ctrl.statistics = data;
+                    ctrl.fetchedData = data;
                 });
         };
 

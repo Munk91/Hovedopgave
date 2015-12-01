@@ -1,2 +1,11 @@
-div(ng-repeat="statistic in StatisticsCtrl.statistics")
-  {{ statistic }}
+div(ng-repeat="data in StatisticsCtrl.fetchedData")
+  h4(ng-bind="data.index")
+  h4(ng-bind="data.type")
+  h4(ng-bind="data.id")
+  div(ng-repeat="(key, value) in data.body)")
+    p
+      b Key of data
+    p(ng-bind="key")
+    p
+      b Value of data
+    p(ng-bind="value")
