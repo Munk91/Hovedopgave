@@ -17,6 +17,7 @@ class ElasticRepository {
             'type' => $jsonSchema['type'], 
             'body' => $jsonSchema['body']
         ];
+
         $client->index($params); 
     }
 
