@@ -3,7 +3,6 @@
 namespace App\Repositories;
 
 use Elasticsearch\ClientBuilder;
-use App\Helpers;
 
 class ElasticRepository {
     /*
