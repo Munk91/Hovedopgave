@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use Elasticsearch\ClientBuilder;
+use Illuminate\Http\Request;
 
 class ElasticRepository {
     /*
@@ -26,15 +27,20 @@ class ElasticRepository {
      *
      * @params string $index
      * @params string $type
-     * @return json
+     * @return json 
     */
-    public static function get($index, $type) {
+    public static function search($index, $type) {
         $client = ClientBuilder::create()->build();
         $params = [
             'index' => $index,
-            'type' => $type
+            'type' => $type,
+            'body' => [
+                'query' => [
+                    'match_all' => []
+                ]
+            ]
         ];
 
-        return $client->indices()->getMapping($params);
+        return $client->search($params);
     }
 }
