@@ -1,15 +1,15 @@
 .pull-data
   h3 Upload API endpoint
-    form(ng-submit="PullCtrl.pullData()")
+    form(ng-submit="PullCtrl.pullData(index, type, ApiUrl)")
       .form-group
         label(for="index") Index
-        input.form-control(type="text" id="index" placeholder="Index" ng-model="PullCtrl.index")
+        input.form-control(type="text" id="index" placeholder="Index" ng-model="index" required)
 
         label(for="type") Type
-        input.form-control(type="text" id="type" placeholder="Type" ng-model="PullCtrl.type")
+        input.form-control(type="text" id="type" placeholder="Type" ng-model="type" required)
 
         label(for="api") API URL
-        input.form-control(type="text" id="api" placeholder="API URL" ng-model="PullCtrl.APIURL")
+        input.form-control(type="text" id="api" placeholder="API URL" ng-model="ApiUrl" required)
 
         button.btn.btn-primary.validate-button(type="submit" ng-click="PullCtrl.ValidateAPIEndpoint()" ng-disabled="true") Validér API endpoint
         button.btn.btn-success.save-button(type="submit" ng-disabled="PullCtrl.saveButtonDisabled") Gem API endpoint 
