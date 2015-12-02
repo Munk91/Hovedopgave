@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Repositories\ElasticRepository;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use App\Helpers;
-use Log;
 
 class ElasticController extends Controller {
 
