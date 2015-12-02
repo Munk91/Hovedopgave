@@ -1,6 +1,6 @@
 angular.module('statistic.pull', ['statistic.pull.service'])
     .controller('PullController', function(elasticIndex, getApi) {
-        var ctrl = this; 
+        var ctrl = this;
         ctrl.pullData = function(api, index, type) {
             var apiData = null;
             getApi.query(api).$promise.then(function(data) {
@@ -9,7 +9,7 @@ angular.module('statistic.pull', ['statistic.pull.service'])
                 var params = {
                     'index': index,
                     'type': type,
-                    'body': {type: apiData} 
+                    'body': {type: apiData}
                 };
                 elasticIndex.save(params);
             });
