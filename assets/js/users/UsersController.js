@@ -1,5 +1,5 @@
-angular.module('users', ['user.service', 'pull.service'])
-    .controller('UsersController', function(showAllUsers, indexData, deleteUser, $timeout) {
+angular.module('users', ['user.service', 'statistic.pull.service'])
+    .controller('UsersController', function(showAllUsers, elasticIndex, deleteUser, $timeout) {
         ctrl = this;
         ctrl.error = "";
 
@@ -32,9 +32,6 @@ angular.module('users', ['user.service', 'pull.service'])
         getUsers = function() {
             showAllUsers.query().$promise.then(function(data) {
                 ctrl.users = data;
-            })
-            .finally(function() {
-                indexData.index(ctrl.users);
             });
         };
 

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Repository\ElasticRepository;
+use App\Repositories\ElasticRepository;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class ElasticController extends Controller {
 
@@ -13,7 +15,7 @@ class ElasticController extends Controller {
      * @return json
      */
     public function index(Request $request) {
-        return ElasticRepository::index($request->input('jsonSchema'));
+        return ElasticRepository::index($request->json()->all());
     }
 
     /*
