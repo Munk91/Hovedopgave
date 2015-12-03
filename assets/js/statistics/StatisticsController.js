@@ -5,8 +5,8 @@ angular.module('statistics', ['statistic.service'])
         // TODO: Dynamically load this data from the database on load
         ctrl.statistics = [
             {
-                'index' : 'MCstats',
-                'type' : ['Brugere', 'Test']
+                'index' : 'mcstats',
+                'type' : ['brugere', 'Test']
             },
             {
                 'index' : 'Andet',
@@ -21,23 +21,34 @@ angular.module('statistics', ['statistic.service'])
             $state.go('.', {'statsIndexId' : null, 'statsTypeId' : null});
             setActiveDropdownValue();
         };
+        filterData = function(list) {
+            ctrl.filteredList = _.map(list[0], function(value, key) {
+                return key;
+            });
+            ctrl.filteredValue = _.map(list, function(value, key) {
+                return value;
+            })
+        }
 
         ctrl.showStatistics = function(statisticIndex, statisticType) {
             statsIndexId = statisticIndex;
             statsTypeId = statisticType;
 
-            showStatistics.query({
+            showStatistics.get({
                 statsIndex : statsIndexId,
                 statsType : statsTypeId
                 })
                 .$promise.then(function(data) {
-                    ctrl.fetchedData = data;
+                    ctrl.fetchedData = data.hits.hits[0];
+                    filterData(ctrl.fetchedData._source.type);
+                    $state.go('.data');
                 });
         };
 
         ctrl.getStatsTypes = function(selectedStatistic) {
 
             // If index dropdown value changes, reset type dropdown and URL
+            $stateParams.statsIndexId = selectedStatistic.index;
             ctrl.activeStatisticTypeList = [];
             $state.go('.', {'statsIndexId' : selectedStatistic.index, 'statsTypeId' : null});
 

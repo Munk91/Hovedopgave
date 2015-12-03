@@ -26,7 +26,7 @@ class ElasticController extends Controller {
      * 
      * @return json
      */
-    public function get($index, $type) {
-        return ElasticRepository::get($index, $type);
+    public function search($index, $type) {
+        return response()->json(ElasticRepository::search($index, $type));
     }
 }

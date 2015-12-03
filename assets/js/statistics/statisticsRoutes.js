@@ -23,5 +23,8 @@ angular.module('statistic.show.routes', ['statistics'])
                         squash: true
                     }
                 }
+            })
+            .state('statistic.statistics.show.data', {
+                templateUrl: "views/statistics/showStatisticsGraph.html"
             });
     });
