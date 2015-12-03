@@ -1,25 +1,49 @@
 \select@language {danish}
-\contentsline {section}{Problemstilling}{2}
-\contentsline {subsection}{Overordnet emne}{2}
-\contentsline {subsection}{Delemne}{2}
-\contentsline {subsection}{Udgangspunkt}{2}
-\contentsline {subsection}{Sp\IeC {\o }rgsm\IeC {\r a}l}{2}
-\contentsline {subsubsection}{Datasp\IeC {\o }rgsm\IeC {\r a}l}{2}
-\contentsline {subsubsection}{Vurderingssp\IeC {\o }rgsm\IeC {\r a}l}{2}
-\contentsline {subsubsection}{Forklaringssp\IeC {\o }rgsm\IeC {\r a}l}{2}
-\contentsline {subsubsection}{Handlingssp\IeC {\o }rgsm\IeC {\r a}l}{3}
-\contentsline {subsection}{Problemstilling}{3}
-\contentsline {section}{Gruppekontrakt}{3}
-\contentsline {section}{Projektstyring}{4}
-\contentsline {subsection}{Scrum}{4}
-\contentsline {subsection}{Planl\IeC {\ae }gning}{4}
-\contentsline {subsection}{Review referater}{5}
-\contentsline {subsubsection}{Fredag d. 20/11}{5}
-\contentsline {section}{Kvalitetssikring}{5}
-\contentsline {section}{Produktbeskrivelse}{6}
-\contentsline {section}{}{6}
-\contentsline {section}{Teknologier}{6}
-\contentsline {subsection}{Problemstilling omkring h\IeC {\r a}ndtering af data}{6}
-\contentsline {section}{Database}{8}
-\contentsline {subsection}{Valg af database}{8}
-\contentsline {subsection}{ElasticSearch}{8}
+\contentsline {section}{Abstract}{3}{section*.2}
+\contentsline {section}{Resum\IeC {\'e}}{3}{section*.3}
+\contentsline {section}{Forord}{3}{section*.4}
+\contentsline {section}{L\IeC {\ae }sevejledning}{3}{section*.5}
+\contentsline {section}{Indledning}{3}{section*.6}
+\contentsline {section}{L\IeC {\ae }ringsm\IeC {\r a}l}{3}{section*.7}
+\contentsline {section}{Beskrivelse af virksomheden}{3}{section*.8}
+\contentsline {section}{Problemstilling}{3}{section*.9}
+\contentsline {subsection}{Overordnet emne}{3}{section*.10}
+\contentsline {subsection}{Delemne}{3}{section*.11}
+\contentsline {subsection}{Udgangspunkt}{3}{section*.12}
+\contentsline {subsection}{Sp\IeC {\o }rgsm\IeC {\r a}l}{3}{section*.13}
+\contentsline {subsubsection}{Datasp\IeC {\o }rgsm\IeC {\r a}l}{3}{section*.14}
+\contentsline {subsubsection}{Vurderingssp\IeC {\o }rgsm\IeC {\r a}l}{4}{section*.15}
+\contentsline {subsubsection}{Forklaringssp\IeC {\o }rgsm\IeC {\r a}l}{4}{section*.16}
+\contentsline {subsubsection}{Handlingssp\IeC {\o }rgsm\IeC {\r a}l}{4}{section*.17}
+\contentsline {subsection}{Problemstilling}{4}{section*.18}
+\contentsline {section}{Gruppekontrakt}{5}{section*.19}
+\contentsline {section}{Projektstyring}{5}{section*.20}
+\contentsline {subsection}{Scrum}{5}{section*.21}
+\contentsline {subsection}{Planl\IeC {\ae }gning}{5}{section*.22}
+\contentsline {subsection}{Review referater}{6}{section*.23}
+\contentsline {subsubsection}{Fredag d. 20/11}{6}{section*.24}
+\contentsline {section}{Kvalitetssikring}{7}{section*.25}
+\contentsline {section}{Produktbeskrivelse}{7}{section*.26}
+\contentsline {section}{Arbejdsmetoder}{8}{section*.27}
+\contentsline {section}{Use cases}{8}{section*.28}
+\contentsline {subsection}{Use case diagram}{8}{section*.29}
+\contentsline {subsection}{Use case beskrivelser}{8}{section*.30}
+\contentsline {section}{Systemarkitektur}{8}{section*.31}
+\contentsline {section}{Teknologier}{8}{section*.32}
+\contentsline {subsection}{Laravel}{9}{section*.33}
+\contentsline {subsection}{AngularJS}{9}{section*.34}
+\contentsline {subsection}{Google Chart API}{10}{section*.35}
+\contentsline {subsection}{Problemstilling omkring h\IeC {\r a}ndtering af data}{10}{section*.36}
+\contentsline {section}{Testing}{11}{section*.37}
+\contentsline {subsection}{Hvad er testing}{11}{section*.38}
+\contentsline {subsection}{Jasmine}{11}{section*.39}
+\contentsline {subsection}{PHPUnit}{12}{section*.40}
+\contentsline {section}{Database}{12}{section*.41}
+\contentsline {subsection}{Valg af database}{13}{section*.42}
+\contentsline {subsection}{ElasticSearch}{13}{section*.43}
+\contentsline {subsection}{Normalisering}{14}{section*.44}
+\contentsline {section}{Konklusion}{15}{section*.45}
+\contentsline {section}{Refleksion}{15}{section*.46}
+\contentsline {section}{Perspektivering}{15}{section*.47}
+\contentsline {section}{Litteraturliste}{15}{section*.48}
+\contentsline {section}{Bilag}{15}{section*.49}
