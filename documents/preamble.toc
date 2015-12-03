@@ -1,25 +1,48 @@
 \select@language {danish}
-\contentsline {section}{Problemstilling}{2}
-\contentsline {subsection}{Overordnet emne}{2}
-\contentsline {subsection}{Delemne}{2}
-\contentsline {subsection}{Udgangspunkt}{2}
-\contentsline {subsection}{Sp\IeC {\o }rgsm\IeC {\r a}l}{2}
-\contentsline {subsubsection}{Datasp\IeC {\o }rgsm\IeC {\r a}l}{2}
-\contentsline {subsubsection}{Vurderingssp\IeC {\o }rgsm\IeC {\r a}l}{2}
-\contentsline {subsubsection}{Forklaringssp\IeC {\o }rgsm\IeC {\r a}l}{2}
-\contentsline {subsubsection}{Handlingssp\IeC {\o }rgsm\IeC {\r a}l}{3}
-\contentsline {subsection}{Problemstilling}{3}
-\contentsline {section}{Gruppekontrakt}{3}
-\contentsline {section}{Projektstyring}{4}
-\contentsline {subsection}{Scrum}{4}
-\contentsline {subsection}{Planl\IeC {\ae }gning}{4}
-\contentsline {subsection}{Review referater}{5}
-\contentsline {subsubsection}{Fredag d. 20/11}{5}
-\contentsline {section}{Kvalitetssikring}{5}
-\contentsline {section}{Produktbeskrivelse}{6}
-\contentsline {section}{}{6}
-\contentsline {section}{Teknologier}{6}
-\contentsline {subsection}{Problemstilling omkring h\IeC {\r a}ndtering af data}{6}
-\contentsline {section}{Database}{8}
-\contentsline {subsection}{Valg af database}{8}
-\contentsline {subsection}{ElasticSearch}{8}
+\contentsline {section}{Abstract}{3}
+\contentsline {section}{Resum\IeC {\'e}}{3}
+\contentsline {section}{Forord}{3}
+\contentsline {section}{L\IeC {\ae }sevejledning}{3}
+\contentsline {section}{Indledning}{3}
+\contentsline {section}{L\IeC {\ae }ringsm\IeC {\r a}l}{3}
+\contentsline {section}{Beskrivelse af virksomheden}{3}
+\contentsline {section}{Problemstilling}{3}
+\contentsline {subsection}{Overordnet emne}{3}
+\contentsline {subsection}{Delemne}{3}
+\contentsline {subsection}{Udgangspunkt}{3}
+\contentsline {subsection}{Sp\IeC {\o }rgsm\IeC {\r a}l}{3}
+\contentsline {subsubsection}{Datasp\IeC {\o }rgsm\IeC {\r a}l}{3}
+\contentsline {subsubsection}{Vurderingssp\IeC {\o }rgsm\IeC {\r a}l}{4}
+\contentsline {subsubsection}{Forklaringssp\IeC {\o }rgsm\IeC {\r a}l}{4}
+\contentsline {subsubsection}{Handlingssp\IeC {\o }rgsm\IeC {\r a}l}{4}
+\contentsline {subsection}{Problemstilling}{4}
+\contentsline {section}{Gruppekontrakt}{5}
+\contentsline {section}{Projektstyring}{5}
+\contentsline {subsection}{Scrum}{5}
+\contentsline {subsection}{Planl\IeC {\ae }gning}{5}
+\contentsline {subsection}{Review referater}{6}
+\contentsline {subsubsection}{Fredag d. 20/11}{6}
+\contentsline {section}{Kvalitetssikring}{7}
+\contentsline {section}{Produktbeskrivelse}{7}
+\contentsline {section}{Arbejdsmetoder}{8}
+\contentsline {section}{Use cases}{8}
+\contentsline {subsection}{Use case diagram}{8}
+\contentsline {subsection}{Use case beskrivelser}{8}
+\contentsline {section}{Arkitektur}{8}
+\contentsline {subsection}{Systemarkitektur}{8}
+\contentsline {subsection}{Klassediagram}{9}
+\contentsline {subsection}{Sekvensdiagram}{9}
+\contentsline {section}{Teknologier}{9}
+\contentsline {subsection}{Programmeringssprog}{9}
+\contentsline {subsubsection}{Backend}{9}
+\contentsline {subsubsection}{Frontend}{9}
+\contentsline {subsection}{Testing}{9}
+\contentsline {subsection}{Problemstilling omkring h\IeC {\r a}ndtering af data}{9}
+\contentsline {section}{Database}{10}
+\contentsline {subsection}{Valg af database}{10}
+\contentsline {subsection}{ElasticSearch}{10}
+\contentsline {section}{Konklusion}{11}
+\contentsline {section}{Refleksion}{11}
+\contentsline {section}{Perspektivering}{11}
+\contentsline {section}{Litteraturliste}{11}
+\contentsline {section}{Bilag}{11}
