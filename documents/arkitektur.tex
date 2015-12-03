@@ -1,10 +1,16 @@
-\section{}
-Vi har valgt at bruge AngularJS i frontend og derfra kalde RESTful APIs i backenden. I figur~\ref{fig:arkitektur} 
-kan man se hvordan det samlede system kommer til at se ud, hvor vores middleware/routing lag kalder backenden,
-som returnere et view, med de dataer, der skal bruges.
-Vi lavede denne arkitektur ud fra GRASP principperne og imødekomme object orienteret programmering
+\section{Systemarkitektur}
+Vores systemarkitektur er opdelt i frontend, backend.
+De to ender af systemet kan kommunikere da vi har valgt at lave et RESTful API til vores server.
+Klienten kan derfor kalde forskellige API'er på serveren og modtage data på den måde.
+\\\\
+Vores frontend er bygget op omkring \hyperlink{AngularJS}{AngularJS}, som giver os en MVC struktur.
+Det samme gør sig gældende på vores server, da vores backend er bygget op efter \hyperlink{Laravel}{Laravels} MVC struktur.
+De strukturer som de forskellige frameworks giver os, er grundstenen i hele vores systemarkitektur. Sammen med det sammenspil mellem vores frontend og backend via et RESTful API.\@
+\\\\
+Vi har lavet en figur der viser vores systemarkitektur, som er bygget ud fra GRASP principperne og som imødekommer definitionen af objekt orienteret programmering.\\
+Brugeren får præsenteret et \textit{view}, som bliver styret af en frontend \textit{controller}. Denne controller står samtidig for at kommunikere med noget middleware som er laget mellem frontend og backend, dette lag står bla. for validering, routing og service kald. Via en route bliver en \textit{controller} på serveren kaldt, som står for at kommunikere med repository, der er en form for data-access lag der kender til en model og data. Repository og model lag er primært indbyggede \hyperlink{Laravel}{Laravel} funktioner, som blandt andet anvender deres ORM, \href{http://laravel.com/docs/5.1/eloquent}{Eloquent}.
 \begin{figure}[here]
 \includegraphics[scale=0.5]{Arkitektur}
-\caption{Vores valgte arkitektur for både frontend og backend}
+\caption{Vores samlede systemarkitektur}
 \label{fig:arkitektur}
 \end{figure}
