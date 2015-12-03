@@ -1,8 +1,11 @@
 h4(ng-bind="StatisticsCtrl.fetchedData._index")
 h4(ng-bind="StatisticsCtrl.fetchedData._type")
 h4(ng-bind="StatisticsCtrl.fetchedData._id")
-div(ng-repeat="data in StatisticsCtrl.fetchedData._source.type")
-  table
-    tbody(ng-repeat="(key, value) in data")
+table.table.table-striped
+  thead
+    tr(ng-repeat="key in StatisticsCtrl.filteredList")
       th(ng-bind="key")
+  tbody
+    tr(ng-repeat="value in StatisticsCtrl.filteredValue")
       td(ng-bind="value")
+

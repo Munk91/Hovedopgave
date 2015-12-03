@@ -22,11 +22,12 @@ angular.module('statistics', ['statistic.service'])
             setActiveDropdownValue();
         };
         filterData = function(list) {
-            flist = _.map(list);
-            ctrl.filteredList = _.filter(flist[0], function(k, v) {
-                return k
+            ctrl.filteredList = _.map(list[0], function(value, key) {
+                return key;
             });
-            console.log(ctrl.filteredList)
+            ctrl.filteredValue = _.map(list, function(value, key) {
+                return value;
+            })
         }
 
         ctrl.showStatistics = function(statisticIndex, statisticType) {
@@ -38,7 +39,6 @@ angular.module('statistics', ['statistic.service'])
                 statsType : statsTypeId
                 })
                 .$promise.then(function(data) {
-                    console.log(data);
                     ctrl.fetchedData = data.hits.hits[0];
                     filterData(ctrl.fetchedData._source.type);
                     $state.go('.data');
