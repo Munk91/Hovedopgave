@@ -22,8 +22,9 @@
 \contentsline {subsection}{Planl\IeC {\ae }gning}{5}
 \contentsline {subsection}{Review referater}{6}
 \contentsline {subsubsection}{Fredag d. 20/11}{6}
+\contentsline {subsubsection}{Fredag d. 4/12}{7}
 \contentsline {section}{Kvalitetssikring}{7}
-\contentsline {section}{Produktbeskrivelse}{7}
+\contentsline {section}{Produktbeskrivelse}{8}
 \contentsline {section}{Arbejdsmetoder}{8}
 \contentsline {section}{Use cases}{8}
 \contentsline {subsection}{Use case diagram}{8}
@@ -40,7 +41,7 @@
 \contentsline {subsection}{Problemstilling omkring h\IeC {\r a}ndtering af data}{9}
 \contentsline {section}{Database}{10}
 \contentsline {subsection}{Valg af database}{10}
-\contentsline {subsection}{ElasticSearch}{10}
+\contentsline {subsection}{ElasticSearch}{11}
 \contentsline {section}{Konklusion}{11}
 \contentsline {section}{Refleksion}{11}
 \contentsline {section}{Perspektivering}{11}
