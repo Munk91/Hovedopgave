@@ -1,5 +1,5 @@
-angular.module('statistics', ['statistic.service'])
-    .controller('StatisticsController', function(showStatistics, $stateParams, $state) {
+angular.module('statistics', ['statistic.service', 'googlechart'])
+    .controller('StatisticsController', function(showStatistics, $scope,  $stateParams, $state) {
         ctrl = this;
 
         // TODO: Dynamically load this data from the database on load
@@ -29,6 +29,49 @@ angular.module('statistics', ['statistic.service'])
                 return value;
             })
         }
+        ctrl.drawChart = function(chart, data, title) {
+            var title = title || "Title not set";
+            var dummychart = "PieChart";
+            var dummydata = [
+                {
+                    "cols": 
+                        {
+                            label: "test", type: "string"
+                        },
+                    
+                    "rows": 
+                        {
+                            c: [{v: "test"}, {v: 30}]
+                        }
+                    
+                },
+                {
+                    "cols": 
+                        {
+                            label: "fest", type: "number"
+                        },
+                    
+                    "rows": 
+                        {
+                            c: [{v: "hestmeste"}, {v: 100}]
+                        }
+                }
+            ];
+            var cols = [];
+            var rows = [];
+            ctrl.chartObject = {};
+            ctrl.chartObject.type = dummychart; 
+
+            angular.forEach(dummydata, function(value, key) {
+                cols.push(value.cols);
+                rows.push(value.rows);
+            });
+
+            ctrl.chartObject.data = {"cols": cols, "rows": rows}
+            ctrl.chartObject.options = {
+                'title': title 
+            };
+        };
 
         ctrl.showStatistics = function(statisticIndex, statisticType) {
             statsIndexId = statisticIndex;
