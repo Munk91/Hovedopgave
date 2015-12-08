@@ -18,5 +18,12 @@ $app->group(['prefix' => 'api', 'namespace' => 'App\Http\Controllers'], function
     $app->delete('deleteUser', 'UserController@deleteUser');
     $app->post('elasticIndex', 'ElasticController@index');
     $app->get('elasticGet/{index}/{type}', 'ElasticController@search');
+    $app->get('testRemoteApi/{apiUrl}', 'ApiController@testRemoteApi');
+    $app->post('saveRemoteApi', 'ApiController@saveRemoteApi');
+
+    // API's for test purposes (returns json results)
+    $app->get('test/year', 'ApiController@testYear');
+    $app->get('test/month', 'ApiController@testMonth');
+    $app->get('test/day', 'ApiController@testDay');
 });
 

@@ -7,12 +7,15 @@ use Illuminate\Http\Request;
 
 class ElasticRepository {
     /*
-     * index a json scheme in Elasticsearch
-     * @params json $jsonSchema
+     * Index a json schema in ElasticSearch
+     *
+     * @param json $jsonSchema
+     *
      * @return json
     */
     public static function index($jsonSchema) {
         $client = ClientBuilder::create()->build();
+        
         $params = [
             'index' => $jsonSchema['index'],
             'type' => $jsonSchema['type'], 
