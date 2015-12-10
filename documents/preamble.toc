@@ -15,14 +15,15 @@
 \contentsline {subsection}{Planl\IeC {\ae }gning}{4}{section*.15}
 \contentsline {subsection}{Review referater}{5}{section*.16}
 \contentsline {subsubsection}{Fredag d. 20/11}{5}{section*.17}
-\contentsline {section}{Kvalitetssikring}{5}{section*.18}
-\contentsline {section}{Produktbeskrivelse}{6}{section*.19}
-\contentsline {section}{Systemarkitektur}{6}{section*.20}
-\contentsline {section}{Teknologier}{6}{section*.21}
-\contentsline {subsection}{Google Chart API}{6}{section*.22}
-\contentsline {subsection}{AngularJS}{7}{section*.23}
-\contentsline {subsection}{Laravel}{7}{section*.24}
-\contentsline {subsection}{Problemstilling omkring h\IeC {\r a}ndtering af data}{7}{section*.25}
-\contentsline {section}{Database}{8}{section*.26}
-\contentsline {subsection}{Valg af database}{8}{section*.27}
-\contentsline {subsection}{ElasticSearch}{9}{section*.28}
+\contentsline {subsubsection}{Fredag d. 4/12}{5}{section*.18}
+\contentsline {section}{Kvalitetssikring}{6}{section*.19}
+\contentsline {section}{Produktbeskrivelse}{6}{section*.20}
+\contentsline {section}{Systemarkitektur}{6}{section*.21}
+\contentsline {section}{Teknologier}{8}{section*.22}
+\contentsline {subsection}{Google Chart API}{8}{section*.23}
+\contentsline {subsection}{AngularJS}{8}{section*.24}
+\contentsline {subsection}{Laravel}{8}{section*.25}
+\contentsline {subsection}{Problemstilling omkring h\IeC {\r a}ndtering af data}{8}{section*.26}
+\contentsline {section}{Database}{9}{section*.27}
+\contentsline {subsection}{Valg af database}{9}{section*.28}
+\contentsline {subsection}{ElasticSearch}{9}{section*.29}
