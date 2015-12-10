@@ -7,31 +7,31 @@
 \contentsline {section}{L\IeC {\ae }ringsm\IeC {\r a}l}{3}
 \contentsline {section}{Beskrivelse af virksomheden}{3}
 \contentsline {subsection}{Ordbogen A/S}{3}
-\contentsline {section}{Problemstilling}{3}
-\contentsline {subsection}{Overordnet emne}{3}
-\contentsline {subsection}{Delemne}{3}
-\contentsline {subsection}{Udgangspunkt}{3}
+\contentsline {section}{Problemstilling}{4}
+\contentsline {subsection}{Overordnet emne}{4}
+\contentsline {subsection}{Delemne}{4}
+\contentsline {subsection}{Udgangspunkt}{4}
 \contentsline {subsection}{Sp\IeC {\o }rgsm\IeC {\r a}l}{4}
 \contentsline {subsubsection}{Datasp\IeC {\o }rgsm\IeC {\r a}l}{4}
 \contentsline {subsubsection}{Vurderingssp\IeC {\o }rgsm\IeC {\r a}l}{4}
 \contentsline {subsubsection}{Forklaringssp\IeC {\o }rgsm\IeC {\r a}l}{4}
-\contentsline {subsubsection}{Handlingssp\IeC {\o }rgsm\IeC {\r a}l}{4}
+\contentsline {subsubsection}{Handlingssp\IeC {\o }rgsm\IeC {\r a}l}{5}
 \contentsline {subsection}{Problemstilling}{5}
 \contentsline {section}{Gruppekontrakt}{5}
-\contentsline {section}{Projektstyring}{5}
-\contentsline {subsection}{Scrum}{5}
+\contentsline {section}{Projektstyring}{6}
+\contentsline {subsection}{Scrum}{6}
 \contentsline {subsection}{Planl\IeC {\ae }gning}{6}
-\contentsline {subsection}{Review referater}{6}
+\contentsline {subsection}{Review referater}{7}
 \contentsline {subsubsection}{Fredag d. 20/11}{7}
 \contentsline {subsubsection}{Fredag d. 4/12}{7}
 \contentsline {section}{Kvalitetssikring}{8}
 \contentsline {section}{Produktbeskrivelse}{8}
-\contentsline {section}{Arbejdsmetoder}{8}
-\contentsline {section}{Use cases}{8}
-\contentsline {subsection}{Use case diagram}{8}
-\contentsline {subsection}{Use case beskrivelser}{8}
-\contentsline {section}{Arkitektur}{8}
-\contentsline {subsection}{Systemarkitektur}{8}
+\contentsline {section}{Arbejdsmetoder}{9}
+\contentsline {section}{Use cases}{9}
+\contentsline {subsection}{Use case diagram}{9}
+\contentsline {subsection}{Use case beskrivelser}{9}
+\contentsline {section}{Arkitektur}{9}
+\contentsline {subsection}{Systemarkitektur}{9}
 \contentsline {subsection}{Klassediagram}{10}
 \contentsline {subsection}{Sekvensdiagram}{10}
 \contentsline {section}{Teknologier}{10}
