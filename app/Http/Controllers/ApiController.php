@@ -83,7 +83,10 @@ class ApiController extends Controller {
         try {
             $response = $client->get($decodedUrl, ['timeout' => 5, 'exceptions' => false]);
         } catch (Exception $e) {
-            return response()->json(['error' => $decodeUrl . ' kunne ikke kontaktes. Prøv igen, eller tjek om det er den korrekte API URL der er angivet.']);
+            return response()->json([
+                'error' => $decodeUrl
+                . ' kunne ikke kontaktes. Prøv igen, eller tjek om det er den korrekte API URL der er angivet.'
+            ]);
         }
 
         $responseHeader = $response->getHeader('content-type')[0];

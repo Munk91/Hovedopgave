@@ -41,9 +41,7 @@ class UserController extends Controller {
      */
     public function deleteUser(Request $request) {
         try {
-            $response = UserRepository::deleteUser($request->input('id'));
-
-            return $response;
+            return UserRepository::deleteUser($request->input('id'));
         } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
             return response()->json(['message' => 'Brugeren findes ikke']);
         }
