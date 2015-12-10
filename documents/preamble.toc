@@ -6,24 +6,25 @@
 \contentsline {section}{Indledning}{3}
 \contentsline {section}{L\IeC {\ae }ringsm\IeC {\r a}l}{3}
 \contentsline {section}{Beskrivelse af virksomheden}{3}
+\contentsline {subsection}{Ordbogen A/S}{3}
 \contentsline {section}{Problemstilling}{3}
 \contentsline {subsection}{Overordnet emne}{3}
 \contentsline {subsection}{Delemne}{3}
 \contentsline {subsection}{Udgangspunkt}{3}
-\contentsline {subsection}{Sp\IeC {\o }rgsm\IeC {\r a}l}{3}
-\contentsline {subsubsection}{Datasp\IeC {\o }rgsm\IeC {\r a}l}{3}
+\contentsline {subsection}{Sp\IeC {\o }rgsm\IeC {\r a}l}{4}
+\contentsline {subsubsection}{Datasp\IeC {\o }rgsm\IeC {\r a}l}{4}
 \contentsline {subsubsection}{Vurderingssp\IeC {\o }rgsm\IeC {\r a}l}{4}
 \contentsline {subsubsection}{Forklaringssp\IeC {\o }rgsm\IeC {\r a}l}{4}
 \contentsline {subsubsection}{Handlingssp\IeC {\o }rgsm\IeC {\r a}l}{4}
-\contentsline {subsection}{Problemstilling}{4}
+\contentsline {subsection}{Problemstilling}{5}
 \contentsline {section}{Gruppekontrakt}{5}
 \contentsline {section}{Projektstyring}{5}
 \contentsline {subsection}{Scrum}{5}
-\contentsline {subsection}{Planl\IeC {\ae }gning}{5}
+\contentsline {subsection}{Planl\IeC {\ae }gning}{6}
 \contentsline {subsection}{Review referater}{6}
-\contentsline {subsubsection}{Fredag d. 20/11}{6}
+\contentsline {subsubsection}{Fredag d. 20/11}{7}
 \contentsline {subsubsection}{Fredag d. 4/12}{7}
-\contentsline {section}{Kvalitetssikring}{7}
+\contentsline {section}{Kvalitetssikring}{8}
 \contentsline {section}{Produktbeskrivelse}{8}
 \contentsline {section}{Arbejdsmetoder}{8}
 \contentsline {section}{Use cases}{8}
@@ -31,19 +32,19 @@
 \contentsline {subsection}{Use case beskrivelser}{8}
 \contentsline {section}{Arkitektur}{8}
 \contentsline {subsection}{Systemarkitektur}{8}
-\contentsline {subsection}{Klassediagram}{9}
-\contentsline {subsection}{Sekvensdiagram}{9}
-\contentsline {section}{Teknologier}{9}
-\contentsline {subsection}{Programmeringssprog}{9}
-\contentsline {subsubsection}{Backend}{9}
-\contentsline {subsubsection}{Frontend}{9}
-\contentsline {subsection}{Testing}{9}
-\contentsline {subsection}{Problemstilling omkring h\IeC {\r a}ndtering af data}{9}
-\contentsline {section}{Database}{10}
-\contentsline {subsection}{Valg af database}{10}
+\contentsline {subsection}{Klassediagram}{10}
+\contentsline {subsection}{Sekvensdiagram}{10}
+\contentsline {section}{Teknologier}{10}
+\contentsline {subsection}{Programmeringssprog}{10}
+\contentsline {subsubsection}{Backend}{10}
+\contentsline {subsubsection}{Frontend}{10}
+\contentsline {subsection}{Testing}{10}
+\contentsline {subsection}{Problemstilling omkring h\IeC {\r a}ndtering af data}{10}
+\contentsline {section}{Database}{11}
+\contentsline {subsection}{Valg af database}{11}
 \contentsline {subsection}{ElasticSearch}{11}
-\contentsline {section}{Konklusion}{11}
-\contentsline {section}{Refleksion}{11}
-\contentsline {section}{Perspektivering}{11}
-\contentsline {section}{Litteraturliste}{11}
-\contentsline {section}{Bilag}{11}
+\contentsline {section}{Konklusion}{12}
+\contentsline {section}{Refleksion}{12}
+\contentsline {section}{Perspektivering}{12}
+\contentsline {section}{Litteraturliste}{12}
+\contentsline {section}{Bilag}{12}
