@@ -1,4 +1,5 @@
 \select@language {danish}
+<<<<<<< HEAD
 \contentsline {section}{Abstract}{3}{section*.2}
 \contentsline {section}{Resum\IeC {\'e}}{3}{section*.3}
 \contentsline {section}{Forord}{3}{section*.4}
@@ -47,3 +48,33 @@
 \contentsline {section}{Perspektivering}{15}{section*.47}
 \contentsline {section}{Litteraturliste}{15}{section*.48}
 \contentsline {section}{Bilag}{15}{section*.49}
+=======
+\contentsline {section}{Problemstilling}{2}{section*.2}
+\contentsline {subsection}{Overordnet emne}{2}{section*.3}
+\contentsline {subsection}{Delemne}{2}{section*.4}
+\contentsline {subsection}{Udgangspunkt}{2}{section*.5}
+\contentsline {subsection}{Sp\IeC {\o }rgsm\IeC {\r a}l}{2}{section*.6}
+\contentsline {subsubsection}{Datasp\IeC {\o }rgsm\IeC {\r a}l}{2}{section*.7}
+\contentsline {subsubsection}{Vurderingssp\IeC {\o }rgsm\IeC {\r a}l}{2}{section*.8}
+\contentsline {subsubsection}{Forklaringssp\IeC {\o }rgsm\IeC {\r a}l}{2}{section*.9}
+\contentsline {subsubsection}{Handlingssp\IeC {\o }rgsm\IeC {\r a}l}{3}{section*.10}
+\contentsline {subsection}{Problemstilling}{3}{section*.11}
+\contentsline {section}{Gruppekontrakt}{3}{section*.12}
+\contentsline {section}{Projektstyring}{4}{section*.13}
+\contentsline {subsection}{Scrum}{4}{section*.14}
+\contentsline {subsection}{Planl\IeC {\ae }gning}{4}{section*.15}
+\contentsline {subsection}{Review referater}{5}{section*.16}
+\contentsline {subsubsection}{Fredag d. 20/11}{5}{section*.17}
+\contentsline {subsubsection}{Fredag d. 4/12}{5}{section*.18}
+\contentsline {section}{Kvalitetssikring}{6}{section*.19}
+\contentsline {section}{Produktbeskrivelse}{6}{section*.20}
+\contentsline {section}{Systemarkitektur}{6}{section*.21}
+\contentsline {section}{Teknologier}{8}{section*.22}
+\contentsline {subsection}{Google Chart API}{8}{section*.23}
+\contentsline {subsection}{AngularJS}{8}{section*.24}
+\contentsline {subsection}{Laravel}{8}{section*.25}
+\contentsline {subsection}{Problemstilling omkring h\IeC {\r a}ndtering af data}{8}{section*.26}
+\contentsline {section}{Database}{9}{section*.27}
+\contentsline {subsection}{Valg af database}{9}{section*.28}
+\contentsline {subsection}{ElasticSearch}{9}{section*.29}
+>>>>>>> New frontpage and company description
