@@ -30,21 +30,21 @@
 \contentsline {section}{Use cases}{9}
 \contentsline {subsection}{Use case diagram}{9}
 \contentsline {subsection}{Use case - Gem API endpoint}{9}
-\contentsline {section}{Arkitektur}{9}
-\contentsline {subsection}{Systemarkitektur}{9}
-\contentsline {subsection}{Klassediagram}{10}
-\contentsline {subsection}{Sekvensdiagram}{10}
-\contentsline {section}{Teknologier}{10}
-\contentsline {subsection}{Programmeringssprog}{10}
-\contentsline {subsubsection}{Backend}{10}
-\contentsline {subsubsection}{Frontend}{10}
-\contentsline {subsection}{Testing}{10}
-\contentsline {subsection}{Problemstilling omkring h\IeC {\r a}ndtering af data}{10}
-\contentsline {section}{Database}{11}
-\contentsline {subsection}{Valg af database}{11}
-\contentsline {subsection}{ElasticSearch}{12}
-\contentsline {section}{Konklusion}{12}
-\contentsline {section}{Refleksion}{12}
-\contentsline {section}{Perspektivering}{12}
-\contentsline {section}{Litteraturliste}{12}
-\contentsline {section}{Bilag}{12}
+\contentsline {section}{Arkitektur}{10}
+\contentsline {subsection}{Systemarkitektur}{10}
+\contentsline {subsection}{Klassediagram}{11}
+\contentsline {subsection}{Sekvensdiagram}{11}
+\contentsline {section}{Teknologier}{11}
+\contentsline {subsection}{Programmeringssprog}{11}
+\contentsline {subsubsection}{Backend}{11}
+\contentsline {subsubsection}{Frontend}{11}
+\contentsline {subsection}{Testing}{11}
+\contentsline {subsection}{Problemstilling omkring h\IeC {\r a}ndtering af data}{11}
+\contentsline {section}{Database}{12}
+\contentsline {subsection}{Valg af database}{12}
+\contentsline {subsection}{ElasticSearch}{13}
+\contentsline {section}{Konklusion}{13}
+\contentsline {section}{Refleksion}{13}
+\contentsline {section}{Perspektivering}{13}
+\contentsline {section}{Litteraturliste}{13}
+\contentsline {section}{Bilag}{13}
