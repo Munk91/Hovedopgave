@@ -1,5 +1,5 @@
 angular.module('statistics', ['statistic.service', 'googlechart'])
-    .controller('StatisticsController', function(showStatistics, $scope,  $stateParams, $state) {
+    .controller('StatisticsController', function(showStatistics, $stateParams, $state) {
         ctrl = this;
 
         // TODO: Dynamically load this data from the database on load
@@ -46,10 +46,9 @@ angular.module('statistics', ['statistic.service', 'googlechart'])
                 width: 400,
                 height: 200,
                 is3D: true,
-                chartArea: {height:"100%"},
                 title: title 
             };
-            ctrl.chart = chartObject
+            ctrl.chart = chartObject;
         };
 
         ctrl.showStatistics = function(statisticIndex, statisticType) {
