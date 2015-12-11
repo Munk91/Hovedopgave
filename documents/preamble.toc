@@ -20,11 +20,15 @@
 \contentsline {section}{Kvalitetssikring}{6}{section*.20}
 \contentsline {section}{Produktbeskrivelse}{6}{section*.21}
 \contentsline {section}{Systemarkitektur}{7}{section*.22}
-\contentsline {section}{Teknologier}{7}{section*.23}
-\contentsline {subsection}{Google Chart API}{7}{section*.24}
-\contentsline {subsection}{AngularJS}{8}{section*.25}
-\contentsline {subsection}{Laravel}{8}{section*.26}
-\contentsline {subsection}{Problemstilling omkring h\IeC {\r a}ndtering af data}{8}{section*.27}
-\contentsline {section}{Database}{9}{section*.28}
-\contentsline {subsection}{Valg af database}{9}{section*.29}
-\contentsline {subsection}{ElasticSearch}{10}{section*.30}
+\contentsline {section}{Arkitektur}{7}{section*.23}
+\contentsline {subsection}{Systemarkitektur}{7}{section*.24}
+\contentsline {subsection}{Klassediagram}{7}{section*.25}
+\contentsline {subsection}{Sekvensdiagram}{8}{section*.26}
+\contentsline {section}{Teknologier}{9}{section*.27}
+\contentsline {subsection}{Google Chart API}{9}{section*.28}
+\contentsline {subsection}{AngularJS}{9}{section*.29}
+\contentsline {subsection}{Laravel}{9}{section*.30}
+\contentsline {subsection}{Problemstilling omkring h\IeC {\r a}ndtering af data}{9}{section*.31}
+\contentsline {section}{Database}{10}{section*.32}
+\contentsline {subsection}{Valg af database}{10}{section*.33}
+\contentsline {subsection}{ElasticSearch}{11}{section*.34}
