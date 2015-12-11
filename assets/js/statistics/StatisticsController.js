@@ -33,44 +33,23 @@ angular.module('statistics', ['statistic.service', 'googlechart'])
             var title = title || "Title not set";
             var dummychart = "PieChart";
             var dummydata = [
-                {
-                    "cols": 
-                        {
-                            label: "test", type: "string"
-                        },
-                    
-                    "rows": 
-                        {
-                            c: [{v: "test"}, {v: 30}]
-                        }
-                    
-                },
-                {
-                    "cols": 
-                        {
-                            label: "fest", type: "number"
-                        },
-                    
-                    "rows": 
-                        {
-                            c: [{v: "hestmeste"}, {v: 100}]
-                        }
-                }
+                ['Test', 'test'],
+                ['fest', 100],
+                ['testmest', 1000]
             ];
-            var cols = [];
-            var rows = [];
-            ctrl.chartObject = {};
-            ctrl.chartObject.type = dummychart; 
+            chartObject = {};
+            chartObject.type = dummychart; 
 
-            angular.forEach(dummydata, function(value, key) {
-                cols.push(value.cols);
-                rows.push(value.rows);
-            });
-
-            ctrl.chartObject.data = {"cols": cols, "rows": rows}
-            ctrl.chartObject.options = {
-                'title': title 
+            chartObject.data = dummydata 
+            chartObject.options = {
+                displayExactValues: true,
+                width: 400,
+                height: 200,
+                is3D: true,
+                chartArea: {height:"100%"},
+                title: title 
             };
+            ctrl.chart = chartObject
         };
 
         ctrl.showStatistics = function(statisticIndex, statisticType) {
