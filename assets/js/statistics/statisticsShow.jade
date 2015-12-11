@@ -14,4 +14,5 @@ h3 Statistikker
           a(ng-click="StatisticsCtrl.activeStatisticType = statsType; StatisticsCtrl.getDataButtonDisabled = false" ng-bind="statsType" ui-sref="statistic.statistics.show({statsTypeId : statsType})")
       button.btn.btn-success.get-stats(type="button", id="getStatistics" ng-click="StatisticsCtrl.showStatistics(StatisticsCtrl.activeStatisticIndex, StatisticsCtrl.activeStatisticType)" ng-disabled="StatisticsCtrl.getDataButtonDisabled") Hent data
 
+div(google-chart chart="StatisticsCtrl.chart")
 <div ui-view></div>

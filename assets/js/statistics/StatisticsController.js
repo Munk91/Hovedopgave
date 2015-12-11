@@ -1,4 +1,4 @@
-angular.module('statistics', ['statistic.service'])
+angular.module('statistics', ['statistic.service', 'googlechart'])
     .controller('StatisticsController', function(showStatistics, $stateParams, $state) {
         ctrl = this;
 
@@ -29,6 +29,27 @@ angular.module('statistics', ['statistic.service'])
                 return value;
             })
         }
+        ctrl.drawChart = function(chart, data, title) {
+            var title = title || "Title not set";
+            var dummychart = "PieChart";
+            var dummydata = [
+                ['Test', 'test'],
+                ['fest', 100],
+                ['testmest', 1000]
+            ];
+            chartObject = {};
+            chartObject.type = dummychart; 
+
+            chartObject.data = dummydata 
+            chartObject.options = {
+                displayExactValues: true,
+                width: 400,
+                height: 200,
+                is3D: true,
+                title: title 
+            };
+            ctrl.chart = chartObject;
+        };
 
         ctrl.showStatistics = function(statisticIndex, statisticType) {
             statsIndexId = statisticIndex;
