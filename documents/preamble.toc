@@ -29,7 +29,7 @@
 \contentsline {section}{Arbejdsmetoder}{9}
 \contentsline {section}{Use cases}{9}
 \contentsline {subsection}{Use case diagram}{9}
-\contentsline {subsection}{Use case beskrivelser}{9}
+\contentsline {subsection}{Use case - Gem API endpoint}{9}
 \contentsline {section}{Arkitektur}{9}
 \contentsline {subsection}{Systemarkitektur}{9}
 \contentsline {subsection}{Klassediagram}{10}
@@ -42,7 +42,7 @@
 \contentsline {subsection}{Problemstilling omkring h\IeC {\r a}ndtering af data}{10}
 \contentsline {section}{Database}{11}
 \contentsline {subsection}{Valg af database}{11}
-\contentsline {subsection}{ElasticSearch}{11}
+\contentsline {subsection}{ElasticSearch}{12}
 \contentsline {section}{Konklusion}{12}
 \contentsline {section}{Refleksion}{12}
 \contentsline {section}{Perspektivering}{12}
