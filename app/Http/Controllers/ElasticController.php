@@ -12,10 +12,11 @@ class ElasticController extends Controller {
      * Index a json schema in Elasticsearch
      *
      * @param Request $request
+     *
      * @return json
      */
     public function index(Request $request) {
-        return ElasticRepository::index($request->json()->all());
+        return ElasticRepository::index($request->all());
     }
 
     /*

@@ -9,7 +9,10 @@ class UserRepository {
     /**
      * Saves a user in the database.
      *
-     * @param User $user
+     * @param string $name
+     * @param string $username
+     * @param string $password
+     * @param string $role
      *
      * @return Response
      */
