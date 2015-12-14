@@ -23,6 +23,15 @@ class ApiController extends Controller {
         );
     }
 
+    /*
+     * Gets a list of api data
+     *
+     * @return json
+     */
+    public function getApis() {
+        return response()->json(ApiRepository::getApis());
+    }
+
     /**
      * Test a remote API, by calling it and then return the result
      *

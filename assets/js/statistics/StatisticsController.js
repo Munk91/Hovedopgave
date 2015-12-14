@@ -1,18 +1,7 @@
 angular.module('statistics', ['statistic.service', 'googlechart'])
-    .controller('StatisticsController', function(showStatistics, $stateParams, $state) {
+    .controller('StatisticsController', function(showStatistics, apiData, $stateParams, $state) {
         ctrl = this;
-
-        // TODO: Dynamically load this data from the database on load
-        ctrl.statistics = [
-            {
-                'index' : 'mcstats',
-                'type' : ['brugere', 'Test']
-            },
-            {
-                'index' : 'Andet',
-                'type' : ['Fest']
-            }
-        ];
+        ctrl.statistics = [];
 
         statsIndexId = $stateParams.statsIndexId || null;
         statsTypeId = $stateParams.statsTypeId || null;
@@ -20,7 +9,9 @@ angular.module('statistics', ['statistic.service', 'googlechart'])
         init = function() {
             $state.go('.', {'statsIndexId' : null, 'statsTypeId' : null});
             setActiveDropdownValue();
+            getApiData();
         };
+
         filterData = function(list) {
             ctrl.filteredList = _.map(list[0], function(value, key) {
                 return key;
@@ -28,7 +19,8 @@ angular.module('statistics', ['statistic.service', 'googlechart'])
             ctrl.filteredValue = _.map(list, function(value, key) {
                 return value;
             })
-        }
+        };
+
         ctrl.drawChart = function(chart, data, title) {
             var title = title || "Title not set";
             var dummychart = "PieChart";
@@ -60,6 +52,7 @@ angular.module('statistics', ['statistic.service', 'googlechart'])
                 statsType : statsTypeId
                 })
                 .$promise.then(function(data) {
+                    console.log(data);
                     ctrl.fetchedData = data.hits.hits[0];
                     filterData(ctrl.fetchedData._source.type);
                     $state.go('.data');
@@ -76,8 +69,45 @@ angular.module('statistics', ['statistic.service', 'googlechart'])
             statsIndexId = selectedStatistic.index;
             setActiveDropdownValue();
 
-            angular.forEach(selectedStatistic.type, function(type) {
+            angular.forEach(selectedStatistic.types, function(type) {
                 ctrl.activeStatisticTypeList.push(type);
+            });
+        };
+
+        getApiData = function() {
+            var fetchedApis = [];
+            apiData.query().$promise.then(function(data) {
+                if(data.length) {
+                    for(var api in data) {
+                        var currentApi = data[api];
+                        if(currentApi.index && currentApi.type && currentApi.url) {
+                            var apiObj = {
+                                'index' : currentApi.index,
+                                'types' : [currentApi.type],
+                                'url' : currentApi.url
+                            };
+
+                            fetchedApis.push(apiObj);
+                        }
+                    }
+                };
+            }).finally(function() {
+                // Join types with same index
+                    for(i = 0; i < fetchedApis.length; i++) {
+                        var currentApi = fetchedApis[i];
+                        if(ctrl.statistics.length > 0) {
+                            for(j = 0; j < ctrl.statistics.length; j++) {
+                                var currentStat = ctrl.statistics[j];
+                                if(fetchedApis[i].index == ctrl.statistics[j].index) {
+                                    ctrl.statistics[j].types.push(fetchedApis[i].types[0]);
+                                } else {
+                                    ctrl.statistics.push(fetchedApis[i]); 
+                                }
+                            }
+                        } else {
+                            ctrl.statistics.push(currentApi); 
+                        }
+                    }
             });
         };
 
@@ -86,7 +116,7 @@ angular.module('statistics', ['statistic.service', 'googlechart'])
                 ctrl.activeStatisticIndex = statsIndexId;
                 ctrl.typeButtonDisabled = false;
             } else {
-                ctrl.activeStatisticIndex = 'Vælg statistik index'; 
+                ctrl.activeStatisticIndex = 'Vælg statistik index';
                 ctrl.typeButtonDisabled = true;
             }
             if(statsTypeId) {

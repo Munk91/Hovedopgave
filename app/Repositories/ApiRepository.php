@@ -24,4 +24,13 @@ class ApiRepository {
 
         $api->save();
     }
+
+    /**
+     * Get all api data in database or return error.
+     *
+     * @return string
+     */
+    public static function getApis() {
+        return Api::all();
+    }
 }
