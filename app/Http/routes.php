@@ -20,6 +20,7 @@ $app->group(['prefix' => 'api', 'namespace' => 'App\Http\Controllers'], function
     $app->get('elasticGet/{index}/{type}', 'ElasticController@search');
     $app->get('testRemoteApi/{apiUrl}', 'ApiController@testRemoteApi');
     $app->post('saveRemoteApi', 'ApiController@saveRemoteApi');
+    $app->get('apiList', 'ApiController@getApis');
 
     // API's for test purposes (returns json results)
     $app->get('test/year', 'ApiController@testYear');
