@@ -52,7 +52,6 @@ angular.module('statistics', ['statistic.service', 'googlechart'])
                 statsType : statsTypeId
                 })
                 .$promise.then(function(data) {
-                    console.log(data);
                     ctrl.fetchedData = data.hits.hits[0];
                     filterData(ctrl.fetchedData._source.type);
                     $state.go('.data');
