@@ -2,6 +2,16 @@ angular.module('statistics', ['statistic.service', 'googlechart'])
     .controller('StatisticsController', function(showStatistics, apiData, $stateParams, $state) {
         ctrl = this;
         ctrl.statistics = [];
+        ctrl.chartData = [];
+        ctrl.chartTitle = '';
+        ctrl.activeChartType = 'Vælg diagram type';
+        ctrl.chartTypes = [
+            'PieChart',
+            'BarChart',
+            'ColumnChart',
+            'AreaChart',
+            'Gauge'
+        ];
 
         statsIndexId = $stateParams.statsIndexId || null;
         statsTypeId = $stateParams.statsTypeId || null;
@@ -21,29 +31,40 @@ angular.module('statistics', ['statistic.service', 'googlechart'])
             })
         };
 
-        ctrl.drawChart = function(chart, data, title) {
-            var title = title || "Title not set";
-            var dummychart = "PieChart";
-            var dummydata = [
-                ['Test', 'test'],
-                ['fest', 100],
-                ['testmest', 1000]
-            ];
+        ctrl.drawChart = function(chartType, data, title) {
             chartObject = {};
-            chartObject.type = dummychart; 
-
-            chartObject.data = dummydata 
+            chartObject.type = chartType;
+            chartObject.data = formatChartData(data);
             chartObject.options = {
                 displayExactValues: true,
-                width: 400,
-                height: 200,
+                width: 600,
+                height: 600,
                 is3D: true,
-                title: title 
+                title: title
             };
             ctrl.chart = chartObject;
         };
 
-        ctrl.showStatistics = function(statisticIndex, statisticType) {
+        formatChartData = function(data) {
+            chartObjectData = [
+                ['ChartData', 'data']
+            ];
+
+            for(i = 0; i < ctrl.chartData.length; i++) {
+                currentDataObject = ctrl.chartData[i];
+                dataHeader = currentDataObject.index + ', ' + currentDataObject.type;
+
+                if(currentDataObject.checked) {
+                    chartObjectData.push([
+                            dataHeader,
+                            currentDataObject.data[1]
+                    ]);
+                }
+            }
+            return chartObjectData;
+        };
+
+        ctrl.getStatisticsData = function(statisticIndex, statisticType) {
             statsIndexId = statisticIndex;
             statsTypeId = statisticType;
 
@@ -54,6 +75,27 @@ angular.module('statistics', ['statistic.service', 'googlechart'])
                 .$promise.then(function(data) {
                     ctrl.fetchedData = data.hits.hits[0];
                     filterData(ctrl.fetchedData._source.type);
+
+                    var dataObject = {
+                        'index' : ctrl.fetchedData._index,
+                        'type' : ctrl.fetchedData._type,
+                        'data' : ctrl.filteredValue,
+                        'checked' : false
+                    };
+
+                    var duplicate = false;
+
+                    for(i = 0; i < ctrl.chartData.length; i++) {
+                        // check for duplicates in chartData list
+                        if(dataObject.type == ctrl.chartData[i].type) {
+                            duplicate = true;
+                        }
+                    }
+
+                    if(!duplicate) {
+                        ctrl.chartData.push(dataObject);
+                    }
+
                     $state.go('.data');
                 });
         };
@@ -100,11 +142,11 @@ angular.module('statistics', ['statistic.service', 'googlechart'])
                                 if(fetchedApis[i].index == ctrl.statistics[j].index) {
                                     ctrl.statistics[j].types.push(fetchedApis[i].types[0]);
                                 } else {
-                                    ctrl.statistics.push(fetchedApis[i]); 
+                                    ctrl.statistics.push(fetchedApis[i]);
                                 }
                             }
                         } else {
-                            ctrl.statistics.push(currentApi); 
+                            ctrl.statistics.push(currentApi);
                         }
                     }
             });
