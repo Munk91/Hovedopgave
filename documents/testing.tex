@@ -1,0 +1,47 @@
+\section{Testing}
+Her vil vi uddybe de test framework vi har brugt til frontend og backend og komme
+med eksempler.
+\subsection{Jasmine}
+Jasmine er et test framework til Javascript. Det kommer med en masse funktioner, 
+der gør det overskueligt og nemt at begynde at teste.
+Noget af det der bliver lagt vægt på i Jasmine er dokumentation og struktur.
+Et eksempel på en test, her fra vores StatisticsController.spec.js fil
+\begin{lstlisting}[caption={StatisticsController.spec.js}, label={lst:StatisticsController}]
+it('should get the types based on the selected statistic index', function() {
+    spyOn(ctrl, 'getStatsTypes').and.callThrough();
+
+    statistic = { type : ['someType'] }
+
+    ctrl.getStatsTypes(statistic);
+
+    expect(ctrl.getStatsTypes).toHaveBeenCalledWith(statistic);
+    expect(setActiveDropdownValue).toHaveBeenCalled;
+    expect(ctrl.activeStatisticTypeList[0]).toBe('someType');
+});
+\end{lstlisting}
+i Listing~\ref{lst:StatisticsController} starter vi med en beskrivelse af hvad testen gør, her går den ind og og kalder getStatsTypes i vores controller
+med noget dummy data også forventer vi at vores activeStatisticTypeList[0] bliver sat med den type fra vores dummy data.
+\subsection{PHPUnit}
+PHPUnit var det framework vi brugte til vores backend test. ligesom med Jasmine kommer det med
+en masse indbyggede funktioner der gør det nemt at gå til
+\begin{lstlisting}[caption={UserControllerTest.php}, label={lst:UserControllerTest}]
+public function testCreateUser() {
+    $userMock = $this->getMockBuilder('User')
+        ->getMock();
+
+    $userControllerMock = $this->getMockBuilder('UserController')
+        ->setMethods(array('createUser'))
+        ->getMock();
+
+    $userControllerMock->expects($this->once())
+        ->method('createUser')
+        ->with($userMock)
+        ->will($this->returnValue(true));
+
+    $this->assertTrue($userControllerMock->createUser($userMock));
+}
+\end{lstlisting}
+som man kan se i Listing~\ref{lst:UserControllerTest} gør PHPUnit det nemt at mocke objekter.
+Her mocker i User objektet fra vores Model, vores UserController og til sidst kalder vi userControlleren 
+med vores userMock og tester på at brugeren bliver lavet
+
