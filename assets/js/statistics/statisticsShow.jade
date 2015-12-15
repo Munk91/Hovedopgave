@@ -7,20 +7,20 @@ h3 Statistikker
         li(ng-repeat="statistic in StatisticsCtrl.statistics")
           a(ng-click="StatisticsCtrl.getStatsTypes(statistic)" ng-bind="statistic.index")
     .dropdown
-      button.btn.btn-default.dropdown-toggle.type-button(type="button", id="statisticTypes" data-toggle="dropdown" aria-haspopup="true" ng-disabled="StatisticsCtrl.typeButtonDisabled") {{ StatisticsCtrl.activeStatisticType }}
+      button.btn.btn-default.dropdown-toggle.type-button(type="button" id="statisticTypes" data-toggle="dropdown" aria-haspopup="true" ng-disabled="StatisticsCtrl.typeButtonDisabled") {{ StatisticsCtrl.activeStatisticType }}
         span.caret
       ul.dropdown-menu(aria-labelledby="statisticTypes")
         li(ng-repeat="statsType in StatisticsCtrl.activeStatisticTypeList")
           a(ng-click="StatisticsCtrl.activeStatisticType = statsType; StatisticsCtrl.getDataButtonDisabled = false" ng-bind="statsType" ui-sref="statistic.statistics.show({statsTypeId : statsType})")
-      button.btn.btn-success.get-stats(type="button", id="getStatistics" ng-click="StatisticsCtrl.getStatisticsData(StatisticsCtrl.activeStatisticIndex, StatisticsCtrl.activeStatisticType)" ng-disabled="StatisticsCtrl.getDataButtonDisabled") Hent data
+      button.btn.btn-success.get-stats(type="button" ng-click="StatisticsCtrl.getStatisticsData(StatisticsCtrl.activeStatisticIndex, StatisticsCtrl.activeStatisticType)" ng-disabled="StatisticsCtrl.getDataButtonDisabled") Hent data
 
 .row.chart-headers
   .col-lg-4
     h4 Vælg data til diagram
   .col-lg-4
-    input.form-control(type="text" id="chartTitle" placeholder="Diagram titel" ng-model="StatisticsCtrl.chartTitle" required)
+    input.form-control(type="text" placeholder="Diagram titel" ng-model="StatisticsCtrl.chartTitle" required)
   .col-lg-4
-    button.btn.btn-default.dropdown-toggle.index-button(type="button", id="chartTypes" data-toggle="dropdown" aria-haspopup="true") {{ StatisticsCtrl.activeChartType }}
+    button.btn.btn-default.dropdown-toggle.index-button(type="button" id="chartTypes" data-toggle="dropdown" aria-haspopup="true") {{ StatisticsCtrl.activeChartType }}
       span.caret
     ul.dropdown-menu(aria-labelledby="chartTypes")
       li(ng-repeat="chartType in StatisticsCtrl.chartTypes")
@@ -30,13 +30,13 @@ h3 Statistikker
     ul.list-group
       li.list-group-item.data-list-item Index
       li.list-group-item.data-list-item Type
-      li.list-group-item.data-list-item-picked Valgt
+      li.list-group-item.data-list Valgt
       div(ng-repeat="chartData in StatisticsCtrl.chartData")
         li.list-group-item.data-list-item(ng-bind="chartData.index")
         li.list-group-item.data-list-item(ng-bind="chartData.type")
-        li.list-group-item.data-list-item-checkbox
+        li.list-group-item.data-list.item-checkbox
           input(type="checkbox", ng-model="chartData.checked")
-    button.btn.btn-success.get-chart(type="button", id="getChart" ng-click="StatisticsCtrl.drawChart(StatisticsCtrl.activeChartType, StatisticsCtrl.chartData, StatisticsCtrl.chartTitle)") Hent diagram
+    button.btn.btn-success.get-chart(type="button" ng-click="StatisticsCtrl.drawChart(StatisticsCtrl.activeChartType, StatisticsCtrl.chartData, StatisticsCtrl.chartTitle)") Hent diagram
   .col-lg-7
     div(google-chart chart="StatisticsCtrl.chart")
 <div ui-view></div>

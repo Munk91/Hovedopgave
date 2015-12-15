@@ -52,11 +52,10 @@ angular.module('statistics', ['statistic.service', 'googlechart'])
 
             for(i = 0; i < ctrl.chartData.length; i++) {
                 currentDataObject = ctrl.chartData[i];
-                dataHeader = currentDataObject.index + ', ' + currentDataObject.type;
 
                 if(currentDataObject.checked) {
                     chartObjectData.push([
-                            dataHeader,
+                            currentDataObject.data[0],
                             currentDataObject.data[1]
                     ]);
                 }

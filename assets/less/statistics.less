@@ -42,15 +42,12 @@
 @height: 40px;
 @width: 15%;
 
-.data-list-item-picked {
+.data-list {
     height: @height;
     width: @width;
     float: left;
-}
 
-.data-list-item-checkbox {
-    height: @height;
-    width: @width;
-    padding-left: @width / 3;
-    float: left;
+    &.item-checkbox {
+        padding-left: @width / 3;
+     }
 }
