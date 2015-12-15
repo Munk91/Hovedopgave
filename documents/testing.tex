@@ -1,12 +1,17 @@
 \section{Testing}
 Her vil vi uddybe de test framework vi har brugt til frontend og backend og komme
-med eksempler.
+med eksempler. I vores eksempler mocker vi objekter der simulerer de rigtige objekter i vores controller.
+\subsection{Hvad er testing}
+Unit testing er en måde at splitte dit program op i individuelle dele og teste de funktionaliteter.
+En unit test er bygget på omkring de tre A'er (arrange, act, assert). Det går ud på at alle
+preconditions og input er mødt, herefter bruger man en metode eller et objekt under testen og til sidst at det forventede sker.\footnote{http://c2.com/cgi/wiki?ArrangeActAssert}
 \subsection{Jasmine}
 Jasmine er et test framework til Javascript. Det kommer med en masse funktioner, 
 der gør det overskueligt og nemt at begynde at teste.
-Noget af det der bliver lagt vægt på i Jasmine er dokumentation og struktur.
+Noget af det der bliver lagt vægt på i Jasmine er dokumentation og struktur. Jasmine frameworket er 
+også behaviour driven, som udskiller sig fra andre test framework, her beskriver man den forventede opførsel først.
 Et eksempel på en test, her fra vores StatisticsController.spec.js fil
-\begin{lstlisting}[caption={StatisticsController.spec.js}, label={lst:StatisticsController}]
+\begin{lstlisting}[caption={StatisticsController.spec.js}, language={JavaScript}, label={lst:StatisticsController}]
 it('should get the types based on the selected statistic index', function() {
     spyOn(ctrl, 'getStatsTypes').and.callThrough();
 
@@ -19,12 +24,13 @@ it('should get the types based on the selected statistic index', function() {
     expect(ctrl.activeStatisticTypeList[0]).toBe('someType');
 });
 \end{lstlisting}
-i Listing~\ref{lst:StatisticsController} starter vi med en beskrivelse af hvad testen gør, her går den ind og og kalder getStatsTypes i vores controller
+i kode eksempel~\ref{lst:StatisticsController} starter vi med en beskrivelse af hvad testen gør, her går den ind og og kalder getStatsTypes i vores controller
 med noget dummy data også forventer vi at vores activeStatisticTypeList[0] bliver sat med den type fra vores dummy data.
+
 \subsection{PHPUnit}
-PHPUnit var det framework vi brugte til vores backend test. ligesom med Jasmine kommer det med
-en masse indbyggede funktioner der gør det nemt at gå til
-\begin{lstlisting}[caption={UserControllerTest.php}, label={lst:UserControllerTest}]
+PHPUnit er det framework vi bruger til vores backend test. ligesom med Jasmine indeholder det
+en masse indbyggede funktioner der gør det nemt at gå til.
+\begin{lstlisting}[caption={UserControllerTest.php}, language={PHP}, label={lst:UserControllerTest}]
 public function testCreateUser() {
     $userMock = $this->getMockBuilder('User')
         ->getMock();
@@ -41,7 +47,7 @@ public function testCreateUser() {
     $this->assertTrue($userControllerMock->createUser($userMock));
 }
 \end{lstlisting}
-som man kan se i Listing~\ref{lst:UserControllerTest} gør PHPUnit det nemt at mocke objekter.
-Her mocker i User objektet fra vores Model, vores UserController og til sidst kalder vi userControlleren 
-med vores userMock og tester på at brugeren bliver lavet
+Som man kan se i kode eksempel~\ref{lst:UserControllerTest} gør PHPUnit det nemt at mocke objekter.
+I denne test mocker vi User objektet fra vores Model, vores UserController og til sidst kalder vi userControlleren 
+med vores userMock og tester på at brugeren bliver lavet.
 
