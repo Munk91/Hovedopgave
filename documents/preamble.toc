@@ -1,34 +1,37 @@
 \select@language {danish}
 \contentsline {section}{Forord}{2}{section*.2}
-\contentsline {section}{Problemstilling}{2}{section*.3}
-\contentsline {subsection}{Overordnet emne}{2}{section*.4}
-\contentsline {subsection}{Delemne}{2}{section*.5}
-\contentsline {subsection}{Udgangspunkt}{2}{section*.6}
-\contentsline {subsection}{Sp\IeC {\o }rgsm\IeC {\r a}l}{2}{section*.7}
-\contentsline {subsubsection}{Datasp\IeC {\o }rgsm\IeC {\r a}l}{2}{section*.8}
-\contentsline {subsubsection}{Vurderingssp\IeC {\o }rgsm\IeC {\r a}l}{2}{section*.9}
-\contentsline {subsubsection}{Forklaringssp\IeC {\o }rgsm\IeC {\r a}l}{3}{section*.10}
-\contentsline {subsubsection}{Handlingssp\IeC {\o }rgsm\IeC {\r a}l}{3}{section*.11}
-\contentsline {subsection}{Problemstilling}{3}{section*.12}
-\contentsline {section}{Gruppekontrakt}{3}{section*.13}
-\contentsline {section}{Projektstyring}{4}{section*.14}
-\contentsline {subsection}{Scrum}{4}{section*.15}
-\contentsline {subsection}{Planl\IeC {\ae }gning}{4}{section*.16}
-\contentsline {subsection}{Review referater}{5}{section*.17}
-\contentsline {subsubsection}{Fredag d. 20/11}{5}{section*.18}
-\contentsline {subsubsection}{Fredag d. 4/12}{6}{section*.19}
-\contentsline {section}{Kvalitetssikring}{6}{section*.20}
-\contentsline {section}{Produktbeskrivelse}{6}{section*.21}
-\contentsline {section}{Systemarkitektur}{7}{section*.22}
-\contentsline {section}{Arkitektur}{7}{section*.23}
-\contentsline {subsection}{Systemarkitektur}{7}{section*.24}
-\contentsline {subsection}{Klassediagram}{7}{section*.25}
-\contentsline {subsection}{Sekvensdiagram}{8}{section*.26}
-\contentsline {section}{Teknologier}{9}{section*.27}
-\contentsline {subsection}{Google Chart API}{9}{section*.28}
-\contentsline {subsection}{AngularJS}{9}{section*.29}
-\contentsline {subsection}{Laravel}{9}{section*.30}
-\contentsline {subsection}{Problemstilling omkring h\IeC {\r a}ndtering af data}{9}{section*.31}
-\contentsline {section}{Database}{10}{section*.32}
-\contentsline {subsection}{Valg af database}{10}{section*.33}
-\contentsline {subsection}{ElasticSearch}{11}{section*.34}
+\contentsline {section}{L\IeC {\ae }ringsm\IeC {\r a}l i forbindelse med afsluttende eksamensprojekt}{2}{section*.3}
+\contentsline {section}{Problemstilling}{3}{section*.4}
+\contentsline {subsection}{Overordnet emne}{3}{section*.5}
+\contentsline {subsection}{Delemne}{3}{section*.6}
+\contentsline {subsection}{Udgangspunkt}{3}{section*.7}
+\contentsline {subsection}{Sp\IeC {\o }rgsm\IeC {\r a}l}{3}{section*.8}
+\contentsline {subsubsection}{Datasp\IeC {\o }rgsm\IeC {\r a}l}{3}{section*.9}
+\contentsline {subsubsection}{Vurderingssp\IeC {\o }rgsm\IeC {\r a}l}{3}{section*.10}
+\contentsline {subsubsection}{Forklaringssp\IeC {\o }rgsm\IeC {\r a}l}{3}{section*.11}
+\contentsline {subsubsection}{Handlingssp\IeC {\o }rgsm\IeC {\r a}l}{4}{section*.12}
+\contentsline {subsection}{Problemstilling}{4}{section*.13}
+\contentsline {section}{Gruppekontrakt}{4}{section*.14}
+\contentsline {section}{Projektstyring}{5}{section*.15}
+\contentsline {subsection}{Scrum}{5}{section*.16}
+\contentsline {subsection}{Planl\IeC {\ae }gning}{5}{section*.17}
+\contentsline {subsection}{Scrum v\IeC {\ae }rkt\IeC {\o }jet YouTrack}{6}{section*.18}
+\contentsline {subsection}{Review referater}{6}{section*.19}
+\contentsline {subsubsection}{Fredag d. 20/11}{7}{section*.20}
+\contentsline {subsubsection}{Fredag d. 4/12}{7}{section*.21}
+\contentsline {subsubsection}{Fredag d. 17/12}{8}{section*.22}
+\contentsline {section}{Kvalitetssikring}{8}{section*.23}
+\contentsline {section}{Produktbeskrivelse}{8}{section*.24}
+\contentsline {section}{Systemarkitektur}{8}{section*.25}
+\contentsline {section}{Arkitektur}{9}{section*.26}
+\contentsline {subsection}{Systemarkitektur}{9}{section*.27}
+\contentsline {subsection}{Klassediagram}{9}{section*.28}
+\contentsline {subsection}{Sekvensdiagram}{9}{section*.29}
+\contentsline {section}{Teknologier}{10}{section*.30}
+\contentsline {subsection}{Google Chart API}{10}{section*.31}
+\contentsline {subsection}{AngularJS}{10}{section*.32}
+\contentsline {subsection}{Laravel}{10}{section*.33}
+\contentsline {subsection}{Problemstilling omkring h\IeC {\r a}ndtering af data}{10}{section*.34}
+\contentsline {section}{Database}{11}{section*.35}
+\contentsline {subsection}{Valg af database}{11}{section*.36}
+\contentsline {subsection}{ElasticSearch}{11}{section*.37}
