@@ -1,4 +1,6 @@
 \section{Teknologier}
+Grunden til vi laver en web applikation er at den nemt skal kunne integreres ude på Ordbogen A/S man skal nemt kunne tilgå den.
+Derudover er det også det de beskæftiger sig med ude på Ordbogen, så derfor synes vi det giver mest mening at følge den sti.
 \hypertarget{GoogleChartAPI}{}
 \subsection{Google Chart API}
 Da vi bestemte os for at bruge Google Charts gjorde vi det på baggrund af det er let tilgængeligt.
@@ -9,11 +11,20 @@ det gør også at det eneste krav til at det skal kunne køre på klienten, er e
 Derudover er der et angular library der gør det endnu nemmere at integrere i AngularJS.
 \hypertarget{AngularJS}{}
 \subsection{AngularJS}
-Something clever here..
+Vi bruger AngularJS frameworket til vores frontend da vi begge havde arbejdet med det
+i vores praktikperiode. AngularJS har nogle libraries der gør det nemt for os at tilgå de RESTful APIs
+vi lavede i backenden. 
+Derudover findes der rigtig mange eksterne libraries, som ved hjælp af Angulars Dependency Injection er nemme at implementere.\footnote{https://angularjs.org/}
 \hypertarget{Laravel}{}
 \subsection{Laravel}
 \label{Laravel}
-Something clever here..
+Vi bruger Laravels Lumen framework, der er et micro-framework er Laravel, grundet til vi valgte Lumen
+fremfor Laravel, var at vi gerne ville have mere kontrol over de ting vi lavede og at Lumen bliver også brugt ude på Ordbogen.
+Så hvis vi kigger på fremtidig udvikling af systemet fra Ordbogen, ga det mest mening.
+Dokumentationen til Lumen er rigtig god og det gør det nemt at komme i gang med, der går ikke lang tid fra opstart
+til man har et noget man kan vise. 
+Derudover bygger vi vores applikation op omkring RESTful API og Lumen, har gjort det rigtig let for os at bygge 
+API' op.\footnote{http://lumen.laravel.com}
 \subsection{Problemstilling omkring håndtering af data}
 Vi har en problemstilling der går på at vi skal have noget data ind i vores ElasticSearch database, for at kunne præsentere det.
 Problemstillingen går på, om vi skal pulle data ud fra de API'er der bliver tilgængelige for vores system. Eller om de forskellige teams der uploader API'er selv skal stå for at pushe data ind til vores database.
