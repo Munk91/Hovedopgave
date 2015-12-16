@@ -94,8 +94,6 @@ angular.module('statistics', ['statistic.service', 'googlechart'])
                     if(!duplicate) {
                         ctrl.chartData.push(dataObject);
                     }
-
-                    $state.go('.data');
                 });
         };
 
