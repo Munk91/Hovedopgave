@@ -34,7 +34,7 @@ ElasticSearch gør også brug af index, som er en liste af dokumenter, der har s
 \\
 Ved større index kan de dele et index op i shards og et shard er et fuldt funktionelt index. Det gør man kan skalere data horisontalt.
 \\\\
-Vi har nedenfor forsøgt at skitsere den generelle opbygning af en typisk ElasticSearch server, og relationer mellem cluster, nodes og dokumenter.
+Vi har Figur~\ref{fig:elasticsearch-arkitektur} forsøgt at skitsere den generelle opbygning af en typisk ElasticSearch server, og relationer mellem cluster, nodes og dokumenter.
 \\\\
 \begin{figure}[here]
     \includegraphics[scale=0.7]{ElasticSearch_arkitektur}
@@ -42,12 +42,11 @@ Vi har nedenfor forsøgt at skitsere den generelle opbygning af en typisk Elasti
     \label{fig:elasticsearch-arkitektur}
 \end{figure}
 \subsection{Normalisering}
-Når vi gemmer informationer omkring API'er, gemmer vi dem i en tabel der hedder \textit{Apis}. Denne tabel indeholder kolonnerne: Id, Index, Type og URL, se Tabel \ref{api-tabel}, for visualisering af strukturen på tabellen.
+Når vi gemmer informationer omkring API'er, gemmer vi dem i en tabel der hedder \textit{Apis}. Denne tabel indeholder kolonnerne: Id, Index, Type og URL, se Tabel~\ref{table:api-tabel}, for visualisering af strukturen på tabellen.
 \\\\
 OBS! Data og struktur i tabellen er kun for eksemplets skyld, og er ikke en reel kopi af den originale tabel.
 \begin{table}[here]
     \centering
-    \label{api-tabel}
     \begin{tabular}{|l|l|l|l|l}
         \cline{1-4}
         id & index  &  type &  url &  \\ \cline{1-4}
@@ -56,6 +55,7 @@ OBS! Data og struktur i tabellen er kun for eksemplets skyld, og er ikke en reel
         3 & Ordbogen & antal\_søgninger\_2013 & http://ordbogen.com/api/searches\_year\_2013 &  \\ \cline{1-4}
     \end{tabular}
     \caption{Apis tabel}
+    \label{table:api-tabel}
 \end{table}
 
 I vores overvejelser omkring normalisering har vi tænkt over hvorvidt denne tabel skal følge alle normalformer (0-3).
@@ -63,7 +63,7 @@ I vores overvejelser omkring normalisering har vi tænkt over hvorvidt denne tab
 Der opstår dog problemer ved 3. normalform som siger at \textit{"3NF kræver, at et felt \textbf{kun} er afhængig af primærnøglen.
 Selvom alle felterne i en tabel overholder 2NF eller at primærnøglen slet ikke er sammensat, så kan der være tilfælde, hvor indholdet af et felt kan bestemmes alene udfra et andet felt i tabellen, som ikke selv er en del af primærnøglen."}\footnote{http://www.eksperten.dk/guide/234}
 \\\\
-Hvis vi kigger på \textit{Apis} tabellen kan url'en udledes ud fra typen, da disse to felter er unikke. Det samme gælder for typen der kan udledes fra url'en.
+Hvis vi kigger på Tabel~\ref{table:api-tabel} kan url'en udledes ud fra typen, da disse to felter er unikke. Det samme gælder for typen der kan udledes fra url'en.
 \\
 En løsning på dette ville være at lave endnu en tabel med type og url, samt en fremmednøgle med relation fra \textit{Apis} tabellen til denne nye tabel, så et id og index peger på en fremmednøgle i tabellen med type og url.
 \\\\
