@@ -13,16 +13,17 @@ og MariaDB er desuden også gratis. ElasticSearch er gratis at implementere da d
 \\\\
 Vores valg faldt på at anvende både MySQL og ElasticSearch.
 \\
-Grunden til at vi valgte af bruge MySQL, var at vi har nogle nødvendige data som skal gemmes. Når man uploader et API giver det god mening
+Grunden til at vi valgte af bruge MySQL, var at vi har noget nødvendig data som skal gemmes. Når man uploader et API giver det god mening
 for os, at disse data bliver gemt på en MySQL database, så vi dermed kan pulle data fra det gemte API når vi har behov for det.\\
-Vi har desuden også en ekstern MySQL database til rådighed som vi allerede betalte for inden projektperioden, ellers ville vi have anvendt en gratis version i form af MariaDB.
+Vi har desuden også en ekstern MySQL database til rådighed som vi allerede betalte for inden projektperioden, ellers ville vi nok have anvendt en gratis version
+af MySQL eller MariaDB.
 \\\\
 Grunden til vi valgte at bruge ElasticSearch til at gemme data fra API endpoints og ikke de andre typer databaser, var at da vi laver et statistik program
 som skal hente data på tværs af forskellige tabeller, ville vi undgå at lave en masse kald til databasen og joine data sammen.
 \\
 Meget af grunden bunder derfor i performance boost til systemet, hver gang der skal hentes og indexeres data.
 \\
-ElasticSearch er primært lavet til indexere, søge og hente data meget efficient og vinder derfor klart på performance ift.\ MySQL\@. 
+ElasticSearch er primært lavet til indexere, søge og hente data meget effektivt og vinder derfor klart på performance ift.\ MySQL\@. 
 \\\\
 Der hvor ElasticSearch taber sammenlignet med de andre databaser, er at det oprindeligt er lavet som en search engine og ikke en decideret database.
 \\Dvs.\ man får ikke den samme sikkerhed, som de andre tilbyder.
@@ -62,10 +63,10 @@ I vores overvejelser omkring normalisering har vi tænkt over hvorvidt denne tab
 Der opstår dog problemer ved 3. normalform som siger at \textit{"3NF kræver, at et felt \textbf{kun} er afhængig af primærnøglen.
 Selvom alle felterne i en tabel overholder 2NF eller at primærnøglen slet ikke er sammensat, så kan der være tilfælde, hvor indholdet af et felt kan bestemmes alene udfra et andet felt i tabellen, som ikke selv er en del af primærnøglen."}\footnote{http://www.eksperten.dk/guide/234}
 \\\\
-Hvis vi kigger på \textit{Apis} tabellen kan url udledes ud fra typen, da disse to felter er unikke. Det samme gælder for typen der kan udledes fra url.
+Hvis vi kigger på \textit{Apis} tabellen kan url'en udledes ud fra typen, da disse to felter er unikke. Det samme gælder for typen der kan udledes fra url'en.
 \\
 En løsning på dette ville være at lave endnu en tabel med type og url, samt en fremmednøgle med relation fra \textit{Apis} tabellen til denne nye tabel, så et id og index peger på en fremmednøgle i tabellen med type og url.
 \\\\
-Grunden til vi ikke valgte denne løsning var at vi synes det var for meget arbejde i forhold til hvad det ville give os. Udover arbejdsmængden giver det dårligere performance hvis vi skulle joine data fra 2 tabeller, i forhold til at hente kun fra en tabel.
+Grunden til vi ikke valgte denne løsning var at vi synes det var for meget arbejde i forhold til hvad det ville give os.
 \\
-Vi vurderede i dette tilfælde at data strukturen var så simpel at det ikke gav mening at ofre performance og tid for pænere struktur i form af at opfylde 3. normalform.
+Vi vurderede i dette tilfælde at data strukturen var så simpel at det ikke gav mening at ofre tid for pænere struktur i form af at opfylde 3. normalform, men at vente med at opdele tabellen til hvis der kom flere kolonner.
