@@ -22,3 +22,32 @@
         float: right;
     }
 }
+
+.chart-headers {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.get-chart {
+    margin-top: 20px;
+}
+
+.data-list-item {
+    height: 40px;
+    width: 40%;
+    float: left;
+}
+
+// Variables for checkbox row including the header
+@height: 40px;
+@width: 15%;
+
+.data-list {
+    height: @height;
+    width: @width;
+    float: left;
+
+    &.item-checkbox {
+        padding-left: @width / 3;
+     }
+}
