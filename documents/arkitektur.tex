@@ -9,8 +9,31 @@ De strukturer som de forskellige frameworks giver os, er grundstenen i hele vore
 \\\\
 Vi har lavet en figur der viser vores systemarkitektur, som er bygget ud fra GRASP principperne og som imødekommer definitionen af objekt orienteret programmering.\\
 Brugeren får præsenteret et \textit{view}, som bliver styret af en frontend \textit{controller}. Denne controller står samtidig for at kommunikere med noget middleware som er laget mellem frontend og backend, dette lag står bla. for validering, routing og service kald. Via en route bliver en \textit{controller} på serveren kaldt, som står for at kommunikere med repository, der er en form for data-access lag der kender til en model og data. Repository og model lag er primært indbyggede \hyperlink{Laravel}{Laravel} funktioner, som blandt andet anvender deres ORM, \href{http://laravel.com/docs/5.1/eloquent}{Eloquent}.
+\section{Arkitektur}
+\subsection{Systemarkitektur}
+Vi har valgt at bruge AngularJS i frontend og derfra kalde RESTful APIs i backenden. I figur~\ref{fig:arkitektur}
+kan man se hvordan det samlede system kommer til at se ud, hvor vores middleware/routing lag kalder backenden,
+som returnere et view, med de dataer, der skal bruges.
+Vi lavede denne arkitektur ud fra GRASP principperne og imødekomme object orienteret programmering
 \begin{figure}[here]
 \includegraphics[scale=0.5]{Arkitektur}
 \caption{Vores samlede systemarkitektur}
 \label{fig:arkitektur}
 \end{figure}
+\subsection{Klassediagram}
+Et klassediagram viser klasserne i systemet samt deres relationer.\\
+Vores klassediagram er lavet ud fra use case diagrammet, hvor vi har \textbf{UploadUser} (aktør: udvikler), \textbf{ShowUser} (aktør: bruger), en \textbf{DatabaseHandler} som står for database interagering, et \textbf{View} som præsenterer data, og en \textbf{Validator} der står for validering.
+\\\\
+Vær opmærksom på at systemet ikke afspejler klassediagrammet til fulde, men blot er et overblik over de forskellige klasser og et eksempel på deres relationer.
+Når vi har programmeret systemet har vi ikke lavet en tro kopi af klassediagrammet, men har blot kunne læne os op ad f.eks.\
+relationer, metoder, attributter, e.l.
+\\\\
+TODO:\ Indsæt klassediagram
+\subsection{Sekvensdiagram}
+Systemsekvensdiagrammer er et eksempel på brugerens interaktion med systemet. Dette beskrives ved forskellige events og logik i systemet, under en given sekvens.
+\\
+Interaktionen mellem brugeren og systemet betragtes som black box, og man kan gå i dybden med hver enkelt system event ved at lave operationskontrakter.
+\\\\
+Vi har valgt at lave et sekvensdiagram for \textit{Gem diagram} use casen, som er beskrevet i afsnit \textit{Use cases}.
+\\\\
+TODO:\ Indsæt sekvensdiagram for \textit{Gem diagram}
