@@ -1,0 +1,40 @@
+\section{Systemet}
+Her vil vi gennemgå systemet og gå i dybden med nogle kodeeksempler, for at give et bedre overblik over hvordan systemet virker og er sat sammen.
+\begin{lstlisting}[caption={StatisticsController.spec.js}, language={JavaScript}, label={lst:StatisticsControllerData}]
+ctrl.getStatisticsData = function(statisticIndex, statisticType) {
+    statsIndexId = statisticIndex;
+    statsTypeId = statisticType;
+
+    showStatistics.get({
+        statsIndex : statsIndexId,
+        statsType : statsTypeId
+        })
+        .$promise.then(function(data) {
+            ctrl.fetchedData = data.hits.hits[0];
+            filterData(ctrl.fetchedData._source.type);
+
+            var dataObject = {
+                'index' : ctrl.fetchedData._index,
+                'type' : ctrl.fetchedData._type,
+                'data' : ctrl.filteredValue,
+                'checked' : false
+            };
+
+            var duplicate = false;
+
+            for(i = 0; i < ctrl.chartData.length; i++) {
+                // check for duplicates in chartData list
+                if(dataObject.type == ctrl.chartData[i].type) {
+                    duplicate = true;
+                }
+            }
+
+            if(!duplicate) {
+                ctrl.chartData.push(dataObject);
+            }
+        });
+};
+\end{lstlisting}
+i kode eksempel\label{lst:StatisticsControllerData} kan man se hvordan vi henter statistic data ud
+
+
