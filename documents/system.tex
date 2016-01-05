@@ -37,11 +37,10 @@ ctrl.getStatisticsData = function(statisticIndex, statisticType) {
         });
 };
 \end{lstlisting}
-i Kode Eksempel~\ref{lst:StatisticsControllerData} kan man se hvordan vi henter statistic data ud fra et valgt api.
-Vi benytter os af et promise, som gør at vi kan håndtere forskellige resultater, alt efter om det lykkedes at hente noget data.
-som henter de den valgte data ud fra elasticsearch.
-måden vi implementerede det på i vores view, som man kan se i figur~\ref{fig:getStatisticsData} var for at gøre det nemt og overskueligt for brugeren,
-når de skal vælge statistic data
+i Kode eksempel~\ref{lst:StatisticsControllerData} kan man se hvordan vi henter statistik data ud fra et valgt api.
+Vi benytter os af et promise, som gør at vi kan håndtere forskellige resultater, alt efter om det lykkedes at hente noget data, fra ElasticSeach.
+Måden vi implementerede det på i vores view, som man kan se i figur~\ref{fig:getStatisticsData} var for at gøre det nemt og overskueligt for brugeren,
+når de skal vælge statistic data.
 Den henter index og type ud fra vores MySQL database.
 \begin{figure}[H]
 \includegraphics[scale=0.5]{getStatisticsData}
@@ -49,9 +48,9 @@ Den henter index og type ud fra vores MySQL database.
 \label{fig:getStatisticsData}
 \end{figure}
 \subsubsection{Reflektion over getStatisticsData}
-Vi udnytter ikke et angular promise ordentligt og skulle have indlagt noget fejlhåndtering af hvis der kom noget data fra API'et,
+Vi udnytter ikke et angular promise ordentligt og skulle have indlagt noget fejlhåndtering, hvis der ikke kom noget data fra API'et,
 altså hvis promiset blev rejected.
-Derudover har Angular gjort det rigtig nemt for os at arbejde med RESTful apis, pga. af promise funktionen.
+Derudover har Angular gjort det rigtig nemt for os at arbejde med RESTful apis, pga. af promise.
 \subsection{drawChart}
 \begin{lstlisting}[caption={drawChart}, language={JavaScript}, label={lst:StatisticsControllerDraw}]
 ctrl.drawChart = function(chartType, data, title) {
@@ -86,12 +85,12 @@ formatChartData = function(data) {
     return chartObjectData;
 };
 \end{lstlisting}
-I Kode Eksempel~\ref{lst:StatisticsControllerDraw} bruger vi den valgte data vi har fået fra figur~\ref{fig:getStatisticsData}.
+I Kode eksempel~\ref{lst:StatisticsControllerDraw} bruger vi den valgte data, vi har fået fra figur~\ref{fig:getStatisticsData}.
 Vi benytter os af \hyperlink{GoogleChartAPI}{Google Chart API} her, hvor vi sætter de nødvendige properties for at lave et diagram.
-Hvis vi kigger fremad kunne vi have lavet så man selv kunne bestemme størrelsen på diagramet. Vi valgte denne løsning med faste værdier, da det var vigtigt for os at have noget funktionelt
+Hvis vi kigger fremad kunne vi have lavet det, så man selv kunne bestemme størrelsen på diagramet. Vi valgte denne løsning med faste værdier, da det var vigtigt for os at have noget funktionelt
 og ligetil.
 Vi har delt koden op i to funktioner, hhv.\ formatChartData og drawChart, da det giver et bedre overblik over hele controlleren.
-I figur~\ref{fig:drawChart} kan man se hvordan vi implementere de to funktioner i vores view.
+I figur~\ref{fig:drawChart} kan man se hvordan vi implementerer de to funktioner i vores view.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{drawChart}
@@ -134,12 +133,14 @@ ctrl.pullData = function(index, type, api) {
     });
 }
 \end{lstlisting}
-i Kode Eksempel~\ref{lst:PullControllerPullData} er metoden beskåret, så det kun er kernefunktionaliteten der er tilbage i den.
+i Kode eksempel~\ref{lst:PullControllerPullData} er metoden beskåret, så det kun er kernefunktionaliteten der er tilbage i den.
 Det er funktionen der håndtere de API's vi skal kunne hente data fra, det er også den funktion der sørger for at de bliver gemt 
-i MySQL databasen. Så de kan bruges af getStatisticsData. Koden her sørger også for at indexere den data fra API'et i vores ElasticSearch
-databaseData. Koden her sørger også for at indexere den data fra API'et i vores ElasticSearch
-database. i figur~\ref{fig:pullData} viser vi hvordan vi har implementeret pullData, som det er nu, er \textbf{Validér API Endpoint} knappen altid deaktiveret. 
+i MySQL databasen, så de kan bruges af getStatisticsData. Koden her sørger også for at indexere den data fra API'et i vores ElasticSearch
+database.
+I figur~\ref{fig:pullData} viser vi hvordan vi har implementeret pullData, som det er nu, er \textbf{Validér API Endpoint} knappen altid deaktiveret. 
 Det er planen at i fremtiden, vil man kunne validere at det er et valid endpoint, med valid data.
+Derudover ville det nok have været smartest, at dele denne funktion op i mindre funktioner. Så den ikke både håndterede at kalde API'et der gemmer i MySQL databasen,
+og det API der indexere ElasticSearch databasen.
 \begin{figure}[H]
      \centering
      \includegraphics[scale=0.5]{pullData}
