@@ -53,6 +53,9 @@
 \contentsline {subsection}{Normalisering}{18}{section*.53}
 \contentsline {section}{Konklusion}{19}{section*.54}
 \contentsline {section}{Refleksion}{19}{section*.55}
-\contentsline {section}{Perspektivering}{19}{section*.56}
-\contentsline {section}{Litteraturliste}{19}{section*.57}
-\contentsline {section}{Bilag}{19}{section*.58}
+\contentsline {subsection}{ElasticSearch}{19}{section*.56}
+\contentsline {section}{Perspektivering}{20}{section*.57}
+\contentsline {section}{Refleksion}{20}{section*.58}
+\contentsline {subsection}{ElasticSearch}{20}{section*.59}
+\contentsline {section}{Litteraturliste}{20}{section*.60}
+\contentsline {section}{Bilag}{20}{section*.61}
