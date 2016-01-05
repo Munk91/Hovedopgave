@@ -1,6 +1,6 @@
 \section{Systemet}
 Her vil vi gennemgå systemet og gå i dybden med nogle kodeeksempler, for at give et bedre overblik over hvordan systemet virker og er sat sammen.
-De eksempler vi gennemgår er dem der har mest betydning for hvordan systemet virker og sikrer kernefunktionaliten.
+De eksempler vi gennemgår er dem der har mest betydning for hvordan systemet virker og er kernefunktionalitet.
 \subsection{getStatisticsData}
 \begin{lstlisting}[caption={getStatisticsData}, language={JavaScript}, label={lst:StatisticsControllerData}]
 ctrl.getStatisticsData = function(statisticIndex, statisticType) {
@@ -37,9 +37,10 @@ ctrl.getStatisticsData = function(statisticIndex, statisticType) {
         });
 };
 \end{lstlisting}
-i Kode eksempel~\ref{lst:StatisticsControllerData} kan man se hvordan vi henter statistik data ud fra et valgt api.
-Vi benytter os af et promise, som gør at vi kan håndtere forskellige resultater, alt efter om det lykkedes at hente noget data, fra ElasticSeach.
-Måden vi implementerede det på i vores view, som man kan se i figur~\ref{fig:getStatisticsData} var for at gøre det nemt og overskueligt for brugeren,
+i kodeeksempel~\ref{lst:StatisticsControllerData}, hentes der statistik data ud fra et valgt API.
+Vi benytter os af et promise, som gør at vi kan håndtere forskellige resultater, alt efter om det lykkedes at hente noget data, fra ElasticSeach, eller ej.
+\\\\
+Måden vi implementerede det på i vores view, som man kan se i figur~\ref{fig:getStatisticsData}, var for at gøre det nemt og overskueligt for brugeren,
 når de skal vælge statistic data.
 Den henter index og type ud fra vores MySQL database.
 \begin{figure}[H]
@@ -50,7 +51,7 @@ Den henter index og type ud fra vores MySQL database.
 \subsubsection{Reflektion over getStatisticsData}
 Vi udnytter ikke et angular promise ordentligt og skulle have indlagt noget fejlhåndtering, hvis der ikke kom noget data fra API'et,
 altså hvis promiset blev rejected.
-Derudover har Angular gjort det rigtig nemt for os at arbejde med RESTful apis, pga. af promise.
+Derudover har Angular gjort det rigtig nemt for os at arbejde med RESTful API's, pga.\ af ngResource.~\footnote{https://docs.angularjs.org/api/ngResource}.
 \subsection{drawChart}
 \begin{lstlisting}[caption={drawChart}, language={JavaScript}, label={lst:StatisticsControllerDraw}]
 ctrl.drawChart = function(chartType, data, title) {
@@ -85,12 +86,13 @@ formatChartData = function(data) {
     return chartObjectData;
 };
 \end{lstlisting}
-I Kode eksempel~\ref{lst:StatisticsControllerDraw} bruger vi den valgte data, vi har fået fra figur~\ref{fig:getStatisticsData}.
+I kodeeksempel~\ref{lst:StatisticsControllerDraw} bruger vi den valgte data, vi har fået fra figur~\ref{fig:getStatisticsData}.
 Vi benytter os af \hyperlink{GoogleChartAPI}{Google Chart API} her, hvor vi sætter de nødvendige properties for at lave et diagram.
-Hvis vi kigger fremad kunne vi have lavet det, så man selv kunne bestemme størrelsen på diagramet. Vi valgte denne løsning med faste værdier, da det var vigtigt for os at have noget funktionelt
+Hvis vi kigger fremad kunne vi have lavet det, så man selv kunne bestemme størrelsen på diagrammet. Vi valgte denne løsning med faste værdier, da det var vigtigt for os at have noget funktionelt
 og ligetil.
+\\\\
 Vi har delt koden op i to funktioner, hhv.\ formatChartData og drawChart, da det giver et bedre overblik over hele controlleren.
-I figur~\ref{fig:drawChart} kan man se hvordan vi implementerer de to funktioner i vores view.
+I figur~\ref{fig:drawChart} kan man se hvordan vi har implementeret de to funktioner i vores view.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{drawChart}
@@ -133,14 +135,14 @@ ctrl.pullData = function(index, type, api) {
     });
 }
 \end{lstlisting}
-i Kode eksempel~\ref{lst:PullControllerPullData} er metoden beskåret, så det kun er kernefunktionaliteten der er tilbage i den.
-Det er funktionen der håndtere de API's vi skal kunne hente data fra, det er også den funktion der sørger for at de bliver gemt 
+i kodeeksempel~\ref{lst:PullControllerPullData} er metoden beskåret, så det kun er kernefunktionaliteten der er tilbage i den.
+Det er funktionen der håndterer de API'er vi skal kunne hente data fra, det er også den funktion der sørger for at de bliver gemt 
 i MySQL databasen, så de kan bruges af getStatisticsData. Koden her sørger også for at indexere den data fra API'et i vores ElasticSearch
 database.
 I figur~\ref{fig:pullData} viser vi hvordan vi har implementeret pullData, som det er nu, er \textbf{Validér API Endpoint} knappen altid deaktiveret. 
 Det er planen at i fremtiden, vil man kunne validere at det er et valid endpoint, med valid data.
 Derudover ville det nok have været smartest, at dele denne funktion op i mindre funktioner. Så den ikke både håndterede at kalde API'et der gemmer i MySQL databasen,
-og det API der indexere ElasticSearch databasen.
+og det API der indekserer i ElasticSearch databasen.
 \begin{figure}[H]
      \centering
      \includegraphics[scale=0.5]{pullData}
