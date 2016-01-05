@@ -1,0 +1,11 @@
+\section{Refleksion}
+\subsection{ElasticSearch}
+Da vi udelukkende har valgt at hente ren statistik data, kunne man have brugt MySQL og vedholdt den høje performance til at hente data ud. 
+Valget med at bruge ElasticSearch til at indexere dataen, gør at hvis man i fremtiden vælger at hente rå data ind og lade applikationen håndtere
+udvælgelsen af den statistike data. Derved vil performance ikke blive påvirket i samme grad, som med en MySQL database.
+
+Arbejdet med ElasticSeach har givet os en god indsigt i, hvad det vil sige at arbejde med søge optimering
+Vi havde en del problemer med hvordan dataen skulle komme ind og hvordan den kom ud igen. 
+Da ElasticSearch stadig er en ny spiller på markedet af search engines synes vi, at der er steder hvor dokumentation har haltet.
+Det har gjort, at vi har været nødsaget til at være enormt eksperimenterende i forhold til hvordan vi skulle få indekseret data og hvad der blev returneret.
+På grund af overstående har vi fået en skarpere forståelse af ElasticSearch, da det har tvunget os til at lave en masse prototyper.
