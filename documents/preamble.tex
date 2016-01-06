@@ -9,6 +9,7 @@
 \usepackage{hyperref}
 \usepackage{listings}
 \usepackage{color}
+\usepackage{float}
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
@@ -23,7 +24,7 @@
     sensitive=false,
   comment=[l]{//},
     morecomment=[s]{/*}{*/},
-  commentstyle=\color{purple}\ttfamily,
+  commentstyle=\color{red}\ttfamily,
     stringstyle=\color{red}\ttfamily,
   morestring=[b]',
     morestring=[b]"
@@ -43,7 +44,15 @@
   stringstyle=\color{mauve},
     breaklines=true,
   breakatwhitespace=true,
-    tabsize=3
+    tabsize=3,
+    extendedchars=true,
+    literate=%
+    {æ}{{\ae}}1
+    {å}{{\aa}}1
+    {ø}{{\o}}1
+    {Æ}{{\AE}}1
+    {Å}{{\AA}}1
+    {Ø}{{\O}}1
 }
 \graphicspath{{./documents/images/}}
 
@@ -57,10 +66,10 @@
     {\huge\bfseries Hovedopgave\par}
     \vspace{2cm}
     {\Large\itshape Mikkel Bendix Munk\par}
-    {\small\itshape 051191-1397\par}
+    {\small\itshape 051191\par}
     {\small\itshape mikk2385@edu.eal.dk\par}
     {\Large\itshape Christoffer Frydkjær Kristensen\par}
-    {\small\itshape 120389-1337\par}
+    {\small\itshape 120389\par}
     {\small\itshape chri635r@edu.eal.dk\par}
     \vfill
     vejledt af\par
@@ -88,11 +97,11 @@
 \import{./documents/}{versionsstyring}
 \import{./documents/}{usecases}
 \import{./documents/}{arkitektur}
+\import{./documents/}{system}
 \import{./documents/}{teknologier}
 \import{./documents/}{testing}
 \import{./documents/}{database}
 \import{./documents/}{konklusion}
-\import{./documents/}{refleksion}
 \import{./documents/}{perspektivering}
 \import{./documents/}{refleksion}
 \import{./documents/}{litteraturliste}
