@@ -6,29 +6,29 @@ Klienten kan derfor kalde forskellige API'er på serveren og modtage data på de
 \\\\
 Vores frontend er bygget op omkring \hyperlink{AngularJS}{AngularJS}, som giver os en MVC struktur.
 Det samme gør sig gældende på vores server, da vores backend er bygget op efter \hyperlink{Laravel}{Laravels} MVC struktur.
-De strukturer som de forskellige frameworks giver os, er grundstenen i hele vores systemarkitektur. Sammen med det sammenspil mellem vores frontend og backend via et RESTful API.\@
 \\\\
-Vi har lavet en figur der viser vores systemarkitektur, som er bygget ud fra GRASP principperne og som imødekommer definitionen af objekt orienteret programmering.\\
+Begge frameworks indeholder principperne med view, model og controller, ligesom mange andre moderne web applikation frameworks.
+Dette er gjort for at seperare business logik fra user interface. Begge frameworks er beskrevet mere detaljeret i \hyperlink{Teknologier}{Teknologier} afsnittet.
+\\
+Et eksempel på hvordan det fungerer i praksis, kan ses på vores~\hyperref[fig:ssd]{SSD}.
+\\\\
+Vi viser på figur~\ref{fig:arkitektur} vores samlede systemarkitektur, som er bygget ud fra GRASP principperne og som imødekommer definitionen af objekt orienteret programmering.\\
 Brugeren får præsenteret et \textit{view}, som bliver styret af en frontend \textit{controller}. Denne controller står samtidig for at kommunikere med noget middleware som er laget mellem frontend og backend, dette lag står bla. for validering, routing og service kald. Via en route bliver en \textit{controller} på serveren kaldt, som står for at kommunikere med repository, der er en form for data-access lag der kender til en model og data. Repository og model lag er primært indbyggede \hyperlink{Laravel}{Laravel} funktioner, som blandt andet anvender deres ORM, \href{http://laravel.com/docs/5.1/eloquent}{Eloquent}.
-\begin{figure}[here]
+\begin{figure}[H]
 \includegraphics[scale=0.5]{Arkitektur}
 \caption{Vores samlede systemarkitektur}
 \label{fig:arkitektur}
 \end{figure}
 \subsection{Klassediagram}
-Et klassediagram viser klasserne i systemet samt deres relationer.\\
-Vores klassediagram er lavet ud fra use case diagrammet, hvor vi har \textbf{UploadUser} (aktør: udvikler), \textbf{ShowUser} (aktør: bruger), en \textbf{DatabaseHandler} som står for database interagering, et \textbf{View} som præsenterer data, og en \textbf{Validator} der står for validering.
+Vores klassediagram er lavet med udgangspunkt i vores use case diagram, hvor vi har \textbf{UploadUser} (aktør: udvikler), \textbf{ShowUser} (aktør: bruger), en \textbf{DatabaseHandler} som står for database interagering, et \textbf{View} som præsenterer data, og en \textbf{Validator} der står for validering.
 \\\\
-Vær opmærksom på at systemet ikke afspejler klassediagrammet til fulde, men blot er et overblik over de forskellige klasser og et eksempel på deres relationer.
-Når vi har programmeret systemet har vi ikke lavet en tro kopi af klassediagrammet, men har blot kunne læne os op ad f.eks.\
-relationer, metoder, attributter, e.l.
+Vær opmærksom på at systemet ikke afspejler klassediagrammet til fulde og visa versa, men blot er et overblik over de forskellige klasser og et eksempel på deres relationer.
+Grunden til dette er at vi ikke har lavet et samlet diagram i løbet af projektet.
+I stedet har vi løbende skitseret klasser og deres relationer på et whiteboard, når vi følte det var nødvendigt.
+Denne figur er blot for at skabe et overblik for læseren.
 \\\\
-TODO:\ Indsæt klassediagram
-\subsection{Sekvensdiagram}
-Systemsekvensdiagrammer er et eksempel på brugerens interaktion med systemet. Dette beskrives ved forskellige events og logik i systemet, under en given sekvens.
-\\
-Interaktionen mellem brugeren og systemet betragtes som black box, og man kan gå i dybden med hver enkelt system event ved at lave operationskontrakter.
-\\\\
-Vi har valgt at lave et sekvensdiagram for \textit{Gem diagram} use casen, som er beskrevet i afsnit \textit{Use cases}.
-\\\\
-TODO:\ Indsæt sekvensdiagram for \textit{Gem diagram}
+\begin{figure}[H]
+    \makebox[\textwidth]{\includegraphics[scale=0.45]{Klassediagram}}
+\caption{Klassediagram med relationer}
+\label{fig:klassediagram}
+\end{figure}
