@@ -1,3 +1,4 @@
+\hypertarget{Teknologier}{}
 \section{Teknologier}
 Grunden til vi laver en web applikation er at den nemt skal kunne integreres ude på Ordbogen A/S  og at man nemt skal kunne tilgå den.
 Vi har også begge arbejdet med webudvikling i vores praktikforløb hos Ordbogen A/S, og derfor var det bekvemt for os at forsætte ad samme sti.
@@ -26,6 +27,22 @@ det er meget intuitivt og tilbyder de nødvendige funtionaliteter i forhold til 
 Det er også lavet til at fungere på tværs af browsere da det renderer med HTML5/SVG, 
 det gør også at det eneste krav til at det skal kunne køre på klienten, er en browser.\footnote{https://developers.google.com/chart/interactive/docs/}. 
 Derudover er der et angular library der gør det endnu nemmere at integrere i AngularJS.
+\subsection{ElasticSearch}
+Vi har anvendt ElasticSearch til at gemme data, som et alternativ til en SQL database.
+\\\\
+ElasticSearch er en næsten real-time search engine som er bygget på Apache Lucene, som er et søge API.\
+ElasticSearch er bygget op omkring et Cluster, som er en liste af nodes, hvor en node er en server der gemmer data. Cluster indekserer så dataen og gør det søgbart\footnote{https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-repositories.html}.
+ElasticSearch gør også brug af index, som er en liste af dokumenter, der har samme karakteristika og er skrevet i JSON format.
+\\
+Ved større index kan de dele et index op i shards og et shard er et fuldt funktionelt index. Det gør man kan skalere data horisontalt.
+\\\\
+Vi har på figur~\ref{fig:elasticsearch-arkitektur} forsøgt at skitsere den generelle opbygning af en typisk ElasticSearch server, og relationer mellem cluster, nodes og dokumenter.
+\\\\
+\begin{figure}[H]
+    \includegraphics[scale=0.7]{ElasticSearch_arkitektur}
+    \caption{Skitsering af ElasticSearch}
+    \label{fig:elasticsearch-arkitektur}
+\end{figure}
 \subsection{Problemstilling omkring håndtering af data}
 Vi har en problemstilling der går på at vi skal have noget data ind i vores ElasticSearch database, for at kunne præsentere det.
 Problemstillingen går på, om vi skal pulle data ud fra de API'er der bliver tilgængelige for vores system. Eller om de forskellige teams der uploader API'er selv skal stå for at pushe data ind til vores database.
