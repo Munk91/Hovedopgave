@@ -1,1 +1,63 @@
 \section{Konklusion}
+Som udgangspunkt for projektet, stillede vi os selv følgende spørgsmål:
+\begin{itemize}
+    \item{Hvad kan vi gøre for at hjælpe med at gøre det simpelt at importere data og få det præsenteret på en brugervenlig måde?}
+    \item{Hvordan kan vi opbygge systemet, så andre udviklere har mulighed for at vedligeholde og videreudvikle systemet?}
+\end{itemize}
+Dette projekt har gjort os i stand til at besvare disse spørgsmål således.
+\subsection{Import og præsentation af data}
+Som vi fremlagde i \hyperlink{push-or-pull}{afsnittet} omkring håndtering af data, er der fordele og ulemper ved enten at pushe
+eller pulle. Ved at pulle data fra endpoints fandt vi dog ud af, at det var nemmere at kontrollere hvilke data vi havde at arbejde
+med i systemet.
+\\
+Ved at bruge pull metoden har vi kunnet bestemme formatet af den data der bliver lagret i vores database, og har dermed gjort arbejdet med at hente data og lagre det nemmere.
+Vi har lavet en bestemt struktur til JSON dokumenter, som kræves af det endpoint der bliver givet til vores system.
+Denne struktur er bestemt på baggrund af diskussion med virksomhedens systemadminstratorer, vores interessenters krav og vores egne undersøgelser.
+\\\\
+Det har dog været svært at bestemme én bestemt struktur til data, da systemet ikke er blevet testet af brugerne.
+Disse test kunne være med til at udvikle en optimeret struktur der gør det nemt for os at hente data fra endpointet,
+og samtidig gøre det nemt at strukturere den data der skal anvendes til statistik.
+\\\\
+Præsentationen af data stod rimelig klart for os, at det skulle foregå ved at generere forskellige diagrammer ud fra data.
+\\
+Det svære var at finde ud af hvilke data der skulle hives ud fra databasen, for at kunne lave de ønskede diagrammer.
+\\
+Vi diskuterede med vores interessenter, om hvordan denne præsentation skulle foregå, og kom frem til at det ønskede resultat
+mere var i stil med en kurve, der kunne vise udviklingen af værdier over tid.
+\\\\
+Dette var med til at ændre strukturen af data, og vi nåede derfor aldrig helt at opfylde alle krav om at få præsenteret
+det på den ønskede måde.
+Vi lavede dog en dynamisk visning af data, ved at anvende et tredjeparts bibliotek til at generere diagrammer, på en nem måde.
+\\
+Vores løsning kan derfor tilpasses rimelig nemt, til at vise andre slags diagrammer, med andre slags data.
+\subsection{Videreudvikling og vedligeholdelse}
+Det andet spørgsmål, handlede for os, meget om at gøre systemet nemt at videreudvikle og vedligeholde for virksomhedens udviklere.
+\\
+Dette løste vi ved at anvende så mange af de teknologier som virksomheden bruger i forvejen, og som vi lærte i vores praktikperiode. Dog kom vi ikke uden om at tage andre kode biblioteker i brug, men vi sørgede hele tiden for at alt var veldokumenteret og nemt at gå til. 
+\\\\
+Vores løsning er lavet med udgangspunkt i Laravel Lumen PHP MVC framework og Angular JS MVC framework, hvilket er to yderst
+veldokumenterede frameworks der gør koden nem at gå til for personer der kender disse teknologier i forvejen eller har mod på at lære dem.
+Herudover har vi dokumenteret vores systemarkitektur, hvilke tanker der ligger bag vores valg, samt vores klasser og hvilke relationer der er imellem dem.
+Vi har illustreret vores løsninger, så udviklere har et godt udgangspunkt når de skal sætte sig ind i vores system.
+\\
+Af nye teknologier kan nævnes ElasticSearch, som vi har anvendt til at lagre data, og Google Chart API som vi har anvendt til at
+lave vores diagrammer.
+Disse biblioteker er dog gennemtestede og veldokumenterede, samt de er forholdsvis nemme at anvende.
+Det burde derfor ikke være et problem at fortsætte med at bruge disse teknologier, eller skifte dem ud med andre lignende moduler.
+\\\\
+Testing var en del af den kvalitetssikring der skulle sikre at programmets funktionalitet var pålidelig.
+Denne del blev dog nedprioteret til sidst i projektperioden, og vores tests dækker derfor ikke 100\% af funktionaliteterne.
+Der er dog skrevet nogle tests, som kan være med til at give inspiration til andre udviklere der ønsker at færdiggøre alle tests.
+\subsection{Samlet konklusion}
+Efter en endt projektperiode og ved afslutning af dette projekt, kan vi konstatere at vi har lavet første udkast til et brugbart system.
+Det har hele tiden været vores mål at kunne lave noget, som var brugbart for virksomheden, men også at anvende projektperioden som et læringsprojekt. Derfor har vi forsøgt at eksperimentere med nye ting, hvilket har gjort at vi ikke helt er kommet i mål med at lave et komplet anvendeligt system.
+\\
+Vi endte med at få ros på det sidste review, og fik at vide der ikke var langt til at de godt ville tage systemet i brug.
+Dette gav os en form for anerkendelse, og fortalte os at vi ikke har lavet noget ubrugeligt.
+\\\\
+Vi har lært meget i projektperioden som vi ikke vidste i forvejen, og vi er stødt ind i mange udfordringer.
+Dette har gjort os til bedre udviklere, og givet os nogle uvurderlige erfaringer som vi kan tage med os videre.
+\\
+En meget essentiel ting vi har lært, er at prøve at planlægge og håndtere et større projekt på egen hånd.
+Sammen med at vi har skullet præsentere vores løsninger for en reel virksomheden, som gav os feedback.
+
