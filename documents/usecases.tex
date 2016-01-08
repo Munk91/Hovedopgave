@@ -1,14 +1,26 @@
 \section{Use cases}
 \subsection{Use case diagram}
-Vi har lavet et samlet use case diagram, der viser vores aktører og deres use cases i systemet.\\
+Vi har lavet et \hyperref[fig:usecase-complete]{samlet use case diagram}, der viser vores aktører og deres use cases i systemet.\\
 For at gøre det mere overskueligt har vi lavet det således at der er indbygget et workflow for hver aktion i systemet.
 På denne måde har vi kunnet fremvise dette diagram for vores interessenter, og få feedback på funktionerne i systemet på en samlet måde.
-I stedet for at fremvise et diagram for hver enkelt use case, giver det samlede use case diagram  også et syn på hvordan de forskellige funktioner snakker sammen.
-\\\\
-TODO: Indsæt samlet use case diagram
+I stedet for at fremvise et diagram for hver enkelt use case, giver det \hyperref[fig:usecase-complete]{samlede use case diagram} også et syn på hvordan de forskellige funktioner snakker sammen.
+\begin{figure}[H]
+    \makebox[\textwidth]{\includegraphics[scale=0.55]{UseCaseDiagram_complete}}
+    \caption{Samlet use case diagram}
+    \label{fig:usecase-complete}
+\end{figure}
+\subsection{Use cases der er færdige}
+Da vi ikke har nået at implementere alle use cases, og fordi der til vores sidste review blev bestemt at nogle skulle skrottes,
+har vi tilføjet nedenstående \hyperref[fig:usecase-done]{billede}.
+\\
+De use cases der er markeret med grøn, er dem der er implementeret, og dem med et kryds er dem der er fjernet fra det oprindelige diagram.
+(Validér API endpoint er ikke komplet implementeret, men kun delvist, og derfor den gulig-grønne farve)
+\begin{figure}[H]
+    \makebox[\textwidth]{\includegraphics[scale=0.55]{UseCaseDiagram_done}}
+    \caption{Use cases der er færdige}
+    \label{fig:usecase-done}
+\end{figure}
 \subsection{Use case - Gem API endpoint}
-TODO: Indsæt use case diagram for gem api endpoint
-\\\\
 \textbf{Aktør:} Udvikler
 \\\\
 \textbf{Scenarie:} En udvikler vil gemme et API endpoint på vores server da det skal være tilgængeligt i vores system. \\
@@ -17,5 +29,15 @@ Brugeren modtager herefter en bekræftelse på om data er blevet gemt korrekt.
 \\\\
 \textbf{Alternative scenarier:} Udvikleren finder det besværligt og får en administrator til at tilføje sit API endpoint,
 eller vælger at forlade siden uden at gemme.
-\subsection{System sekvens diagram}
-Nedenfor er skitseret et system sekvens diagram for \textit{Gem API}, der viser flow'et af use casen igennem hele systemet.
+\subsection{Systemsekvensdiagram}
+Systemsekvensdiagrammet visualiserer hvordan \textit{Gem Api} fungerer i praksis, og hvordan de forskellige lag i vores applikation fungerer.
+\\
+Vi har valgt at dele det op i frontend og backend, der gør det nemmere at overskue det konkrete opdeling af de to ting.
+\\\\
+Gem Api går i alt sin enkelhed ud på at brugeren indtaster noget data og forsøger at gemme det i databasen.
+Hvis dette ikke lykkedes, får brugeren en fejlbesked. Nedenfor er denne sekvens visualiseret.
+\begin{figure}[H]
+    \makebox[\textwidth]{\includegraphics[scale=0.50]{Systemsekvensdiagram}}
+    \caption{Systemsekvensdiagram for Gem Api}
+\label{fig:ssd}
+\end{figure}
