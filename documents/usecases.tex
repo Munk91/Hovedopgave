@@ -23,3 +23,16 @@ Brugeren modtager herefter en bekræftelse på om data er blevet gemt korrekt.
 \\\\
 \textbf{Alternative scenarier:} Udvikleren finder det besværligt og får en administrator til at tilføje sit API endpoint,
 eller vælger at forlade siden uden at gemme.
+\hypertarget{Systemsekvensdiagram}{}
+\subsection{Systemsekvensdiagram}
+Systemsekvensdiagrammet visualiserer hvordan \textit{Gem Api} fungerer i praksis, og hvordan de forskellige lag i vores applikation fungerer.
+\\
+Vi har valgt at dele det op i frontend og backend, der gør det nemmere at overskue det konkrete opdeling af de to ting.
+\\\\
+Gem Api går i alt sin enkelhed ud på at brugeren indtaster noget data og forsøger at gemme det i databasen.
+Hvis dette ikke lykkedes, får brugeren en fejlbesked. Nedenfor er denne sekvens visualiseret.
+\begin{figure}[H]
+    \makebox[\textwidth]{\includegraphics[scale=0.50]{Systemsekvensdiagram}}
+    \caption{Systemsekvensdiagram for Gem Api}
+\label{fig:ssd}
+\end{figure}
