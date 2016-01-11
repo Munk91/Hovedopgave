@@ -1,70 +1,70 @@
 \select@language {danish}
 \contentsline {section}{\numberline {1}Forord}{1}{section.1}
 \contentsline {section}{\numberline {2}Resum\IeC {\'e}}{1}{section.2}
-\contentsline {section}{\numberline {3}L\IeC {\ae }sevejledning}{3}{section.3}
-\contentsline {section}{\numberline {4}Indledning}{3}{section.4}
-\contentsline {section}{\numberline {5}L\IeC {\ae }ringsm\IeC {\r a}l i forbindelse med afsluttende eksamensprojekt}{4}{section.5}
-\contentsline {section}{\numberline {6}Produktbeskrivelse}{4}{section.6}
-\contentsline {section}{\numberline {7}Beskrivelse af virksomheden}{4}{section.7}
-\contentsline {subsection}{\numberline {7.1}Ordbogen A/S}{4}{subsection.7.1}
-\contentsline {section}{\numberline {8}Problemstilling}{5}{section.8}
-\contentsline {subsection}{\numberline {8.1}Overordnet emne}{5}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Delemne}{5}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}Udgangspunkt}{5}{subsection.8.3}
-\contentsline {subsection}{\numberline {8.4}Sp\IeC {\o }rgsm\IeC {\r a}l}{5}{subsection.8.4}
-\contentsline {subsubsection}{\numberline {8.4.1}Datasp\IeC {\o }rgsm\IeC {\r a}l}{5}{subsubsection.8.4.1}
-\contentsline {subsubsection}{\numberline {8.4.2}Vurderingssp\IeC {\o }rgsm\IeC {\r a}l}{5}{subsubsection.8.4.2}
-\contentsline {subsubsection}{\numberline {8.4.3}Forklaringssp\IeC {\o }rgsm\IeC {\r a}l}{6}{subsubsection.8.4.3}
-\contentsline {subsubsection}{\numberline {8.4.4}Handlingssp\IeC {\o }rgsm\IeC {\r a}l}{6}{subsubsection.8.4.4}
-\contentsline {subsection}{\numberline {8.5}Problemformulering}{6}{subsection.8.5}
-\contentsline {section}{\numberline {9}Gruppekontrakt}{6}{section.9}
-\contentsline {section}{\numberline {10}Kvalitetssikring}{7}{section.10}
-\contentsline {section}{\numberline {11}Projektstyring}{7}{section.11}
-\contentsline {subsection}{\numberline {11.1}Scrum}{7}{subsection.11.1}
-\contentsline {subsection}{\numberline {11.2}Planl\IeC {\ae }gning}{7}{subsection.11.2}
-\contentsline {subsection}{\numberline {11.3}Scrum v\IeC {\ae }rkt\IeC {\o }jet YouTrack}{9}{subsection.11.3}
-\contentsline {subsection}{\numberline {11.4}Review referater}{10}{subsection.11.4}
-\contentsline {subsubsection}{\numberline {11.4.1}Fredag d. 20/11}{10}{subsubsection.11.4.1}
-\contentsline {subsubsection}{\numberline {11.4.2}Fredag d. 4/12}{11}{subsubsection.11.4.2}
-\contentsline {subsubsection}{\numberline {11.4.3}Fredag d. 18/12}{11}{subsubsection.11.4.3}
-\contentsline {section}{\numberline {12}Arbejdsmetoder}{12}{section.12}
-\contentsline {section}{\numberline {13}Versionsstyring}{12}{section.13}
-\contentsline {section}{\numberline {14}Use cases}{13}{section.14}
-\contentsline {subsection}{\numberline {14.1}Use case diagram}{13}{subsection.14.1}
-\contentsline {subsection}{\numberline {14.2}Use cases der er f\IeC {\ae }rdige}{13}{subsection.14.2}
-\contentsline {subsection}{\numberline {14.3}Use case - Gem API endpoint}{14}{subsection.14.3}
-\contentsline {subsection}{\numberline {14.4}Systemsekvensdiagram}{14}{subsection.14.4}
-\contentsline {section}{\numberline {15}Arkitektur}{15}{section.15}
-\contentsline {subsection}{\numberline {15.1}Systemarkitektur}{15}{subsection.15.1}
-\contentsline {subsection}{\numberline {15.2}Klassediagram}{17}{subsection.15.2}
-\contentsline {section}{\numberline {16}Opsummering - analyse}{18}{section.16}
-\contentsline {section}{\numberline {17}Teknologier}{19}{section.17}
-\contentsline {subsection}{\numberline {17.1}Laravel}{19}{subsection.17.1}
-\contentsline {subsection}{\numberline {17.2}AngularJS}{19}{subsection.17.2}
-\contentsline {subsection}{\numberline {17.3}Google Chart API}{19}{subsection.17.3}
-\contentsline {subsection}{\numberline {17.4}ElasticSearch}{19}{subsection.17.4}
-\contentsline {subsection}{\numberline {17.5}Problemstilling omkring h\IeC {\r a}ndtering af data}{20}{subsection.17.5}
-\contentsline {section}{\numberline {18}Systemet}{21}{section.18}
-\contentsline {subsection}{\numberline {18.1}getStatisticsData}{21}{subsection.18.1}
-\contentsline {subsubsection}{\numberline {18.1.1}Reflektion over getStatisticsData}{23}{subsubsection.18.1.1}
-\contentsline {subsection}{\numberline {18.2}drawChart}{23}{subsection.18.2}
-\contentsline {subsection}{\numberline {18.3}pullData}{24}{subsection.18.3}
-\contentsline {section}{\numberline {19}Testing}{26}{section.19}
-\contentsline {subsection}{\numberline {19.1}Jasmine}{26}{subsection.19.1}
-\contentsline {subsection}{\numberline {19.2}PHPUnit}{26}{subsection.19.2}
-\contentsline {section}{\numberline {20}Database}{27}{section.20}
-\contentsline {subsection}{\numberline {20.1}Valg af database}{27}{subsection.20.1}
-\contentsline {subsection}{\numberline {20.2}Normalisering}{28}{subsection.20.2}
-\contentsline {section}{\numberline {21}Opsummering - Teknik}{29}{section.21}
-\contentsline {section}{\numberline {22}Konklusion}{30}{section.22}
-\contentsline {subsection}{\numberline {22.1}Import og pr\IeC {\ae }sentation af data}{30}{subsection.22.1}
-\contentsline {subsection}{\numberline {22.2}Videreudvikling og vedligeholdelse}{31}{subsection.22.2}
-\contentsline {subsection}{\numberline {22.3}Samlet konklusion}{31}{subsection.22.3}
-\contentsline {section}{\numberline {23}Perspektivering}{32}{section.23}
-\contentsline {section}{\numberline {24}Refleksion}{32}{section.24}
-\contentsline {subsection}{\numberline {24.1}Systemet som en helhed}{32}{subsection.24.1}
-\contentsline {subsection}{\numberline {24.2}ElasticSearch}{33}{subsection.24.2}
-\contentsline {section}{\numberline {25}Arbejdsfordeling}{33}{section.25}
-\contentsline {subsection}{\numberline {25.1}Rapporten}{34}{subsection.25.1}
-\contentsline {section}{\numberline {26}Litteraturliste}{35}{section.26}
-\contentsline {section}{\numberline {27}Bilag}{35}{section.27}
+\contentsline {section}{\numberline {3}L\IeC {\ae }sevejledning}{5}{section.3}
+\contentsline {section}{\numberline {4}Indledning}{5}{section.4}
+\contentsline {section}{\numberline {5}L\IeC {\ae }ringsm\IeC {\r a}l i forbindelse med afsluttende eksamensprojekt}{6}{section.5}
+\contentsline {section}{\numberline {6}Produktbeskrivelse}{6}{section.6}
+\contentsline {section}{\numberline {7}Beskrivelse af virksomheden}{6}{section.7}
+\contentsline {subsection}{\numberline {7.1}Ordbogen A/S}{6}{subsection.7.1}
+\contentsline {section}{\numberline {8}Problemstilling}{7}{section.8}
+\contentsline {subsection}{\numberline {8.1}Overordnet emne}{7}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Delemne}{7}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Udgangspunkt}{7}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Sp\IeC {\o }rgsm\IeC {\r a}l}{7}{subsection.8.4}
+\contentsline {subsubsection}{\numberline {8.4.1}Datasp\IeC {\o }rgsm\IeC {\r a}l}{7}{subsubsection.8.4.1}
+\contentsline {subsubsection}{\numberline {8.4.2}Vurderingssp\IeC {\o }rgsm\IeC {\r a}l}{7}{subsubsection.8.4.2}
+\contentsline {subsubsection}{\numberline {8.4.3}Forklaringssp\IeC {\o }rgsm\IeC {\r a}l}{8}{subsubsection.8.4.3}
+\contentsline {subsubsection}{\numberline {8.4.4}Handlingssp\IeC {\o }rgsm\IeC {\r a}l}{8}{subsubsection.8.4.4}
+\contentsline {subsection}{\numberline {8.5}Problemformulering}{8}{subsection.8.5}
+\contentsline {section}{\numberline {9}Gruppekontrakt}{8}{section.9}
+\contentsline {section}{\numberline {10}Kvalitetssikring}{9}{section.10}
+\contentsline {section}{\numberline {11}Projektstyring}{9}{section.11}
+\contentsline {subsection}{\numberline {11.1}Scrum}{9}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.2}Planl\IeC {\ae }gning}{9}{subsection.11.2}
+\contentsline {subsection}{\numberline {11.3}Scrum v\IeC {\ae }rkt\IeC {\o }jet YouTrack}{11}{subsection.11.3}
+\contentsline {subsection}{\numberline {11.4}Review referater}{12}{subsection.11.4}
+\contentsline {subsubsection}{\numberline {11.4.1}Fredag d. 20/11}{12}{subsubsection.11.4.1}
+\contentsline {subsubsection}{\numberline {11.4.2}Fredag d. 4/12}{13}{subsubsection.11.4.2}
+\contentsline {subsubsection}{\numberline {11.4.3}Fredag d. 18/12}{13}{subsubsection.11.4.3}
+\contentsline {section}{\numberline {12}Arbejdsmetoder}{14}{section.12}
+\contentsline {section}{\numberline {13}Versionsstyring}{14}{section.13}
+\contentsline {section}{\numberline {14}Use cases}{15}{section.14}
+\contentsline {subsection}{\numberline {14.1}Use case diagram}{15}{subsection.14.1}
+\contentsline {subsection}{\numberline {14.2}Use cases der er f\IeC {\ae }rdige}{15}{subsection.14.2}
+\contentsline {subsection}{\numberline {14.3}Use case - Gem API endpoint}{16}{subsection.14.3}
+\contentsline {subsection}{\numberline {14.4}Systemsekvensdiagram}{16}{subsection.14.4}
+\contentsline {section}{\numberline {15}Arkitektur}{17}{section.15}
+\contentsline {subsection}{\numberline {15.1}Systemarkitektur}{17}{subsection.15.1}
+\contentsline {subsection}{\numberline {15.2}Klassediagram}{19}{subsection.15.2}
+\contentsline {section}{\numberline {16}Opsummering - analyse}{20}{section.16}
+\contentsline {section}{\numberline {17}Teknologier}{21}{section.17}
+\contentsline {subsection}{\numberline {17.1}Laravel}{21}{subsection.17.1}
+\contentsline {subsection}{\numberline {17.2}AngularJS}{21}{subsection.17.2}
+\contentsline {subsection}{\numberline {17.3}Google Chart API}{21}{subsection.17.3}
+\contentsline {subsection}{\numberline {17.4}ElasticSearch}{21}{subsection.17.4}
+\contentsline {subsection}{\numberline {17.5}Problemstilling omkring h\IeC {\r a}ndtering af data}{22}{subsection.17.5}
+\contentsline {section}{\numberline {18}Systemet}{23}{section.18}
+\contentsline {subsection}{\numberline {18.1}getStatisticsData}{23}{subsection.18.1}
+\contentsline {subsubsection}{\numberline {18.1.1}Reflektion over getStatisticsData}{25}{subsubsection.18.1.1}
+\contentsline {subsection}{\numberline {18.2}drawChart}{25}{subsection.18.2}
+\contentsline {subsection}{\numberline {18.3}pullData}{26}{subsection.18.3}
+\contentsline {section}{\numberline {19}Testing}{28}{section.19}
+\contentsline {subsection}{\numberline {19.1}Jasmine}{28}{subsection.19.1}
+\contentsline {subsection}{\numberline {19.2}PHPUnit}{28}{subsection.19.2}
+\contentsline {section}{\numberline {20}Database}{29}{section.20}
+\contentsline {subsection}{\numberline {20.1}Valg af database}{29}{subsection.20.1}
+\contentsline {subsection}{\numberline {20.2}Normalisering}{30}{subsection.20.2}
+\contentsline {section}{\numberline {21}Opsummering - Teknik}{31}{section.21}
+\contentsline {section}{\numberline {22}Konklusion}{32}{section.22}
+\contentsline {subsection}{\numberline {22.1}Import og pr\IeC {\ae }sentation af data}{32}{subsection.22.1}
+\contentsline {subsection}{\numberline {22.2}Videreudvikling og vedligeholdelse}{33}{subsection.22.2}
+\contentsline {subsection}{\numberline {22.3}Samlet konklusion}{33}{subsection.22.3}
+\contentsline {section}{\numberline {23}Perspektivering}{34}{section.23}
+\contentsline {section}{\numberline {24}Refleksion}{34}{section.24}
+\contentsline {subsection}{\numberline {24.1}Systemet som en helhed}{34}{subsection.24.1}
+\contentsline {subsection}{\numberline {24.2}ElasticSearch}{35}{subsection.24.2}
+\contentsline {section}{\numberline {25}Arbejdsfordeling}{35}{section.25}
+\contentsline {subsection}{\numberline {25.1}Rapporten}{36}{subsection.25.1}
+\contentsline {section}{\numberline {26}Litteraturliste}{37}{section.26}
+\contentsline {section}{\numberline {27}Bilag}{37}{section.27}
