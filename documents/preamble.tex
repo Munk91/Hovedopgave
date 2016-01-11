@@ -9,6 +9,8 @@
 \usepackage{listings}
 \usepackage{color}
 \usepackage{float}
+\usepackage{pdflscape}
+\usepackage{geometry}
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
@@ -65,10 +67,8 @@
     {\huge\bfseries Hovedopgave\par}
     \vspace{2cm}
     {\Large\itshape Mikkel Bendix Munk\par}
-    {\small\itshape 051191\par}
     {\small\itshape mikk2385@edu.eal.dk\par}
     {\Large\itshape Christoffer Frydkjær Kristensen\par}
-    {\small\itshape 120389\par}
     {\small\itshape chri635r@edu.eal.dk\par}
     \vfill
     vejledt af\par
@@ -78,29 +78,32 @@
 
     {\large \today\par}
 \end{titlepage}
+\import{./documents/}{forord}
+\import{./documents/}{resume}
+\newpage
 \tableofcontents{}
 \newpage
-\import{./documents/}{resume}
-\import{./documents/}{forord}
 \import{./documents/}{laesevejledning}
 \import{./documents/}{indledning}
 \import{./documents/}{laeringsmaal}
+\import{./documents/}{produktbeskrivelse}
 \import{./documents/}{beskrivelse}
 \import{./documents/}{problemformulering}
 \import{./documents/}{gruppekontrakt}
-\import{./documents/}{projektstyring}
 \import{./documents/}{kvalitetssikring}
-\import{./documents/}{produktbeskrivelse}
+\import{./documents/}{projektstyring}
 \import{./documents/}{arbejdsmetoder}
 \import{./documents/}{versionsstyring}
 \import{./documents/}{usecases}
 \import{./documents/}{arkitektur}
 \import{./documents/}{delkonklusion-analyse}
-\import{./documents/}{system}
+\newpage
 \import{./documents/}{teknologier}
+\import{./documents/}{system}
 \import{./documents/}{testing}
 \import{./documents/}{database}
 \import{./documents/}{delkonklusion-teknik}
+\newpage
 \import{./documents/}{konklusion}
 \import{./documents/}{perspektivering}
 \import{./documents/}{refleksion}
