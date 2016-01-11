@@ -4,19 +4,19 @@
 \contentsline {section}{\numberline {3}L\IeC {\ae }sevejledning}{3}{section.3}
 \contentsline {section}{\numberline {4}Indledning}{3}{section.4}
 \contentsline {section}{\numberline {5}L\IeC {\ae }ringsm\IeC {\r a}l i forbindelse med afsluttende eksamensprojekt}{4}{section.5}
-\contentsline {section}{\numberline {6}Produktbeskrivelse}{4}{section.6}
-\contentsline {section}{\numberline {7}Beskrivelse af virksomheden}{4}{section.7}
-\contentsline {subsection}{\numberline {7.1}Ordbogen A/S}{4}{subsection.7.1}
-\contentsline {section}{\numberline {8}Problemstilling}{5}{section.8}
-\contentsline {subsection}{\numberline {8.1}Overordnet emne}{5}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Delemne}{5}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}Udgangspunkt}{5}{subsection.8.3}
-\contentsline {subsection}{\numberline {8.4}Sp\IeC {\o }rgsm\IeC {\r a}l}{5}{subsection.8.4}
-\contentsline {subsubsection}{\numberline {8.4.1}Datasp\IeC {\o }rgsm\IeC {\r a}l}{5}{subsubsection.8.4.1}
-\contentsline {subsubsection}{\numberline {8.4.2}Vurderingssp\IeC {\o }rgsm\IeC {\r a}l}{5}{subsubsection.8.4.2}
-\contentsline {subsubsection}{\numberline {8.4.3}Forklaringssp\IeC {\o }rgsm\IeC {\r a}l}{6}{subsubsection.8.4.3}
-\contentsline {subsubsection}{\numberline {8.4.4}Handlingssp\IeC {\o }rgsm\IeC {\r a}l}{6}{subsubsection.8.4.4}
-\contentsline {subsection}{\numberline {8.5}Problemformulering}{6}{subsection.8.5}
+\contentsline {section}{\numberline {6}Beskrivelse af virksomheden}{4}{section.6}
+\contentsline {subsection}{\numberline {6.1}Ordbogen A/S}{4}{subsection.6.1}
+\contentsline {section}{\numberline {7}Problemstilling}{4}{section.7}
+\contentsline {subsection}{\numberline {7.1}Overordnet emne}{4}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Delemne}{4}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Udgangspunkt}{5}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}Sp\IeC {\o }rgsm\IeC {\r a}l}{5}{subsection.7.4}
+\contentsline {subsubsection}{\numberline {7.4.1}Datasp\IeC {\o }rgsm\IeC {\r a}l}{5}{subsubsection.7.4.1}
+\contentsline {subsubsection}{\numberline {7.4.2}Vurderingssp\IeC {\o }rgsm\IeC {\r a}l}{5}{subsubsection.7.4.2}
+\contentsline {subsubsection}{\numberline {7.4.3}Forklaringssp\IeC {\o }rgsm\IeC {\r a}l}{5}{subsubsection.7.4.3}
+\contentsline {subsubsection}{\numberline {7.4.4}Handlingssp\IeC {\o }rgsm\IeC {\r a}l}{5}{subsubsection.7.4.4}
+\contentsline {subsection}{\numberline {7.5}Problemformulering}{6}{subsection.7.5}
+\contentsline {section}{\numberline {8}Produktbeskrivelse}{6}{section.8}
 \contentsline {section}{\numberline {9}Gruppekontrakt}{6}{section.9}
 \contentsline {section}{\numberline {10}Kvalitetssikring}{7}{section.10}
 \contentsline {section}{\numberline {11}Projektstyring}{7}{section.11}
@@ -55,16 +55,15 @@
 \contentsline {section}{\numberline {20}Database}{27}{section.20}
 \contentsline {subsection}{\numberline {20.1}Valg af database}{27}{subsection.20.1}
 \contentsline {subsection}{\numberline {20.2}Normalisering}{28}{subsection.20.2}
-\contentsline {section}{\numberline {21}Opsummering - Teknik}{29}{section.21}
-\contentsline {section}{\numberline {22}Konklusion}{30}{section.22}
-\contentsline {subsection}{\numberline {22.1}Import og pr\IeC {\ae }sentation af data}{30}{subsection.22.1}
-\contentsline {subsection}{\numberline {22.2}Videreudvikling og vedligeholdelse}{31}{subsection.22.2}
-\contentsline {subsection}{\numberline {22.3}Samlet konklusion}{31}{subsection.22.3}
-\contentsline {section}{\numberline {23}Perspektivering}{32}{section.23}
-\contentsline {section}{\numberline {24}Refleksion}{32}{section.24}
-\contentsline {subsection}{\numberline {24.1}Systemet som en helhed}{32}{subsection.24.1}
-\contentsline {subsection}{\numberline {24.2}ElasticSearch}{33}{subsection.24.2}
-\contentsline {section}{\numberline {25}Arbejdsfordeling}{33}{section.25}
-\contentsline {subsection}{\numberline {25.1}Rapporten}{34}{subsection.25.1}
-\contentsline {section}{\numberline {26}Litteraturliste}{35}{section.26}
-\contentsline {section}{\numberline {27}Bilag}{35}{section.27}
+\contentsline {section}{\numberline {21}Konklusion}{30}{section.21}
+\contentsline {subsection}{\numberline {21.1}Import og pr\IeC {\ae }sentation af data}{30}{subsection.21.1}
+\contentsline {subsection}{\numberline {21.2}Videreudvikling og vedligeholdelse}{31}{subsection.21.2}
+\contentsline {subsection}{\numberline {21.3}Samlet konklusion}{31}{subsection.21.3}
+\contentsline {section}{\numberline {22}Perspektivering}{32}{section.22}
+\contentsline {section}{\numberline {23}Refleksion}{32}{section.23}
+\contentsline {subsection}{\numberline {23.1}Systemet som en helhed}{32}{subsection.23.1}
+\contentsline {subsection}{\numberline {23.2}ElasticSearch}{33}{subsection.23.2}
+\contentsline {section}{\numberline {24}Arbejdsfordeling}{33}{section.24}
+\contentsline {subsection}{\numberline {24.1}Rapporten}{34}{subsection.24.1}
+\contentsline {section}{\numberline {25}Litteraturliste}{35}{section.25}
+\contentsline {section}{\numberline {26}Bilag}{35}{section.26}
