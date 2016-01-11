@@ -1,4 +1,4 @@
-\section{Testing}
+section{Testing}
 Her vil vi uddybe de test framework vi har brugt til frontend og backend og komme
 med eksempler. I vores eksempler mocker vi objekter der simulerer de rigtige objekter i vores controller.
 \subsection{Jasmine}
@@ -7,7 +7,7 @@ der gør det overskueligt og nemt at begynde at teste.
 Noget af det der bliver lagt vægt på i Jasmine er dokumentation og struktur. Jasmine frameworket er 
 også behaviour driven, så man beskriver den forventede opførsel for funktionen først, og derefter tester man den.
 \\\\
-Et eksempel på en test, her fra vores StatisticsController.spec.js fil
+Kodeeksempel~\ref{lst:StatisticsController} viser et eksempel på en test fra vorest StatistisController.spec.js fil.
 \begin{lstlisting}[caption={StatisticsController.spec.js}, language={JavaScript}, label={lst:StatisticsController}]
 it('should get the types based on the selected statistic index', function() {
     spyOn(ctrl, 'getStatsTypes').and.callThrough();
@@ -21,11 +21,11 @@ it('should get the types based on the selected statistic index', function() {
     expect(ctrl.activeStatisticTypeList[0]).toBe('someType');
 });
 \end{lstlisting}
-i kode eksempel~\ref{lst:StatisticsController} starter vi med en beskrivelse af hvad testen gør, her går den ind og og kalder getStatsTypes i vores controller
+I eksemplet starter vi med en beskrivelse af hvad testen gør, her går den ind og og kalder getStatsTypes i vores controller
 med noget dummy data også forventer vi at vores activeStatisticTypeList[0] bliver sat med den type fra vores dummy data.
 
 \subsection{PHPUnit}
-PHPUnit er det framework vi bruger til vores backend test. ligesom med Jasmine indeholder det
+PHPUnit er det framework vi bruger til vores backend test. Ligesom Jasmine indeholder det
 en masse indbyggede funktioner der gør det nemt at gå til.
 \begin{lstlisting}[caption={UserControllerTest.php}, language={PHP}, label={lst:UserControllerTest}]
 public function testCreateUser() {
@@ -44,7 +44,7 @@ public function testCreateUser() {
     $this->assertTrue($userControllerMock->createUser($userMock));
 }
 \end{lstlisting}
-Som man kan se i kode eksempel~\ref{lst:UserControllerTest} gør PHPUnit det nemt at mocke objekter.
+I kode eksempel~\ref{lst:UserControllerTest} ses det at PHPUnit gør det nemt at mocke objekter.
 I denne test mocker vi User objektet fra vores Model, vores UserController og til sidst kalder vi userControlleren 
 med vores userMock og tester på at brugeren bliver lavet.
 
