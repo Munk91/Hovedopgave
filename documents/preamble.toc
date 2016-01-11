@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {5}L\IeC {\ae }ringsm\IeC {\r a}l i forbindelse med afsluttende eksamensprojekt}{5}{section.5}
 \contentsline {section}{\numberline {6}Beskrivelse af virksomheden}{6}{section.6}
 \contentsline {subsection}{\numberline {6.1}Ordbogen A/S}{6}{subsection.6.1}
-\contentsline {section}{\numberline {7}Problemformulering}{7}{section.7}
+\contentsline {section}{\numberline {7}Problemstilling}{7}{section.7}
 \contentsline {subsection}{\numberline {7.1}Overordnet emne}{7}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}Delemne}{7}{subsection.7.2}
 \contentsline {subsection}{\numberline {7.3}Udgangspunkt}{7}{subsection.7.3}
@@ -15,7 +15,7 @@
 \contentsline {subsubsection}{\numberline {7.4.2}Vurderingssp\IeC {\o }rgsm\IeC {\r a}l}{7}{subsubsection.7.4.2}
 \contentsline {subsubsection}{\numberline {7.4.3}Forklaringssp\IeC {\o }rgsm\IeC {\r a}l}{7}{subsubsection.7.4.3}
 \contentsline {subsubsection}{\numberline {7.4.4}Handlingssp\IeC {\o }rgsm\IeC {\r a}l}{8}{subsubsection.7.4.4}
-\contentsline {subsection}{\numberline {7.5}Problemstilling}{8}{subsection.7.5}
+\contentsline {subsection}{\numberline {7.5}Problemformulering}{8}{subsection.7.5}
 \contentsline {section}{\numberline {8}Gruppekontrakt}{8}{section.8}
 \contentsline {section}{\numberline {9}Projektstyring}{9}{section.9}
 \contentsline {subsection}{\numberline {9.1}Scrum}{9}{subsection.9.1}
@@ -26,44 +26,45 @@
 \contentsline {subsubsection}{\numberline {9.4.2}Fredag d. 4/12}{15}{subsubsection.9.4.2}
 \contentsline {subsubsection}{\numberline {9.4.3}Fredag d. 18/12}{15}{subsubsection.9.4.3}
 \contentsline {section}{\numberline {10}Kvalitetssikring}{16}{section.10}
-\contentsline {section}{\numberline {11}Produktbeskrivelse}{16}{section.11}
+\contentsline {section}{\numberline {11}Produktbeskrivelse}{17}{section.11}
 \contentsline {section}{\numberline {12}Arbejdsmetoder}{17}{section.12}
-\contentsline {section}{\numberline {13}Versionsstyring}{17}{section.13}
+\contentsline {section}{\numberline {13}Versionsstyring}{18}{section.13}
 \contentsline {section}{\numberline {14}Use cases}{18}{section.14}
 \contentsline {subsection}{\numberline {14.1}Use case diagram}{18}{subsection.14.1}
-\contentsline {subsection}{\numberline {14.2}Use case - Gem API endpoint}{18}{subsection.14.2}
-\contentsline {subsection}{\numberline {14.3}System sekvens diagram}{18}{subsection.14.3}
-\contentsline {section}{\numberline {15}Arkitektur}{19}{section.15}
-\contentsline {subsection}{\numberline {15.1}Systemarkitektur}{19}{subsection.15.1}
-\contentsline {subsection}{\numberline {15.2}Klassediagram}{20}{subsection.15.2}
-\contentsline {section}{\numberline {16}Delkonklusion - analyse}{21}{section.16}
-\contentsline {section}{\numberline {17}Systemet}{22}{section.17}
-\contentsline {subsection}{\numberline {17.1}getStatisticsData}{22}{subsection.17.1}
-\contentsline {subsubsection}{\numberline {17.1.1}Reflektion over getStatisticsData}{23}{subsubsection.17.1.1}
-\contentsline {subsection}{\numberline {17.2}drawChart}{23}{subsection.17.2}
-\contentsline {subsection}{\numberline {17.3}pullData}{24}{subsection.17.3}
-\contentsline {section}{\numberline {18}Teknologier}{26}{section.18}
-\contentsline {subsection}{\numberline {18.1}Laravel}{26}{subsection.18.1}
-\contentsline {subsection}{\numberline {18.2}AngularJS}{26}{subsection.18.2}
-\contentsline {subsection}{\numberline {18.3}Google Chart API}{27}{subsection.18.3}
-\contentsline {subsection}{\numberline {18.4}ElasticSearch}{27}{subsection.18.4}
-\contentsline {subsection}{\numberline {18.5}Problemstilling omkring h\IeC {\r a}ndtering af data}{28}{subsection.18.5}
-\contentsline {section}{\numberline {19}Testing}{29}{section.19}
-\contentsline {subsection}{\numberline {19.1}Jasmine}{29}{subsection.19.1}
-\contentsline {subsection}{\numberline {19.2}PHPUnit}{30}{subsection.19.2}
-\contentsline {section}{\numberline {20}Database}{30}{section.20}
-\contentsline {subsection}{\numberline {20.1}Valg af database}{31}{subsection.20.1}
-\contentsline {subsection}{\numberline {20.2}Normalisering}{31}{subsection.20.2}
-\contentsline {section}{\numberline {21}Delkonklusion - Teknik}{32}{section.21}
-\contentsline {section}{\numberline {22}Konklusion}{33}{section.22}
-\contentsline {subsection}{\numberline {22.1}Import og pr\IeC {\ae }sentation af data}{33}{subsection.22.1}
-\contentsline {subsection}{\numberline {22.2}Videreudvikling og vedligeholdelse}{34}{subsection.22.2}
-\contentsline {subsection}{\numberline {22.3}Samlet konklusion}{34}{subsection.22.3}
-\contentsline {section}{\numberline {23}Perspektivering}{35}{section.23}
-\contentsline {section}{\numberline {24}Refleksion}{36}{section.24}
-\contentsline {subsection}{\numberline {24.1}Systemet som en helhed}{36}{subsection.24.1}
-\contentsline {subsection}{\numberline {24.2}ElasticSearch}{36}{subsection.24.2}
-\contentsline {section}{\numberline {25}Arbejdsfordeling}{37}{section.25}
-\contentsline {subsection}{\numberline {25.1}Rapporten}{37}{subsection.25.1}
-\contentsline {section}{\numberline {26}Litteraturliste}{38}{section.26}
-\contentsline {section}{\numberline {27}Bilag}{38}{section.27}
+\contentsline {subsection}{\numberline {14.2}Use cases der er f\IeC {\ae }rdige}{19}{subsection.14.2}
+\contentsline {subsection}{\numberline {14.3}Use case - Gem API endpoint}{20}{subsection.14.3}
+\contentsline {subsection}{\numberline {14.4}Systemsekvensdiagram}{20}{subsection.14.4}
+\contentsline {section}{\numberline {15}Arkitektur}{22}{section.15}
+\contentsline {subsection}{\numberline {15.1}Systemarkitektur}{22}{subsection.15.1}
+\contentsline {subsection}{\numberline {15.2}Klassediagram}{23}{subsection.15.2}
+\contentsline {section}{\numberline {16}Opsummering - analyse}{24}{section.16}
+\contentsline {section}{\numberline {17}Systemet}{25}{section.17}
+\contentsline {subsection}{\numberline {17.1}getStatisticsData}{25}{subsection.17.1}
+\contentsline {subsubsection}{\numberline {17.1.1}Reflektion over getStatisticsData}{26}{subsubsection.17.1.1}
+\contentsline {subsection}{\numberline {17.2}drawChart}{26}{subsection.17.2}
+\contentsline {subsection}{\numberline {17.3}pullData}{27}{subsection.17.3}
+\contentsline {section}{\numberline {18}Teknologier}{29}{section.18}
+\contentsline {subsection}{\numberline {18.1}Laravel}{29}{subsection.18.1}
+\contentsline {subsection}{\numberline {18.2}AngularJS}{29}{subsection.18.2}
+\contentsline {subsection}{\numberline {18.3}Google Chart API}{30}{subsection.18.3}
+\contentsline {subsection}{\numberline {18.4}ElasticSearch}{30}{subsection.18.4}
+\contentsline {subsection}{\numberline {18.5}Problemstilling omkring h\IeC {\r a}ndtering af data}{31}{subsection.18.5}
+\contentsline {section}{\numberline {19}Testing}{32}{section.19}
+\contentsline {subsection}{\numberline {19.1}Jasmine}{32}{subsection.19.1}
+\contentsline {subsection}{\numberline {19.2}PHPUnit}{33}{subsection.19.2}
+\contentsline {section}{\numberline {20}Database}{33}{section.20}
+\contentsline {subsection}{\numberline {20.1}Valg af database}{34}{subsection.20.1}
+\contentsline {subsection}{\numberline {20.2}Normalisering}{34}{subsection.20.2}
+\contentsline {section}{\numberline {21}Opsummering - Teknik}{35}{section.21}
+\contentsline {section}{\numberline {22}Konklusion}{36}{section.22}
+\contentsline {subsection}{\numberline {22.1}Import og pr\IeC {\ae }sentation af data}{36}{subsection.22.1}
+\contentsline {subsection}{\numberline {22.2}Videreudvikling og vedligeholdelse}{37}{subsection.22.2}
+\contentsline {subsection}{\numberline {22.3}Samlet konklusion}{37}{subsection.22.3}
+\contentsline {section}{\numberline {23}Perspektivering}{38}{section.23}
+\contentsline {section}{\numberline {24}Refleksion}{39}{section.24}
+\contentsline {subsection}{\numberline {24.1}Systemet som en helhed}{39}{subsection.24.1}
+\contentsline {subsection}{\numberline {24.2}ElasticSearch}{39}{subsection.24.2}
+\contentsline {section}{\numberline {25}Arbejdsfordeling}{40}{section.25}
+\contentsline {subsection}{\numberline {25.1}Rapporten}{40}{subsection.25.1}
+\contentsline {section}{\numberline {26}Litteraturliste}{41}{section.26}
+\contentsline {section}{\numberline {27}Bilag}{41}{section.27}

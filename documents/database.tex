@@ -1,39 +1,39 @@
 \section{Database}
-Vi har i vores system valgt at bruge to forskellige databaser, hvoraf de også er forskellige typer.
+Vi har i vores system valgt, at bruge to forskellige databaser, hvoraf de også er forskellige typer.
 \\
 Vi har været vant til fra studiet at bruge relationelle databaser, som bruger SQL. Dog har vi i dette projekt 
-forsøgt os med et alternativ, da vi har valgt at bruge ElasticSearch til at indeksere data, dog har vi samtidig anvendt en MySQL database til noget data.
+forsøgt os med et alternativ, da vi har valgt at bruge ElasticSearch til at indeksere data.
+Samtidig har vi anvendt en MySQL database til at håndtere data der ikke var så indholdsrigt.
 \subsection{Valg af database}
-Vores valg stod primært mellem MySQL, MongoDB og ElasticSearch. Grunden til dette er at de anvender strukturer og
+Vores valg stod primært mellem MySQL, MongoDB og ElasticSearch. Grunden til dette er, at de anvender strukturer og
 kompabilitet med den type teknologier vi anvender. Derudover havde vi en ekstern MySQL database til rådighed, som vi valgte at anvende.
 \\\\
-I vores situation, hvor vi har anvendt PHP til vores backend, giver MySQL rigtig god mening da det er kompatibelt med PHP.
-En fordel ved ElasticSearch er at det er gratis at anvende, dog kræver det en server at køre på.
+I vores situation, hvor vi har anvendt PHP til vores backend, giver MySQL rigtig god mening, da det er let integrerbart med PHP.
 \\\\
 Vores valg faldt på at anvende både MySQL og ElasticSearch.
 \\
-Grunden til at vi valgte af bruge MySQL, var at vi har noget nødvendig data som skal gemmes. Når man uploader et API giver det god mening
-for os, at disse data bliver gemt på en MySQL database, så vi dermed kan pulle data fra det gemte API når vi har behov for det.\\
-Vi har desuden også en ekstern MySQL database til rådighed som vi allerede betalte for inden projektperioden, ellers ville vi nok have anvendt en gratis version
-af MySQL eller MariaDB.
+Vi valgte at bruge MySQL da vi har noget nødvendig data, som skal gemmes. Når man uploader et API giver det god mening
+for os, at disse data bliver gemt på en MySQL database, så vi dermed kan pulle data fra det gemte API, når vi har behov for det.\\
+Vi har desuden også en ekstern MySQL database til rådighed som vi allerede betalte for inden projektperioden, ellers ville vi have anvendt MariaDB, da det er en fork af MySQL, 
+der giver de samme funktionaliter som en fuld MySQL database, den er bare helt gratis.
 \\\\
 Grunden til at vi valgte at bruge ElasticSearch til at gemme data, var at vi forventede at skulle håndtere store datamængder.
 Disse data ville være indholdet af det statistik data vi hentede ind fra API endpoints.
 \\
-Hvor en relationel database ville kræve at vi lavede et SQL kald, hvor vi skulle joine en masse data sammen og satte specifikationer, har man i ElasticSearch
+Hvor en relationel database ville kræve at vi lavede et SQL kald, hvor vi skulle joine en masse data sammen, har man i ElasticSearch
 bedre mulighed for at søge og udvælge data på en hurtig og effektiv måde.
 \\
-Meget af grunden bundede derfor i et performance boost til systemet, i form af hurtigere at kunne servere data den nødvendige data.
+Meget af grunden bundede derfor i et performance boost til systemet, i form af hurtigere at kunne servere den nødvendige data.
 \\
-ElasticSearch er primært lavet til indexere, søge og hente data meget effektivt og vinder derfor klart på performance ift.\ relationelle databaser.
-Dog skal det nævnes at ElasticSearch ikke er en decideret database, men vi har bare anvendt teknologien til blandt andet at gemme og hente data.\\
-\\\\
-Der hvor ElasticSearch taber sammenlignet med andre databaser, er at det oprindeligt er lavet som en search engine og ikke en decideret database.
-\\Dvs.\ man får ikke den samme sikkerhed og struktur, som de andre tilbyder.
+ElasticSearch er primært lavet til at indexere, søge og hente data meget effektivt og vinder derfor klart på performance ift.\ relationelle databaser.
+Dog skal det nævnes at ElasticSearch ikke er en decideret database. Vi har anvendt teknologien til blandt andet at gemme og hente data.\\
+\\
+Der hvor ElasticSearch taber sammenlignet med andre databaser, er at det oprindeligt er lavet som en search engine.
+\\Man får ikke den samme sikkerhed og struktur, som de andre tilbyder, ved at benytte ElasticSearch
 \subsection{Normalisering}
 Når vi gemmer informationer omkring API'er, gemmer vi dem i en tabel der hedder \textit{Apis}. Denne tabel indeholder kolonnerne: Id, Index, Type og URL.
 \\\\
-OBS! Data og struktur i tabellen er kun for eksemplets skyld, og er ikke en reel kopi af den originale tabel.
+Data i tabel~\ref{table:api-tabel} er kun et eksempel, og er ikke en reel kopi af den originale tabel.
 \begin{table}[H]
     \centering
     \begin{tabular}{|l|l|l|l|l}
