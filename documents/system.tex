@@ -37,7 +37,7 @@ ctrl.getStatisticsData = function(statisticIndex, statisticType) {
         });
 };
 \end{lstlisting}
-i kodeeksempel~\ref{lst:StatisticsControllerData}, hentes der statistik data ud fra et valgt API.
+I kodeeksempel~\ref{lst:StatisticsControllerData}, hentes der statistik data ud fra et valgt API.
 Vi benytter os af et promise som gør, at vi kan håndtere forskellige resultater, alt efter om det lykkedes at hente noget data, fra ElasticSeach, eller ej.
 \\\\
 Måden vi implementerede det på i vores view, ses på figur~\ref{fig:getStatisticsData} for at gøre det nemt og overskueligt for brugeren,
@@ -49,8 +49,7 @@ Den henter index og type ud fra vores MySQL database.
 \label{fig:getStatisticsData}
 \end{figure}
 \subsubsection{Reflektion over getStatisticsData}
-Vi udnytter ikke et angular promise ordentligt og skulle have indlagt noget fejlhåndtering, hvis der ikke kom noget data fra API'et,
-altså hvis promiset blev rejected.
+Vi udnytter ikke et angular promise ordentligt og skulle have indlagt noget fejlhåndtering, hvis der ikke kom noget data fra API'et, altså hvis promiset blev rejected.
 Derudover har Angular gjort det rigtig nemt for os at arbejde med RESTful API's, pga.\ af ngResource~\footnote{https://docs.angularjs.org/api/ngResource}.
 \subsection{drawChart}
 \begin{lstlisting}[caption={drawChart}, language={JavaScript}, label={lst:StatisticsControllerDraw}]
@@ -87,9 +86,10 @@ formatChartData = function(data) {
 };
 \end{lstlisting}
 I kodeeksempel~\ref{lst:StatisticsControllerDraw} bruges den valgte data, vi har fra figur~\ref{fig:getStatisticsData}.
-Vi benytter os af \hyperlink{GoogleChartAPI}{Google Chart API}, hvor vi sætter de nødvendige properties for at lave et diagram.
-Hvis vi kigger fremad kunne vi have lavet det, så man selv kunne bestemme størrelsen på diagrammet. Vi valgte løsningen med faste værdier, da det var vigtigt for os, at have noget funktionelt
-og ligetil.
+Vi benyttede os af \hyperlink{GoogleChartAPI}{Google Chart API}, hvor vi satte de nødvendige properties for at lave et diagram.
+\\\\
+Hvis vi kigger fremad, kunne vi have lavet det så man selv kunne bestemme størrelsen på diagrammet.
+Vi valgte løsningen med faste værdier, da det var vigtigt for os, at have noget funktionelt og ligetil.
 \\\\
 Koden er delt op i to funktioner, hhv.\ formatChartData og drawChart, da det giver et bedre overblik over hele controlleren.
 I figur~\ref{fig:drawChart} kan man se hvordan de to funktioner er implementeret i vores view.

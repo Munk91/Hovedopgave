@@ -24,10 +24,10 @@ Derudover findes der rigtig mange eksterne libraries, som ved hjælp af Angulars
 \subsection{Google Chart API}
 Da vi bestemte os for at bruge Google Charts gjorde vi det på baggrund af at det er let tilgængeligt.
 Det har en god dokumentation og det bliver vedligeligholdt og så kommer det fra en kilde der er garant for gode produkter.
-Det er meget intuitivt og tilbyder de nødvendige funtionaliteter i forhold til visning af diagrammer 
+Det er meget intuitivt og tilbyder de nødvendige funktionaliteter i forhold til visning af diagrammer.
 Google Chart API er også lavet til at fungere på tværs af browsere da det renderer med HTML5/SVG, 
 det gør også at det eneste krav til at det skal kunne køre på klienten, er en browser\footnote{https://developers.google.com/chart/interactive/docs/}. 
-Derudover er der et angular library der gør Google Chart API endnu nemmere at integrere i AngularJS.
+Vi har tilmed anvendt et AngularJS bibliotek der gør Google Chart API endnu nemmere at integrere i AngularJS.
 \subsection{ElasticSearch}
 Vi har anvendt ElasticSearch til at gemme data, som et alternativ til en SQL database.
 \\\\
@@ -36,7 +36,7 @@ ElasticSearch er bygget op omkring et Cluster, som er en liste af nodes, hvor en
 ElasticSearch gør ligeledes brug af index, som er en liste af dokumenter, der har samme karakteristika og er skrevet i JSON format.
 \\
 Ved større index kan de dele et index op i shards og et shard er et fuldt funktionelt index.
-ElasticSearch skalere horizontalt og det det der gør det så hurtigt.
+ElasticSearch skalerer horisontalt og det det der gør det så hurtigt.
 \\\\
 På figur~\ref{fig:elasticsearch-arkitektur} skitseres den generelle opbygning af en typisk ElasticSearch server og relationer mellem cluster, nodes og dokumenter.
 \\\\
